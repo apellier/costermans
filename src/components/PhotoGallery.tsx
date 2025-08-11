@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface Photo {
   id: string;
@@ -23,13 +24,14 @@ export default function PhotoGallery({ photos, className = '' }: PhotoGalleryPro
         {photos.map((photo) => (
           <div
             key={photo.id}
-            className="aspect-square overflow-hidden rounded-lg cursor-pointer group"
+            className="aspect-square overflow-hidden rounded-lg cursor-pointer group relative"
             onClick={() => setSelectedPhoto(photo)}
           >
-            <img
+            <Image
               src={photo.src}
               alt={photo.alt}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
             />
           </div>
         ))}
@@ -42,9 +44,11 @@ export default function PhotoGallery({ photos, className = '' }: PhotoGalleryPro
           onClick={() => setSelectedPhoto(null)}
         >
           <div className="relative max-w-4xl max-h-full">
-            <img
+            <Image
               src={selectedPhoto.src}
               alt={selectedPhoto.alt}
+              width={800}
+              height={600}
               className="max-w-full max-h-full object-contain rounded-lg"
             />
             <button

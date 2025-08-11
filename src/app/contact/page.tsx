@@ -85,7 +85,7 @@ export default function ContactPage() {
                     Place du Grand Sablon<br />
                     1000 Brussels, Belgium<br />
                     <span className="text-sm text-gray-600">
-                      In the heart of Brussels' antique district
+                      In the heart of Brussels&apos; antique district
                     </span>
                   </address>
                 </div>
@@ -210,8 +210,8 @@ export default function ContactPage() {
               <h3 className="text-xl font-bold text-forest-green mb-4">By Public Transport</h3>
               <div className="space-y-2 text-dark-green text-body">
                 <p><strong>Metro:</strong> Louise (Lines 2, 6) - 5 minute walk</p>
-                <p><strong>Bus:</strong> Lines 27, 95 - Stop "Petit Sablon"</p>
-                <p><strong>Tram:</strong> Lines 92, 94 - Stop "Louise"</p>
+                <p><strong>Bus:</strong> Lines 27, 95 - Stop &quot;Petit Sablon&quot;</p>
+                <p><strong>Tram:</strong> Lines 92, 94 - Stop &quot;Louise&quot;</p>
               </div>
             </div>
             

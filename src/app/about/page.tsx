@@ -111,7 +111,7 @@ export default function AboutPage() {
               <p className="text-lg text-dark-green text-body leading-relaxed">
                 Natural materials, warm lighting, and subtle antique details create an atmosphere 
                 that feels both contemporary and timeless. Every element has been chosen to reflect 
-                our family's appreciation for enduring beauty and authentic craftsmanship.
+                our family&apos;s appreciation for enduring beauty and authentic craftsmanship.
               </p>
             </div>
           </div>
