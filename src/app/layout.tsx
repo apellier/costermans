@@ -54,20 +54,22 @@ export default function RootLayout({
     description: 'A refined café and brunch destination in the heart of Brussels\' Sablon district, connected to the heritage of Costermans Antiquaire.',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Place du Grand Sablon',
-      addressLocality: 'Brussels',
+      streetAddress: '5 place du grand sablon',
+      addressLocality: 'Bruxelles',
       postalCode: '1000',
       addressCountry: 'BE',
     },
-    telephone: '+32123456789',
-    email: 'hello@costermans.be',
+    email: 'cafecostermans@gmail.com',
     url: 'https://costermans.be',
     priceRange: '€€',
     servesCuisine: ['European', 'Belgian', 'Brunch'],
     openingHours: [
-      'Mo-Fr 08:00-17:00',
-      'Sa 09:00-18:00', 
-      'Su 09:00-16:00'
+      'Tu 09:00-18:00',
+      'We 09:00-23:00',
+      'Th 09:00-23:00',
+      'Fr 09:00-23:00',
+      'Sa 09:00-18:00',
+      'Su 09:00-18:00'
     ],
     geo: {
       '@type': 'GeoCoordinates',
@@ -75,13 +77,16 @@ export default function RootLayout({
       longitude: '4.3587',
     },
     sameAs: [
-      // Add social media URLs when available
+      'https://www.instagram.com/cafecostermans/?hl=fr'
     ],
   };
 
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

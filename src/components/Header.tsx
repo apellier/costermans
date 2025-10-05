@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Header() {
@@ -14,16 +15,22 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white border-b border-warm-beige sticky top-0 z-50">
+    <header className="bg-white border-b border-forest/10 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
           {/* Logo */}
           <Link 
             href="/" 
-            className="text-2xl font-sans font-bold text-forest-green"
+            className="flex items-center space-x-3"
             aria-label="Café Costermans - Return to homepage"
           >
-            Café Costermans
+            <Image 
+              src="/logo-costermans.png" 
+              alt="Café Costermans" 
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -32,7 +39,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-forest-green hover:text-ochre transition-colors duration-300 font-sans font-medium px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-forest-green focus:ring-offset-2"
+                className="text-black hover:text-forest transition-colors duration-300 font-space-grotesk font-bold px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2"
               >
                 {item.name}
               </Link>
@@ -42,7 +49,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-forest-green hover:text-ochre transition-colors"
+            className="md:hidden p-2 rounded-md text-black hover:text-forest transition-colors"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
@@ -59,13 +66,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div id="mobile-menu" className="md:hidden border-t border-warm-beige py-4">
+          <div id="mobile-menu" className="md:hidden border-t border-forest/10 py-4">
             <nav className="flex flex-col space-y-4" aria-label="Mobile navigation">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-forest-green hover:text-ochre transition-colors duration-300 font-sans font-medium px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-forest-green focus:ring-offset-2"
+                  className="text-black hover:text-forest transition-colors duration-300 font-space-grotesk font-bold px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

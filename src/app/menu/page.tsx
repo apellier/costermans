@@ -1,176 +1,154 @@
+import Image from "next/image";
+
 export default function MenuPage() {
-  const menuSections = [
+  const menuHighlights = [
     {
-      title: "Brunch Classics",
-      description: "Timeless favorites prepared with artisan care",
-      image: "brunch-hero",
-      items: [
-        {
-          name: "Eggs Benedict Costermans",
-          description: "Free-range poached eggs, Belgian ham, hollandaise sauce on house-made English muffin",
-          price: "€16"
-        },
-        {
-          name: "Avocado & Smoked Salmon Toast",
-          description: "Sourdough toast, smashed avocado, Nordic salmon, microgreens, lemon zest",
-          price: "€14"
-        },
-        {
-          name: "French Toast Grand Sablon",
-          description: "Brioche bread, vanilla custard, seasonal berries, maple syrup, whipped cream",
-          price: "€12"
-        },
-        {
-          name: "Croque Monsieur Traditionnel",
-          description: "Gruyère cheese, Belgian ham, béchamel sauce, served with mixed greens",
-          price: "€13"
-        }
+      title: "Morning Brunch",
+      description: "Start your day with our signature morning creations",
+      image: "brunch-vertical",
+      highlights: [
+        "Costermans Super Bun - €12",
+        "N'Duja Eggs - €10",
+        "Toasted Brioche - €6"
       ]
     },
     {
-      title: "Artisan Coffee & Beverages",
-      description: "Carefully selected beans and house-crafted drinks",
-      image: "coffee-hero",
-      items: [
-        {
-          name: "Espresso Costermans",
-          description: "Single origin Ethiopian beans, notes of chocolate and citrus",
-          price: "€3.50"
-        },
-        {
-          name: "Cappuccino",
-          description: "Silky microfoam, house blend, choice of oat, almond, or whole milk",
-          price: "€4.50"
-        },
-        {
-          name: "Cold Brew Antique",
-          description: "24-hour cold extraction, served over ice with a hint of vanilla",
-          price: "€5"
-        },
-        {
-          name: "Golden Milk Latte",
-          description: "Turmeric, ginger, cinnamon, coconut milk, local honey",
-          price: "€5.50"
-        }
+      title: "Midi Lunch/Brunch",
+      description: "Perfect midday combinations of fresh flavors and comfort",
+      image: "lunch-vertical",
+      highlights: [
+        "Bun aux Légumes - €14",
+        "Croque Jambonneau - €14",
+        "Crispy Tuna Melt - €14"
       ]
     },
     {
-      title: "Light Bites & Pastries",
-      description: "Fresh selections perfect for your terrace moment",
-      image: "pastries-hero",
-      items: [
-        {
-          name: "Almond Croissant",
-          description: "Buttery pastry, almond cream, toasted almonds, daily baked",
-          price: "€4.50"
-        },
-        {
-          name: "Seasonal Fruit Tart",
-          description: "Vanilla custard, fresh seasonal fruits, shortbread crust",
-          price: "€6.50"
-        },
-        {
-          name: "Brussels Waffle",
-          description: "Traditional recipe, pearl sugar, choice of toppings",
-          price: "€8"
-        },
-        {
-          name: "Artisan Cheese Plate",
-          description: "Selection of Belgian cheeses, fig jam, walnut bread, honey",
-          price: "€15"
-        }
+      title: "Dinner",
+      description: "Evening delights featuring refined flavors and artisan techniques",
+      image: "dinner-vertical",
+      highlights: [
+        "Ravioles (volaille, n'duja, citron confit et basilic thaï) - €12",
+        "Pommes Dauphines (beurre de sauge, ail noir et champignons) - €12",
+        "Maquereau à la Flamme (figue violette et shiso) - €12"
       ]
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Menu Header - Visual Hero */}
-      <section className="relative h-screen bg-warm-beige">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50">
-          <div className="w-full h-full bg-warm-beige flex items-center justify-center">
-            {/* Placeholder for food/menu hero image */}
-            <div className="text-forest-green/20 text-center">
-              <svg className="w-32 h-32 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <p className="text-sm">Menu Hero Image from @cafecostermans</p>
-            </div>
-          </div>
+      {/* Menu Header - Mobile First Hero with Vertical Layout */}
+      <section className="relative min-h-screen flex flex-col lg:flex-row">
+        {/* Hero Image - Food/Brunch Photo */}
+        <div className="relative flex-1 min-h-[50vh] lg:min-h-screen overflow-hidden">
+          <Image
+            src="/images/brunch/DSC02698-2.jpg"
+            alt="Café Costermans - Fresh brunch and artisan cuisine"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-forest/20 via-forest/10 to-forest/30"></div>
         </div>
         
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white px-4 sm:px-6 lg:px-8">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl text-white mb-6 font-light tracking-wide">
+        {/* Menu Content & PDF Access */}
+        <div className="relative flex-1 flex items-center justify-center bg-gradient-to-br from-forest to-forest-light">
+          <div className="text-center text-white px-4 py-8 lg:py-16">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl text-white mb-6 font-light tracking-wide">
               Our Menu
             </h1>
-            <p className="text-xl lg:text-2xl text-white/90 mb-8 max-w-2xl mx-auto font-light">
+            <p className="text-lg lg:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-light">
               Artisan ingredients meet timeless recipes
+            </p>
+            
+            {/* PDF Download Options */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <a 
+                href="/Carte food.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white text-forest border-2 border-white hover:bg-forest hover:text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Food Menu (PDF)
+              </a>
+              <a 
+                href="/Carte boissons.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white text-forest border-2 border-white hover:bg-forest hover:text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Drinks Menu (PDF)
+              </a>
+            </div>
+            
+            <p className="text-sm text-white/70">
+              Scroll down to explore our signature selections
             </p>
           </div>
         </div>
       </section>
 
-      {/* Menu Sections - Visual First */}
-      {menuSections.map((section, sectionIndex) => (
-        <section key={sectionIndex} className={`py-20 ${sectionIndex % 2 === 0 ? 'bg-white' : 'bg-warm-beige'}`}>
+      {/* Menu Highlights - Mobile First Vertical Layout */}
+      {menuHighlights.map((section, sectionIndex) => (
+        <section key={sectionIndex} className={`py-12 lg:py-20 ${sectionIndex % 2 === 0 ? 'bg-white' : 'bg-warm-beige'}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            {/* Section Header with Visual */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
-              <div className={sectionIndex % 2 === 0 ? 'order-first' : 'order-last lg:order-first'}>
-                <h2 className="text-4xl text-forest-green mb-6">
-                  {section.title}
-                </h2>
-                <p className="text-xl text-dark-green text-body mb-8">
-                  {section.description}
-                </p>
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+              {/* Vertical Image */}
+              <div className="w-full lg:w-1/3">
+                <div className="aspect-[3/4] bg-warm-beige rounded-lg overflow-hidden mx-auto max-w-sm lg:max-w-none hover:shadow-lg transition-shadow">
+                  <Image
+                    src={
+                      sectionIndex === 0 ? "/images/brunch/DSC02686-2.jpg" :
+                      sectionIndex === 1 ? "/images/brunch/DSC02828-2.jpg" :
+                      "/images/dinner/dinner-2.jpg"
+                    }
+                    alt={`${section.title} at Café Costermans`}
+                    width={400}
+                    height={533}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
               </div>
               
-              {/* Section Image */}
-              <div className={sectionIndex % 2 === 0 ? 'order-last' : 'order-first lg:order-last'}>
-                <div className="aspect-[4/3] bg-warm-beige rounded-lg flex items-center justify-center">
-                  <div className="text-forest-green/20 text-center">
-                    <svg className="w-24 h-24 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <p className="text-sm">{section.title} Photo</p>
-                  </div>
+              {/* Content */}
+              <div className="flex-1 text-center lg:text-left">
+                <h2 className="text-3xl lg:text-4xl text-forest mb-4">
+                  {section.title}
+                </h2>
+                <p className="text-lg text-body mb-6">
+                  {section.description}
+                </p>
+                
+                {/* Highlight Items */}
+                <div className="space-y-3 mb-8">
+                  {section.highlights.map((highlight, index) => (
+                    <div key={index} className="text-forest font-medium">
+                      {highlight}
+                    </div>
+                  ))}
                 </div>
+                
+                <p className="text-sm text-body italic">
+                  View complete selection in our detailed menu PDFs above
+                </p>
               </div>
-            </div>
-
-            {/* Menu Items Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {section.items.map((item, itemIndex) => (
-                <div 
-                  key={itemIndex} 
-                  className="bg-white rounded-lg p-8 card-shadow hover:shadow-lg transition-shadow"
-                >
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-bold text-forest-green pr-4">
-                      {item.name}
-                    </h3>
-                    <span className="text-xl font-bold text-ochre whitespace-nowrap">
-                      {item.price}
-                    </span>
-                  </div>
-                  <p className="text-dark-green text-body leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
             </div>
           </div>
         </section>
       ))}
 
       {/* Menu Philosophy Section */}
-      <section className="py-20 bg-forest-green text-white">
+      <section className="py-16 lg:py-20 bg-forest text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl mb-8 font-light">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+            <div className="flex-1 text-center lg:text-left">
+              <h2 className="text-3xl lg:text-4xl mb-8 font-light">
                 Our Approach
               </h2>
               <div className="space-y-6 text-lg text-white/90">
@@ -185,7 +163,7 @@ export default function MenuPage() {
               </div>
             </div>
             
-            <div className="space-y-6">
+            <div className="space-y-6 w-full lg:w-auto">
               <div className="bg-white/10 rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-3">Dietary Accommodations</h3>
                 <p className="text-white/90">Vegetarian, vegan, and gluten-free options available upon request</p>
@@ -203,28 +181,37 @@ export default function MenuPage() {
         </div>
       </section>
 
-      {/* Instagram Food Gallery */}
-      <section className="py-20 bg-warm-beige">
+      {/* Instagram Food Gallery - Vertical Images */}
+      <section className="py-16 lg:py-20 bg-warm-beige">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl text-forest-green mb-6">From Our Kitchen</h2>
-            <p className="text-xl text-dark-green text-body max-w-3xl mx-auto">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl lg:text-4xl text-forest mb-6">From Our Kitchen</h2>
+            <p className="text-lg lg:text-xl text-body max-w-3xl mx-auto">
               A glimpse into the artistry behind every dish
             </p>
           </div>
           
-          {/* Food Photo Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-            {Array.from({ length: 8 }).map((_, index) => (
+          {/* Food Photo Grid - Real Food & Drinks Photos */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mb-12">
+            {[
+              { src: "/images/brunch/DSC02693-2.jpg", alt: "Artisan brunch plate" },
+              { src: "/images/drinks/DSC02818-2.jpg", alt: "Specialty coffee creation" },
+              { src: "/images/brunch/DSC02705-2.jpg", alt: "Fresh pastries and coffee" },
+              { src: "/images/drinks/drinks-2.jpg", alt: "Signature beverages" },
+              { src: "/images/brunch/DSC02783-2.jpg", alt: "Gourmet breakfast selection" },
+              { src: "/images/drinks/DSC02900-2.jpg", alt: "Coffee craftsmanship" }
+            ].map((photo, index) => (
               <div
                 key={index}
-                className="aspect-square bg-white rounded-lg flex items-center justify-center group cursor-pointer overflow-hidden hover:shadow-lg transition-shadow"
+                className="aspect-[3/4] bg-white rounded-lg overflow-hidden group cursor-pointer hover:shadow-lg transition-shadow"
               >
-                <div className="text-forest-green/20 group-hover:text-forest-green/30 transition-colors">
-                  <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  width={300}
+                  height={400}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
             ))}
           </div>

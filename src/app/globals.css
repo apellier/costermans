@@ -2,47 +2,44 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #2d5530;
-  --forest-green: #2d5530;
-  --forest-green-light: #3a6b3e;
-  --ochre: #c4955c;
-  --ochre-light: #d4a570;
-  --gold: #b8860b;
-  --gold-light: #daa520;
-  --warm-beige: #f5f1e8;
-  --dark-green: #1a3a1c;
+  --foreground: #000000;
+  --black: #000000;
+  --white: #ffffff;
+  --forest: #065C2B;
+  --deep: #12321C;
+  --grasse: #5BAF30;
+  --sun: #EDED00;
+  --warm-beige: #F5F5DC;
+  --forest-light: #31862E;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-forest-green: var(--forest-green);
-  --color-forest-green-light: var(--forest-green-light);
-  --color-ochre: var(--ochre);
-  --color-ochre-light: var(--ochre-light);
-  --color-gold: var(--gold);
-  --color-gold-light: var(--gold-light);
+  --color-black: var(--black);
+  --color-white: var(--white);
+  --color-forest: var(--forest);
+  --color-deep: var(--deep);
+  --color-grasse: var(--grasse);
+  --color-sun: var(--sun);
   --color-warm-beige: var(--warm-beige);
-  --color-dark-green: var(--dark-green);
-  --font-sans: 'Avenir', 'Futura', -apple-system, system-ui, sans-serif;
-  --font-serif: 'Garamond', 'Times New Roman', serif;
-  --font-geometric: 'Futura', 'Avenir', 'Helvetica Neue', system-ui, sans-serif;
+  --color-forest-light: var(--forest-light);
+  --font-breathing: 'Breathing', cursive;
+  --font-space-grotesk: 'Space Grotesk', -apple-system, system-ui, sans-serif;
   --font-mono: ui-monospace, Menlo, Monaco, monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-serif);
+  font-family: var(--font-space-grotesk);
   line-height: 1.6;
   letter-spacing: 0.01em;
 }
 
-/* Subtle paper grain texture for warm-beige backgrounds */
-.bg-warm-beige {
-  background-image: 
-    radial-gradient(circle at 1px 1px, rgba(45, 85, 48, 0.03) 1px, transparent 0);
-  background-size: 20px 20px;
+/* Subtle paper grain texture for light backgrounds */
+.bg-light {
+  background-color: var(--white);
 }
 
 /* Enhanced visual hierarchy */
@@ -86,45 +83,43 @@ a, button {
 /* Elegant dividers */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--forest-green), transparent);
+  background: linear-gradient(90deg, transparent, var(--forest), transparent);
   max-width: 200px;
   margin: 2rem auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-geometric);
-  font-weight: 600;
+  font-family: var(--font-space-grotesk);
+  font-weight: 700;
   letter-spacing: 0.025em;
-  color: var(--forest-green);
+  color: var(--black);
   line-height: 1.2;
 }
 
-h1 {
-  font-weight: 700;
-  letter-spacing: 0.03em;
-}
-
-h2 {
-  font-weight: 650;
-  letter-spacing: 0.028em;
+.title-accent {
+  font-family: var(--font-breathing);
+  font-weight: normal;
+  color: var(--forest);
 }
 
 .text-body {
-  font-family: var(--font-serif);
+  font-family: var(--font-space-grotesk);
+  font-weight: 400;
   line-height: 1.7;
   letter-spacing: 0.01em;
+  color: var(--black);
 }
 
 .btn-primary {
-  background: var(--forest-green);
-  color: white;
+  background: var(--forest);
+  color: var(--white);
   padding: 0.875rem 2rem;
   border-radius: 2rem;
-  font-family: var(--font-geometric);
-  font-weight: 600;
+  font-family: var(--font-space-grotesk);
+  font-weight: 700;
   letter-spacing: 0.02em;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 4px rgba(45, 85, 48, 0.1);
+  box-shadow: 0 2px 4px rgba(6, 92, 43, 0.1);
   border: none;
   cursor: pointer;
   display: inline-block;
@@ -132,9 +127,9 @@ h2 {
 }
 
 .btn-primary:hover {
-  background: var(--ochre);
+  background: var(--grasse);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(45, 85, 48, 0.15);
+  box-shadow: 0 4px 8px rgba(6, 92, 43, 0.15);
 }
 
 .btn-primary:active {
@@ -143,24 +138,24 @@ h2 {
 
 .btn-secondary {
   background: transparent;
-  color: var(--forest-green);
+  color: var(--forest);
   padding: 0.875rem 2rem;
   border-radius: 2rem;
-  font-family: var(--font-geometric);
-  font-weight: 600;
+  font-family: var(--font-space-grotesk);
+  font-weight: 700;
   letter-spacing: 0.02em;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid var(--forest-green);
+  border: 2px solid var(--forest);
   cursor: pointer;
   display: inline-block;
   text-decoration: none;
 }
 
 .btn-secondary:hover {
-  background: var(--forest-green);
-  color: white;
+  background: var(--forest);
+  color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(45, 85, 48, 0.15);
+  box-shadow: 0 4px 8px rgba(6, 92, 43, 0.15);
 }
 
 .btn-secondary:active {
@@ -170,7 +165,7 @@ h2 {
 /* Focus styles for accessibility */
 .btn-primary:focus,
 .btn-secondary:focus {
-  outline: 2px solid var(--forest-green);
+  outline: 2px solid var(--forest);
   outline-offset: 2px;
 }
 
@@ -203,8 +198,8 @@ h2 {
   position: absolute;
   top: -40px;
   left: 6px;
-  background: var(--forest-green);
-  color: white;
+  background: var(--forest);
+  color: var(--white);
   padding: 8px;
   text-decoration: none;
   z-index: 100;
