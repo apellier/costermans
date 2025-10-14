@@ -1,0 +1,250 @@
+{
+  "navigation": {
+    "home": "Home",
+    "menu": "Menu",
+    "about": "Over Ons",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Café Costermans",
+      "subtitle": "Een geheim terras in het hart van de Zavel",
+      "cta": "Ontdek ons menu"
+    },
+    "experience": {
+      "title": "De Ervaring",
+      "subtitle": "Stap binnen in onze wereld waar erfgoed moderne café cultuur ontmoet",
+      "heritage": "Erfgoed",
+      "heritageDesc": "Verbonden met Costermans Antiquairs",
+      "atmosphere": "Sfeer",
+      "atmosphereDesc": "Geheim terras op de Zavel",
+      "quality": "Kwaliteit",
+      "qualityDesc": "Ambachtelijke koffie & verse keuken"
+    },
+    "visit": {
+      "title": "Bezoek Ons",
+      "hours": "Openingsuren",
+      "address": "Adres",
+      "days": {
+        "tuesday": "Dinsdag",
+        "wednesday": "Woensdag",
+        "thursday": "Donderdag",
+        "friday": "Vrijdag",
+        "saturday": "Zaterdag",
+        "sunday": "Zondag",
+        "monday": "Gesloten op maandag"
+      }
+    }
+  },
+  "menu": {
+    "hero": {
+      "title": "Ons Menu",
+      "subtitle": "Ambachtelijke ingrediënten ontmoeten tijdloze recepten",
+      "foodMenu": "Voedsel Menu (PDF)",
+      "drinksMenu": "Dranken Menu (PDF)",
+      "scrollText": "Scroll naar beneden om onze signature selecties te ontdekken"
+    },
+    "sections": {
+      "morningBrunch": {
+        "title": "Ochtend Brunch",
+        "description": "Begin je dag met onze signature ochtend creaties",
+        "items": {
+          "superBun": "Costermans Super Bun - €12",
+          "ndujaEggs": "N'Duja Eieren - €10",
+          "toastedBrioche": "Geroosterde Brioche - €6"
+        }
+      },
+      "lunchBrunch": {
+        "title": "Middag Lunch/Brunch",
+        "description": "Perfecte middagcombinaties van verse smaken en comfort",
+        "items": {
+          "bunLegumes": "Groenten Bun - €14",
+          "croqueJambonneau": "Croque Jambonneau - €14",
+          "tunaMelt": "Crispy Tuna Melt - €14"
+        }
+      },
+      "dinner": {
+        "title": "Diner",
+        "description": "Avondverrukkingen met verfijnde smaken en ambachtelijke technieken",
+        "items": {
+          "ravioles": "Ravioles (gevogelte, n'duja, geconfijte citroen en Thaise basilicum) - €12",
+          "pommesDauphines": "Pommes Dauphines (salieboter, zwarte knoflook en champignons) - €12",
+          "maquereau": "Makreel op Vuur (paarse vijg en shiso) - €12"
+        }
+      }
+    },
+    "philosophy": {
+      "title": "Onze Benadering",
+      "description1": "We sourcen de beste ingrediënten van vertrouwde leveranciers die onze toewijding aan kwaliteit en duurzaamheid delen. Elk gerecht reflecteert ons erfgoed van vakmanschap.",
+      "description2": "Ons menu verandert subtiel met de seizoenen, wat versheid garandeert terwijl we de tijdloze klassiekers behouden waar onze gasten van houden.",
+      "dietary": "Dieetvoorzieningen",
+      "dietaryDesc": "Vegetarische, veganistische en glutenvrije opties beschikbaar op aanvraag",
+      "sourcing": "Lokale Inkoop",
+      "sourcingDesc": "We werken samen met Belgische producenten waar mogelijk",
+      "fresh": "Dagelijks Vers",
+      "freshDesc": "Gebak elke ochtend vers gebakken, koffie wekelijks gebrand"
+    },
+    "gallery": {
+      "title": "Uit Onze Keuken",
+      "subtitle": "Een glimp van de kunstzinnigheid achter elk gerecht",
+      "follow": "Volg Onze Keuken Verhalen"
+    },
+    "footerText": "Bekijk volledige selectie in onze gedetailleerde menu PDF's hierboven"
+  },
+  "about": {
+    "hero": {
+      "title": "Ons Verhaal",
+      "subtitle": "Waar generaties vakmanschap moderne café cultuur ontmoeten"
+    },
+    "legacy": {
+      "title": "Een Erfenis van Excellentie",
+      "description1": "Café Costermans komt voort uit een rijk familie erfgoed geworteld in Costermans Antiquair, waar onze familie generaties lang een waardering heeft gekweekt voor vakmanschap, authenticiteit en de mooiste dingen in het leven.",
+      "description2": "Dit diepe begrip van kwaliteit en aandacht voor detail evolueerde natuurlijk naar ons café, waar we dezelfde principes toepassen op elke kop koffie, elk gerecht, en elk moment dat onze gasten bij ons doorbrengen.",
+      "description3": "Gelegen in het hart van de Grote Zavel, brengt ons café hulde aan dit historische plein terwijl het frisse energie brengt naar een van Brussel's meest geliefde buurten."
+    },
+    "terrace": {
+      "title": "Ons Geheime Terras",
+      "subtitle": "Verstopt in het hart van de Zavel, biedt ons terras een tijdloze ontsnapping uit de bruisende stad",
+      "description": "Natuurlijke materialen, warme verlichting en subtiele antieke details creëren een sfeer die zowel eigentijds als tijdloos aanvoelt. Elk element is gekozen om onze familie's waardering voor blijvende schoonheid en authentiek vakmanschap te reflecteren."
+    },
+    "philosophy": {
+      "title": "Onze Culinaire Filosofie",
+      "description1": "Elk gerecht vertelt een verhaal van zorgvuldige inkoop en ambachtelijke bereiding. We werken nauw samen met lokale Belgische producenten die onze toewijding aan kwaliteit en duurzaamheid delen.",
+      "description2": "Van onze signature koffie blends tot onze seizoensgebonden brunch aanbiedingen, elk element is gemaakt met dezelfde aandacht voor detail die de Costermans familie generaties lang heeft gedefinieerd.",
+      "description3": "Ons menu evolueert met de seizoenen, wat versheid garandeert terwijl we de tijdloze klassiekers behouden die favorieten zijn geworden onder onze gasten."
+    },
+    "values": {
+      "title": "Wat Ons Drijft",
+      "quality": "Kwaliteit",
+      "qualityDesc": "Elk ingrediënt, elk detail reflecteert onze onwrikbare toewijding aan excellentie",
+      "heritage": "Erfgoed",
+      "heritageDesc": "We eren ons familie erfgoed terwijl we moderne café innovatie omarmen",
+      "community": "Gemeenschap",
+      "communityDesc": "Verbindingen creëren door uitzonderlijke ervaringen in onze geheime tuin"
+    },
+    "cta": {
+      "title": "Ervaar Ons Verhaal",
+      "subtitle": "Bezoek ons geheime terras en word onderdeel van het voortdurende verhaal van Café Costermans",
+      "viewMenu": "Bekijk Ons Menu",
+      "visitUs": "Bezoek Ons"
+    }
+  },
+  "footer": {
+    "brand": {
+      "description": "Een tijdloos, lichtelijk geheim terras in het hart van de Zavel, waar erfgoed moderne café cultuur ontmoet.",
+      "heritage": "Verbonden met Costermans Antiquairs - een familietraditie van vakmanschap en authenticiteit."
+    },
+    "contact": {
+      "title": "Bezoek Ons"
+    },
+    "hours": {
+      "title": "Openingsuren",
+      "days": {
+        "tuesday": "Dinsdag",
+        "wednesday": "Woensdag",
+        "thursday": "Donderdag",
+        "friday": "Vrijdag",
+        "saturday": "Zaterdag",
+        "sunday": "Zondag",
+        "monday": "Gesloten op maandag"
+      }
+    },
+    "links": {
+      "menu": "Menu",
+      "about": "Over Ons",
+      "contact": "Contact"
+    },
+    "copyright": "Alle rechten voorbehouden."
+  },
+  "contact": {
+    "hero": {
+      "title": "Contacteer Ons",
+      "subtitle": "We zouden u graag verwelkomen op ons geheime terras"
+    },
+    "info": {
+      "title": "Contactinformatie",
+      "location": {
+        "title": "Ons Adres",
+        "description": "In het hart van de historische Zavel wijk"
+      },
+      "hours": {
+        "title": "Openingsuren",
+        "days": {
+          "tuesday": "Dinsdag",
+          "wednesday": "Woensdag",
+          "thursday": "Donderdag",
+          "friday": "Vrijdag",
+          "saturday": "Zaterdag",
+          "sunday": "Zondag",
+          "monday": "Gesloten op maandag"
+        }
+      },
+      "contact": {
+        "title": "Contact Opnemen",
+        "email": "Email",
+        "social": "Sociale Media"
+      },
+      "reservations": {
+        "title": "Reserveringen",
+        "description": "We accepteren geen reserveringen, maar neem gerust contact op voor speciale evenementen of groepen."
+      }
+    },
+    "form": {
+      "title": "Stuur Ons een Bericht",
+      "fields": {
+        "name": {
+          "label": "Naam",
+          "placeholder": "Uw volledige naam"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "uw.email@voorbeeld.com"
+        },
+        "subject": {
+          "label": "Onderwerp",
+          "placeholder": "Selecteer een onderwerp",
+          "options": {
+            "reservation": "Reservering / Groep",
+            "event": "Privé Evenement",
+            "general": "Algemene Vraag",
+            "feedback": "Feedback"
+          }
+        },
+        "message": {
+          "label": "Bericht",
+          "placeholder": "Vertel ons hoe we u kunnen helpen..."
+        }
+      },
+      "buttons": {
+        "send": "Verstuur Bericht",
+        "sending": "Verzenden..."
+      },
+      "messages": {
+        "success": "Bedankt! Uw bericht is succesvol verzonden. We nemen binnenkort contact met u op.",
+        "error": "Sorry, er is een probleem opgetreden bij het verzenden van uw bericht. Probeer het opnieuw."
+      },
+      "note": "We reageren meestal binnen 24 uur tijdens onze openingsuren."
+    },
+    "map": {
+      "title": "Vind Ons",
+      "subtitle": "Gelegen in het hart van de Grote Zavel, omringd door antiquairs en chocolatiers",
+      "placeholder": "Interactieve Kaart"
+    }
+  },
+  "instagram": {
+    "title": "Volg Ons Verhaal",
+    "subtitle": "Ervaar het dagelijkse leven van ons geheime terras via onze Instagram",
+    "follow": "@cafecostermans"
+  },
+  "common": {
+    "alt": {
+      "heroImage": "Café Costermans - Geheim terras in Brussel",
+      "brunchPlate": "Heerlijke brunch bij Café Costermans",
+      "coffee": "Ambachtelijke koffie en dranken",
+      "interior": "Interieur sfeer van Café Costermans",
+      "terrace": "Geheim terras met erfgoed sfeer",
+      "heritage": "Erfgoed sfeer en vakmanschap",
+      "community": "Gemeenschap bijeenkomst over lekker eten"
+    }
+  }
+}

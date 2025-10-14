@@ -1,7 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getTranslations } from 'next-intl/server';
 
-export default function AboutPage() {
+export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations('about');
   return (
     <div className="min-h-screen bg-white">
       {/* About Header - Mobile First Hero with Ambiance Photo */}
@@ -19,13 +22,13 @@ export default function AboutPage() {
         </div>
         
         {/* Hero Content */}
-        <div className="relative flex-1 flex items-center justify-center bg-gradient-to-br from-forest to-forest-light">
+        <div className="relative flex-1 flex items-center justify-center bg-gradient-to-br from-forest to-deep">
           <div className="text-center text-white px-4 py-8 lg:py-16">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl text-white mb-6 font-bold tracking-tight">
-              Our Story
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl !text-white mb-6 font-bold tracking-tight drop-shadow-lg">
+              {t('hero.title')}
             </h1>
             <p className="text-lg lg:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-light">
-              Where generations of craftsmanship meet modern café culture
+              {t('hero.subtitle')}
             </p>
           </div>
         </div>
@@ -39,22 +42,17 @@ export default function AboutPage() {
             {/* Story Content */}
             <div>
               <h2 className="text-3xl lg:text-4xl text-forest mb-6">
-                A Legacy of Excellence
+                {t('legacy.title')}
               </h2>
               <div className="space-y-6 text-lg text-body">
                 <p>
-                  Café Costermans emerges from a rich family heritage rooted in <strong>Costermans Antiquaire</strong>, 
-                  where for generations, our family has cultivated an appreciation for craftsmanship, 
-                  authenticity, and the finest things in life.
+                  {t('legacy.description1')}
                 </p>
                 <p>
-                  This deep understanding of quality and attention to detail naturally evolved into 
-                  our café, where we apply the same principles to every cup of coffee, every dish, 
-                  and every moment our guests spend with us.
+                  {t('legacy.description2')}
                 </p>
                 <p>
-                  Located in the heart of <strong>Place du Grand Sablon</strong>, our café pays homage to 
-                  this historic square while bringing fresh energy to one of Brussels&apos; most beloved neighborhoods.
+                  {t('legacy.description3')}
                 </p>
               </div>
             </div>
@@ -80,10 +78,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl lg:text-4xl text-forest mb-6">
-              Our Secret Terrace
+              {t('terrace.title')}
             </h2>
             <p className="text-lg lg:text-xl text-body max-w-3xl mx-auto">
-              Tucked away in the heart of Sablon, our terrace offers a timeless escape from the bustling city
+              {t('terrace.subtitle')}
             </p>
           </div>
           
@@ -122,9 +120,7 @@ export default function AboutPage() {
           <div className="text-center">
             <div className="max-w-3xl mx-auto">
               <p className="text-lg text-body leading-relaxed">
-                Natural materials, warm lighting, and subtle antique details create an atmosphere 
-                that feels both contemporary and timeless. Every element has been chosen to reflect 
-                our family&apos;s appreciation for enduring beauty and authentic craftsmanship.
+                {t('terrace.description')}
               </p>
             </div>
           </div>
@@ -151,20 +147,17 @@ export default function AboutPage() {
             {/* Approach Content */}
             <div>
               <h2 className="text-3xl lg:text-4xl text-forest mb-6">
-                Our Culinary Philosophy
+                {t('philosophy.title')}
               </h2>
               <div className="space-y-6 text-lg text-body">
                 <p>
-                  Every dish tells a story of <strong>careful sourcing</strong> and <strong>artisan preparation</strong>. 
-                  We work closely with local Belgian producers who share our commitment to quality and sustainability.
+                  {t('philosophy.description1')}
                 </p>
                 <p>
-                  From our signature coffee blends to our seasonal brunch offerings, each element is crafted 
-                  with the same attention to detail that has defined the Costermans family for generations.
+                  {t('philosophy.description2')}
                 </p>
                 <p>
-                  Our menu evolves with the seasons, ensuring freshness while maintaining the timeless classics 
-                  that have become favorites among our guests.
+                  {t('philosophy.description3')}
                 </p>
               </div>
             </div>
@@ -177,7 +170,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl lg:text-4xl text-forest mb-6">
-              What Drives Us
+              {t('values.title')}
             </h2>
           </div>
           
@@ -192,9 +185,9 @@ export default function AboutPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl lg:text-2xl text-forest mb-4">Quality</h3>
+              <h3 className="text-xl lg:text-2xl text-forest mb-4">{t('values.quality')}</h3>
               <p className="text-body">
-                Every ingredient, every detail reflects our unwavering commitment to excellence
+                {t('values.qualityDesc')}
               </p>
             </div>
             
@@ -208,9 +201,9 @@ export default function AboutPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl lg:text-2xl text-forest mb-4">Heritage</h3>
+              <h3 className="text-xl lg:text-2xl text-forest mb-4">{t('values.heritage')}</h3>
               <p className="text-body">
-                We honor our family legacy while embracing modern café innovation
+                {t('values.heritageDesc')}
               </p>
             </div>
             
@@ -224,9 +217,9 @@ export default function AboutPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl lg:text-2xl text-forest mb-4">Community</h3>
+              <h3 className="text-xl lg:text-2xl text-forest mb-4">{t('values.community')}</h3>
               <p className="text-body">
-                Creating connections over exceptional experiences in our secret garden
+                {t('values.communityDesc')}
               </p>
             </div>
           </div>
@@ -236,18 +229,18 @@ export default function AboutPage() {
       {/* Call to Action */}
       <section className="py-16 lg:py-20 bg-forest text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl mb-6 font-light">
-            Experience Our Story
+          <h2 className="text-3xl lg:text-4xl mb-6 font-light !text-white">
+            {t('cta.title')}
           </h2>
           <p className="text-lg lg:text-xl mb-8 lg:mb-12 text-white/90 font-light max-w-2xl mx-auto">
-            Visit our secret terrace and become part of the continuing story of Café Costermans
+            {t('cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center">
-            <Link href="/menu" className="bg-white text-forest border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300">
-              View Our Menu
+            <Link href="menu" className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300">
+              {t('cta.viewMenu')}
             </Link>
-            <Link href="/contact" className="bg-white text-forest border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300">
-              Visit Us
+            <Link href="contact" className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300">
+              {t('cta.visitUs')}
             </Link>
           </div>
         </div>

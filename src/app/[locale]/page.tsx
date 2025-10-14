@@ -1,8 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getTranslations } from 'next-intl/server';
 import InstagramEmbed from "@/components/InstagramEmbed";
 
-export default function Home() {
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations('home');
   return (
     <>
       {/* Hero Section - Mobile First Design with Vertical Images */}
@@ -20,17 +23,17 @@ export default function Home() {
         </div>
         
         {/* Hero Content - Mobile First Layout */}
-        <div className="relative flex-1 flex items-center justify-center bg-gradient-to-br from-forest to-forest-light">
+        <div className="relative flex-1 flex items-center justify-center bg-gradient-to-br from-forest to-deep">
           <div className="text-center text-white px-4 py-8 lg:py-16">
-            <h1 id="hero-heading" className="text-4xl sm:text-5xl lg:text-7xl text-white mb-6 font-bold tracking-tight">
-              Café Costermans
+            <h1 id="hero-heading" className="text-4xl sm:text-5xl lg:text-7xl !text-white mb-6 font-bold tracking-tight drop-shadow-lg">
+              {t('hero.title')}
             </h1>
             
             <p className="text-lg lg:text-2xl text-white/90 mb-8 max-w-2xl mx-auto font-light">
-              A secret terrace in the heart of Sablon
+              {t('hero.subtitle')}
             </p>
-            <Link href="/menu" className="bg-white text-forest border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300">
-              Discover Our Menu
+            <Link href="menu" className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300">
+              {t('hero.cta')}
             </Link>
           </div>
         </div>
@@ -47,9 +50,9 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-6">The Experience</h2>
+            <h2 className="text-4xl mb-6">{t('experience.title')}</h2>
             <p className="text-xl text-body max-w-3xl mx-auto">
-              Step into our world where heritage meets modern café culture
+              {t('experience.subtitle')}
             </p>
           </div>
           
@@ -125,16 +128,16 @@ export default function Home() {
           {/* Simple essence statements */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <h3 className="text-2xl mb-3 title-accent">Heritage</h3>
-              <p className="text-body">Connected to Costermans Antiquaire</p>
+              <h3 className="text-2xl mb-3 title-accent">{t('experience.heritage')}</h3>
+              <p className="text-body">{t('experience.heritageDesc')}</p>
             </div>
             <div>
-              <h3 className="text-2xl mb-3 title-accent">Atmosphere</h3>
-              <p className="text-body">Secret terrace in Sablon</p>
+              <h3 className="text-2xl mb-3 title-accent">{t('experience.atmosphere')}</h3>
+              <p className="text-body">{t('experience.atmosphereDesc')}</p>
             </div>
             <div>
-              <h3 className="text-2xl mb-3 title-accent">Quality</h3>
-              <p className="text-body">Artisan coffee & fresh cuisine</p>
+              <h3 className="text-2xl mb-3 title-accent">{t('experience.quality')}</h3>
+              <p className="text-body">{t('experience.qualityDesc')}</p>
             </div>
           </div>
         </div>
@@ -146,22 +149,22 @@ export default function Home() {
       {/* Visit Us Section - Simplified */}
       <section className="py-20 bg-light">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl mb-12 title-accent">Visit Us</h2>
+          <h2 className="text-4xl mb-12 title-accent">{t('visit.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl mb-4 font-bold">Heures d&apos;ouverture</h3>
+              <h3 className="text-2xl mb-4 font-bold">{t('visit.hours')}</h3>
               <div className="space-y-2 text-lg text-body">
-                <p><strong>Mardi:</strong> 09h-18h</p>
-                <p><strong>Mercredi:</strong> 09h-23h</p>
-                <p><strong>Jeudi:</strong> 09h-23h</p>
-                <p><strong>Vendredi:</strong> 09h-23h</p>
-                <p><strong>Samedi:</strong> 09h-18h</p>
-                <p><strong>Dimanche:</strong> 09h-18h</p>
-                <p className="text-sm italic">Fermé le lundi</p>
+                <p><strong>{t('visit.days.tuesday')}:</strong> 09h-18h</p>
+                <p><strong>{t('visit.days.wednesday')}:</strong> 09h-23h</p>
+                <p><strong>{t('visit.days.thursday')}:</strong> 09h-23h</p>
+                <p><strong>{t('visit.days.friday')}:</strong> 09h-23h</p>
+                <p><strong>{t('visit.days.saturday')}:</strong> 09h-18h</p>
+                <p><strong>{t('visit.days.sunday')}:</strong> 09h-18h</p>
+                <p className="text-sm italic">{t('visit.days.monday')}</p>
               </div>
             </div>
             <div>
-              <h3 className="text-2xl mb-4 font-bold">Adresse</h3>
+              <h3 className="text-2xl mb-4 font-bold">{t('visit.address')}</h3>
               <p className="text-lg mb-6 text-body">
                 5 place du grand sablon<br />
                 1000 Bruxelles

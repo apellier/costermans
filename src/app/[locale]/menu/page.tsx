@@ -1,35 +1,39 @@
 import Image from "next/image";
+import { getTranslations } from 'next-intl/server';
 
-export default function MenuPage() {
+export default async function MenuPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations('menu');
+  
   const menuHighlights = [
     {
-      title: "Morning Brunch",
-      description: "Start your day with our signature morning creations",
+      title: t('sections.morningBrunch.title'),
+      description: t('sections.morningBrunch.description'),
       image: "brunch-vertical",
       highlights: [
-        "Costermans Super Bun - €12",
-        "N'Duja Eggs - €10",
-        "Toasted Brioche - €6"
+        t('sections.morningBrunch.items.superBun'),
+        t('sections.morningBrunch.items.ndujaEggs'),
+        t('sections.morningBrunch.items.toastedBrioche')
       ]
     },
     {
-      title: "Midi Lunch/Brunch",
-      description: "Perfect midday combinations of fresh flavors and comfort",
+      title: t('sections.lunchBrunch.title'),
+      description: t('sections.lunchBrunch.description'),
       image: "lunch-vertical",
       highlights: [
-        "Bun aux Légumes - €14",
-        "Croque Jambonneau - €14",
-        "Crispy Tuna Melt - €14"
+        t('sections.lunchBrunch.items.bunLegumes'),
+        t('sections.lunchBrunch.items.croqueJambonneau'),
+        t('sections.lunchBrunch.items.tunaMelt')
       ]
     },
     {
-      title: "Dinner",
-      description: "Evening delights featuring refined flavors and artisan techniques",
+      title: t('sections.dinner.title'),
+      description: t('sections.dinner.description'),
       image: "dinner-vertical",
       highlights: [
-        "Ravioles (volaille, n'duja, citron confit et basilic thaï) - €12",
-        "Pommes Dauphines (beurre de sauge, ail noir et champignons) - €12",
-        "Maquereau à la Flamme (figue violette et shiso) - €12"
+        t('sections.dinner.items.ravioles'),
+        t('sections.dinner.items.pommesDauphines'),
+        t('sections.dinner.items.maquereau')
       ]
     }
   ];
@@ -51,13 +55,13 @@ export default function MenuPage() {
         </div>
         
         {/* Menu Content & PDF Access */}
-        <div className="relative flex-1 flex items-center justify-center bg-gradient-to-br from-forest to-forest-light">
+        <div className="relative flex-1 flex items-center justify-center bg-gradient-to-br from-forest to-deep">
           <div className="text-center text-white px-4 py-8 lg:py-16">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl text-white mb-6 font-light tracking-wide">
-              Our Menu
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl !text-white mb-6 font-light tracking-wide drop-shadow-lg">
+              {t('hero.title')}
             </h1>
             <p className="text-lg lg:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-light">
-              Artisan ingredients meet timeless recipes
+              {t('hero.subtitle')}
             </p>
             
             {/* PDF Download Options */}
@@ -66,28 +70,28 @@ export default function MenuPage() {
                 href="/Carte food.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-white text-forest border-2 border-white hover:bg-forest hover:text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2"
+                className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                Food Menu (PDF)
+                {t('hero.foodMenu')}
               </a>
               <a 
                 href="/Carte boissons.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-white text-forest border-2 border-white hover:bg-forest hover:text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2"
+                className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                Drinks Menu (PDF)
+                {t('hero.drinksMenu')}
               </a>
             </div>
             
             <p className="text-sm text-white/70">
-              Scroll down to explore our signature selections
+              {t('hero.scrollText')}
             </p>
           </div>
         </div>
@@ -135,7 +139,7 @@ export default function MenuPage() {
                 </div>
                 
                 <p className="text-sm text-body italic">
-                  View complete selection in our detailed menu PDFs above
+                  {t('footerText')}
                 </p>
               </div>
             </div>
@@ -148,33 +152,31 @@ export default function MenuPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
             <div className="flex-1 text-center lg:text-left">
-              <h2 className="text-3xl lg:text-4xl mb-8 font-light">
-                Our Approach
+              <h2 className="text-3xl lg:text-4xl mb-8 font-light !text-white">
+                {t('philosophy.title')}
               </h2>
               <div className="space-y-6 text-lg text-white/90">
                 <p>
-                  We source the finest ingredients from trusted suppliers who share our commitment 
-                  to quality and sustainability. Every dish reflects our heritage of craftsmanship.
+                  {t('philosophy.description1')}
                 </p>
                 <p>
-                  Our menu changes subtly with the seasons, ensuring freshness while maintaining 
-                  the timeless classics our guests love.
+                  {t('philosophy.description2')}
                 </p>
               </div>
             </div>
             
             <div className="space-y-6 w-full lg:w-auto">
               <div className="bg-white/10 rounded-lg p-6">
-                <h3 className="text-xl font-bold mb-3">Dietary Accommodations</h3>
-                <p className="text-white/90">Vegetarian, vegan, and gluten-free options available upon request</p>
+                <h3 className="text-xl font-bold mb-3 !text-white">{t('philosophy.dietary')}</h3>
+                <p className="text-white/90">{t('philosophy.dietaryDesc')}</p>
               </div>
               <div className="bg-white/10 rounded-lg p-6">
-                <h3 className="text-xl font-bold mb-3">Local Sourcing</h3>
-                <p className="text-white/90">We partner with Belgian producers whenever possible</p>
+                <h3 className="text-xl font-bold mb-3 !text-white">{t('philosophy.sourcing')}</h3>
+                <p className="text-white/90">{t('philosophy.sourcingDesc')}</p>
               </div>
               <div className="bg-white/10 rounded-lg p-6">
-                <h3 className="text-xl font-bold mb-3">Fresh Daily</h3>
-                <p className="text-white/90">Pastries baked fresh each morning, coffee roasted weekly</p>
+                <h3 className="text-xl font-bold mb-3 !text-white">{t('philosophy.fresh')}</h3>
+                <p className="text-white/90">{t('philosophy.freshDesc')}</p>
               </div>
             </div>
           </div>
@@ -185,9 +187,9 @@ export default function MenuPage() {
       <section className="py-16 lg:py-20 bg-warm-beige">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl lg:text-4xl text-forest mb-6">From Our Kitchen</h2>
+            <h2 className="text-3xl lg:text-4xl text-forest mb-6">{t('gallery.title')}</h2>
             <p className="text-lg lg:text-xl text-body max-w-3xl mx-auto">
-              A glimpse into the artistry behind every dish
+              {t('gallery.subtitle')}
             </p>
           </div>
           
@@ -223,7 +225,7 @@ export default function MenuPage() {
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              Follow Our Kitchen Stories
+              {t('gallery.follow')}
             </a>
           </div>
         </div>

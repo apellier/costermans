@@ -3,15 +3,19 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const t = useTranslations('navigation');
+  const locale = useLocale();
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Menu', href: '/menu' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: t('home'), href: `/${locale}` },
+    { name: t('menu'), href: `/${locale}/menu` },
+    { name: t('about'), href: `/${locale}/about` },
+    { name: t('contact'), href: `/${locale}/contact` },
   ];
 
   return (
@@ -20,7 +24,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-6">
           {/* Logo */}
           <Link 
-            href="/" 
+            href={`/${locale}`} 
             className="flex items-center space-x-3"
             aria-label="Café Costermans - Return to homepage"
           >
@@ -34,34 +38,40 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8" aria-label="Main navigation">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-black hover:text-forest transition-colors duration-300 font-space-grotesk font-bold px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
+          <div className="hidden md:flex items-center space-x-8">
+            <nav className="flex space-x-8" aria-label="Main navigation">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-black hover:text-forest transition-colors duration-300 font-space-grotesk font-bold px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+            <LanguageSwitcher />
+          </div>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-black hover:text-forest transition-colors"
-            aria-expanded={isMenuOpen}
-            aria-controls="mobile-menu"
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+          {/* Mobile menu button and language switcher */}
+          <div className="md:hidden flex items-center space-x-2">
+            <LanguageSwitcher />
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 rounded-md text-black hover:text-forest transition-colors"
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                {isMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

@@ -1,0 +1,250 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "menu": "Menu",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Café Costermans",
+      "subtitle": "Une terrasse secrète au cœur du Sablon",
+      "cta": "Découvrir notre menu"
+    },
+    "experience": {
+      "title": "L'Expérience",
+      "subtitle": "Entrez dans notre monde où l'héritage rencontre la culture moderne du café",
+      "heritage": "Héritage",
+      "heritageDesc": "Connecté aux Antiquaires Costermans",
+      "atmosphere": "Atmosphère",
+      "atmosphereDesc": "Terrasse secrète au Sablon",
+      "quality": "Qualité",
+      "qualityDesc": "Café artisanal et cuisine fraîche"
+    },
+    "visit": {
+      "title": "Nous rendre visite",
+      "hours": "Heures d'ouverture",
+      "address": "Adresse",
+      "days": {
+        "tuesday": "Mardi",
+        "wednesday": "Mercredi",
+        "thursday": "Jeudi",
+        "friday": "Vendredi",
+        "saturday": "Samedi",
+        "sunday": "Dimanche",
+        "monday": "Fermé le lundi"
+      }
+    }
+  },
+  "menu": {
+    "hero": {
+      "title": "Notre Menu",
+      "subtitle": "Des ingrédients artisanaux rencontrent des recettes intemporelles",
+      "foodMenu": "Food Menu (PDF)",
+      "drinksMenu": "Drinks Menu (PDF)",
+      "scrollText": "Faites défiler pour explorer nos sélections signature"
+    },
+    "sections": {
+      "morningBrunch": {
+        "title": "Brunch du Matin",
+        "description": "Commencez votre journée avec nos créations signature du matin",
+        "items": {
+          "superBun": "Costermans Super Bun - €12",
+          "ndujaEggs": "Œufs N'Duja - €10",
+          "toastedBrioche": "Brioche Toastée - €6"
+        }
+      },
+      "lunchBrunch": {
+        "title": "Déjeuner/Brunch Midi",
+        "description": "Combinaisons parfaites de saveurs fraîches et de réconfort pour le midi",
+        "items": {
+          "bunLegumes": "Bun aux Légumes - €14",
+          "croqueJambonneau": "Croque Jambonneau - €14",
+          "tunaMelt": "Crispy Tuna Melt - €14"
+        }
+      },
+      "dinner": {
+        "title": "Dîner",
+        "description": "Délices du soir avec des saveurs raffinées et des techniques artisanales",
+        "items": {
+          "ravioles": "Ravioles (volaille, n'duja, citron confit et basilic thaï) - €12",
+          "pommesDauphines": "Pommes dauphines (beurre de sauge, ail noir et champignons) - €12",
+          "maquereau": "Maquereau à la flamme (figue violette et shiso) - €12"
+        }
+      }
+    },
+    "philosophy": {
+      "title": "Notre approche",
+      "description1": "Nous nous approvisionnons des meilleurs ingrédients auprès de fournisseurs de confiance qui partagent notre engagement envers la qualité et la durabilité. Chaque plat reflète notre héritage d'artisanat.",
+      "description2": "Notre menu change subtilement selon les saisons, garantissant la fraîcheur tout en maintenant les classiques intemporels que nos clients adorent.",
+      "dietary": "Accommodations alimentaires",
+      "dietaryDesc": "Options végétariennes, véganes et sans gluten disponibles sur demande",
+      "sourcing": "Approvisionnement local",
+      "sourcingDesc": "Nous nous associons avec des producteurs belges quand c'est possible",
+      "fresh": "Frais quotidiennement",
+      "freshDesc": "Pâtisseries cuites fraîches chaque matin, café torréfié chaque semaine"
+    },
+    "gallery": {
+      "title": "De notre cuisine",
+      "subtitle": "Un aperçu de l'art derrière chaque plat",
+      "follow": "Suivre nos histoires de cuisine"
+    },
+    "footerText": "Voir la sélection complète dans nos menus PDF détaillés ci-dessus"
+  },
+  "about": {
+    "hero": {
+      "title": "Notre Histoire",
+      "subtitle": "Où des générations d'artisanat rencontrent la culture moderne du café"
+    },
+    "legacy": {
+      "title": "Un Héritage d'Excellence",
+      "description1": "Café Costermans émerge d'un riche héritage familial enraciné dans Costermans Antiquaire, où pendant des générations, notre famille a cultivé une appréciation pour l'artisanat, l'authenticité et les plus belles choses de la vie.",
+      "description2": "Cette compréhension profonde de la qualité et l'attention aux détails a naturellement évolué vers notre café, où nous appliquons les mêmes principes à chaque tasse de café, chaque plat, et chaque moment que nos clients passent avec nous.",
+      "description3": "Situé au cœur de la Place du Grand Sablon, notre café rend hommage à cette place historique tout en apportant une énergie fraîche à l'un des quartiers les plus aimés de Bruxelles."
+    },
+    "terrace": {
+      "title": "Notre Terrasse Secrète",
+      "subtitle": "Nichée au cœur du Sablon, notre terrasse offre une évasion intemporelle de la ville animée",
+      "description": "Matériaux naturels, éclairage chaleureux et détails antiques subtils créent une atmosphère qui se sent à la fois contemporaine et intemporelle. Chaque élément a été choisi pour refléter l'appréciation de notre famille pour la beauté durable et l'artisanat authentique."
+    },
+    "philosophy": {
+      "title": "Notre Philosophie Culinaire",
+      "description1": "Chaque plat raconte une histoire d'approvisionnement soigné et de préparation artisanale. Nous travaillons étroitement avec des producteurs belges locaux qui partagent notre engagement envers la qualité et la durabilité.",
+      "description2": "De nos mélanges de café signature à nos offres de brunch saisonnières, chaque élément est crafté avec la même attention aux détails qui a défini la famille Costermans pendant des générations.",
+      "description3": "Notre menu évolue avec les saisons, garantissant la fraîcheur tout en maintenant les classiques intemporels qui sont devenus les favoris de nos clients."
+    },
+    "values": {
+      "title": "Ce qui nous motive",
+      "quality": "Qualité",
+      "qualityDesc": "Chaque ingrédient, chaque détail reflète notre engagement inébranlable envers l'excellence",
+      "heritage": "Héritage",
+      "heritageDesc": "Nous honorons notre héritage familial tout en embrassant l'innovation moderne du café",
+      "community": "Communauté",
+      "communityDesc": "Créer des connexions grâce à des expériences exceptionnelles dans notre jardin secret"
+    },
+    "cta": {
+      "title": "Découvrir Notre Histoire",
+      "subtitle": "Visitez notre terrasse secrète et devenez partie de l'histoire continue de Café Costermans",
+      "viewMenu": "Voir Notre Menu",
+      "visitUs": "Nous Rendre Visite"
+    }
+  },
+  "footer": {
+    "brand": {
+      "description": "Une terrasse intemporelle et légèrement secrète au cœur du Sablon, où l'héritage rencontre la culture moderne du café.",
+      "heritage": "Connecté aux Antiquaires Costermans - une tradition familiale d'artisanat et d'authenticité."
+    },
+    "contact": {
+      "title": "Nous rendre visite"
+    },
+    "hours": {
+      "title": "Heures d'ouverture",
+      "days": {
+        "tuesday": "Mardi",
+        "wednesday": "Mercredi",
+        "thursday": "Jeudi",
+        "friday": "Vendredi",
+        "saturday": "Samedi",
+        "sunday": "Dimanche",
+        "monday": "Fermé le lundi"
+      }
+    },
+    "links": {
+      "menu": "Menu",
+      "about": "À propos",
+      "contact": "Contact"
+    },
+    "copyright": "Tous droits réservés."
+  },
+  "contact": {
+    "hero": {
+      "title": "Contactez-nous",
+      "subtitle": "Nous serions ravis de vous accueillir sur notre terrasse secrète"
+    },
+    "info": {
+      "title": "Informations de Contact",
+      "location": {
+        "title": "Notre Adresse",
+        "description": "Au cœur du quartier historique du Sablon"
+      },
+      "hours": {
+        "title": "Heures d'Ouverture",
+        "days": {
+          "tuesday": "Mardi",
+          "wednesday": "Mercredi",
+          "thursday": "Jeudi",
+          "friday": "Vendredi",
+          "saturday": "Samedi",
+          "sunday": "Dimanche",
+          "monday": "Fermé le lundi"
+        }
+      },
+      "contact": {
+        "title": "Nous Contacter",
+        "email": "Email",
+        "social": "Réseaux Sociaux"
+      },
+      "reservations": {
+        "title": "Réservations",
+        "description": "Nous n'acceptons pas les réservations, mais n'hésitez pas à nous contacter pour des événements spéciaux ou des groupes."
+      }
+    },
+    "form": {
+      "title": "Envoyez-nous un Message",
+      "fields": {
+        "name": {
+          "label": "Nom",
+          "placeholder": "Votre nom complet"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "votre.email@exemple.com"
+        },
+        "subject": {
+          "label": "Sujet",
+          "placeholder": "Sélectionnez un sujet",
+          "options": {
+            "reservation": "Réservation / Groupe",
+            "event": "Événement Privé",
+            "general": "Question Générale",
+            "feedback": "Commentaires"
+          }
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Dites-nous comment nous pouvons vous aider..."
+        }
+      },
+      "buttons": {
+        "send": "Envoyer le Message",
+        "sending": "Envoi en cours..."
+      },
+      "messages": {
+        "success": "Merci ! Votre message a été envoyé avec succès. Nous vous répondrons bientôt.",
+        "error": "Désolé, il y a eu un problème lors de l'envoi de votre message. Veuillez réessayer."
+      },
+      "note": "Nous répondons généralement dans les 24 heures pendant nos heures d'ouverture."
+    },
+    "map": {
+      "title": "Nous Trouver",
+      "subtitle": "Situé au cœur de la Place du Grand Sablon, entouré d'antiquaires et de chocolatiers",
+      "placeholder": "Plan Interactif"
+    }
+  },
+  "instagram": {
+    "title": "Suivez notre histoire",
+    "subtitle": "Découvrez la vie quotidienne de notre terrasse secrète à travers notre Instagram",
+    "follow": "@cafecostermans"
+  },
+  "common": {
+    "alt": {
+      "heroImage": "Café Costermans - Terrasse secrète à Bruxelles",
+      "brunchPlate": "Délicieux brunch au Café Costermans",
+      "coffee": "Café artisanal et boissons",
+      "interior": "Atmosphère intérieure du Café Costermans",
+      "terrace": "Terrasse secrète avec atmosphère patrimoniale",
+      "heritage": "Atmosphère patrimoniale et artisanat",
+      "community": "Rassemblement communautaire autour de la bonne nourriture"
+    }
+  }
+}
