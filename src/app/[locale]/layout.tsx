@@ -4,7 +4,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n/request';
 import { spaceGrotesk } from '@/lib/fonts';
-import { generatePageMetadata, defaultKeywords } from '@/lib/seo';
+import { generatePageMetadata, getKeywordsForPage } from '@/lib/seo';
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -14,7 +14,7 @@ export const metadata: Metadata = generatePageMetadata({
   description: 'Experience refined café culture at our secret terrace in Brussels\' historic Sablon district. Heritage meets modern hospitality at Café Costermans.',
   path: '',
   locale: 'fr', // Default locale
-  keywords: defaultKeywords,
+  keywords: getKeywordsForPage('fr', 'home'),
   image: '/images/home/hero.jpg'
 });
 
