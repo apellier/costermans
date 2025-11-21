@@ -10,7 +10,8 @@
     "hero": {
       "title": "Café Costermans",
       "subtitle": "Een geheim adres in het hart van de Zavel",
-      "cta": "Ontdek ons menu"
+      "dayMenu": "Dagmenu",
+      "nightMenu": "Avondmenu"
     },
     "experience": {
       "title": "De Ervaring",

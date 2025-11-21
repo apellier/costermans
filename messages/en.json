@@ -10,7 +10,8 @@
     "hero": {
       "title": "Café Costermans",
       "subtitle": "A secret address in the heart of Sablon",
-      "cta": "Discover Our Menu"
+      "dayMenu": "Day Menu",
+      "nightMenu": "Night Menu"
     },
     "experience": {
       "title": "The Experience",
