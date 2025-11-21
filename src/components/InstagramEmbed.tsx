@@ -1,5 +1,6 @@
 'use client';
 
+import Script from 'next/script';
 import { useTranslations } from 'next-intl';
 
 export default function InstagramEmbed() {
@@ -72,8 +73,27 @@ export default function InstagramEmbed() {
         </div>
       </div>
       
-      {/* Instagram Embed Script - Load once */}
-      <script async src="//www.instagram.com/embed.js"></script>
+      {/* Optimized Instagram Embed Script */}
+      <Script
+        src="https://www.instagram.com/embed.js"
+        strategy="lazyOnload"
+        onLoad={() => {
+          // Instagram script loaded - process embeds if available
+          if (typeof window !== 'undefined') {
+            const instagram = window as Window & {
+              instgrm?: {
+                Embeds: {
+                  process(): void;
+                };
+              };
+            };
+            
+            if (instagram.instgrm?.Embeds?.process) {
+              instagram.instgrm.Embeds.process();
+            }
+          }
+        }}
+      />
     </section>
   );
 }

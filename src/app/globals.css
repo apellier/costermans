@@ -25,7 +25,7 @@
   --color-warm-beige: var(--warm-beige);
   --color-forest-light: var(--forest-light);
   --font-breathing: 'Breathing', cursive;
-  --font-space-grotesk: 'Space Grotesk', -apple-system, system-ui, sans-serif;
+  --font-space-grotesk: var(--font-space-grotesk), -apple-system, system-ui, sans-serif;
   --font-mono: ui-monospace, Menlo, Monaco, monospace;
 }
 
