@@ -15,27 +15,7 @@ export default function robots(): MetadataRoute.Robots {
           '/private/',
           '*.pdf$' // Disallow direct PDF indexing, they should be accessed through pages
         ],
-      },
-      {
-        userAgent: 'GPTBot',
-        disallow: '/',
-      },
-      {
-        userAgent: 'ChatGPT-User',
-        disallow: '/',
-      },
-      {
-        userAgent: 'CCBot',
-        disallow: '/',
-      },
-      {
-        userAgent: 'anthropic-ai',
-        disallow: '/',
-      },
-      {
-        userAgent: 'Claude-Web',
-        disallow: '/',
-      },
+      }
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
     host: baseUrl,
