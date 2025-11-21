@@ -1,23 +1,24 @@
 {
   "navigation": {
     "home": "Accueil",
-    "menu": "Menu",
+    "day": "Le Jour",
+    "night": "Le Soir",
     "about": "À propos",
     "contact": "Contact"
   },
   "home": {
     "hero": {
       "title": "Café Costermans",
-      "subtitle": "Une terrasse secrète au cœur du Sablon",
+      "subtitle": "Une adresse secrète au cœur du Sablon",
       "cta": "Découvrir notre menu"
     },
     "experience": {
       "title": "L'Expérience",
-      "subtitle": "Entrez dans notre monde où l'héritage rencontre la culture moderne du café",
+      "subtitle": "Découvrez notre intérieur chaleureux et notre cour secrète où l'héritage rencontre la culture moderne du café",
       "heritage": "Héritage",
       "heritageDesc": "Connecté aux Antiquaires Costermans",
       "atmosphere": "Atmosphère",
-      "atmosphereDesc": "Terrasse secrète au Sablon",
+      "atmosphereDesc": "Intérieur cosy et cour secrète au Sablon",
       "quality": "Qualité",
       "qualityDesc": "Café artisanal et cuisine fraîche"
     },
@@ -91,6 +92,101 @@
     },
     "footerText": "Voir la sélection complète dans nos menus PDF détaillés ci-dessus"
   },
+  "day": {
+    "hero": {
+      "title": "Le Jour",
+      "subtitle": "Brunch et déjeuner artisanaux dans notre adresse secrète",
+      "foodMenu": "Menu Food (PDF)",
+      "drinksMenu": "Menu Boissons (PDF)",
+      "scrollText": "Découvrez nos créations du jour"
+    },
+    "sections": {
+      "morningBrunch": {
+        "title": "Brunch du Matin",
+        "description": "Commencez votre journée avec nos créations signature du matin",
+        "items": {
+          "superBun": "Costermans Super Bun - €12",
+          "ndujaEggs": "Œufs N'Duja - €10",
+          "toastedBrioche": "Brioche Toastée - €6"
+        }
+      },
+      "lunchBrunch": {
+        "title": "Déjeuner/Brunch Midi",
+        "description": "Combinaisons parfaites de saveurs fraîches et de réconfort pour le midi",
+        "items": {
+          "bunLegumes": "Bun aux Légumes - €14",
+          "croqueJambonneau": "Croque Jambonneau - €14",
+          "tunaMelt": "Crispy Tuna Melt - €14"
+        }
+      }
+    },
+    "philosophy": {
+      "title": "Notre approche du jour",
+      "description1": "Le jour chez nous célèbre les ingrédients frais et les préparations simples qui révèlent leurs saveurs naturelles. Chaque brunch et déjeuner reflète notre engagement envers la qualité artisanale.",
+      "description2": "De nos mélanges de café signature à nos créations du midi, nous privilégions la fraîcheur et l'authenticité pour vous accompagner tout au long de la journée.",
+      "dietary": "Options alimentaires",
+      "dietaryDesc": "Adaptations végétariennes, véganes et sans gluten disponibles",
+      "sourcing": "Ingrédients locaux",
+      "sourcingDesc": "Partenariats avec des producteurs belges de confiance",
+      "fresh": "Fraîcheur quotidienne",
+      "freshDesc": "Préparations matinales et café fraîchement torréfié"
+    },
+    "gallery": {
+      "title": "Nos créations du jour",
+      "subtitle": "L'art du brunch et du déjeuner artisanal",
+      "follow": "Suivre nos histoires du jour"
+    },
+    "footerText": "Découvrez la sélection complète dans nos menus PDF ci-dessus"
+  },
+  "night": {
+    "hero": {
+      "title": "Le Soir",
+      "subtitle": "Dîner raffiné et sélection de vins dans une atmosphère intime",
+      "foodMenu": "Menu Food (PDF)",
+      "drinksMenu": "Menu Boissons (PDF)",
+      "scrollText": "Découvrez nos délices du soir"
+    },
+    "sections": {
+      "dinner": {
+        "title": "Dîner",
+        "description": "Délices du soir avec des saveurs raffinées et des techniques artisanales",
+        "items": {
+          "ravioles": "Ravioles (volaille, n'duja, citron confit et basilic thaï) - €12",
+          "pommesDauphines": "Pommes dauphines (beurre de sauge, ail noir et champignons) - €12",
+          "maquereau": "Maquereau à la flamme (figue violette et shiso) - €12"
+        }
+      }
+    },
+    "wine": {
+      "title": "Vins & Spiritueux",
+      "subtitle": "Une sélection curatée de vins naturels et de spiritueux artisanaux pour accompagner vos soirées",
+      "features": {
+        "natural": "Vins Naturels",
+        "naturalDesc": "Sélection de vignerons indépendants et biodynamiques",
+        "curated": "Sélection Experte",
+        "curatedDesc": "Chaque bouteille choisie pour sa personnalité unique",
+        "craft": "Spiritueux Artisanaux",
+        "craftDesc": "Gin, whisky et liqueurs de producteurs passionnés"
+      }
+    },
+    "philosophy": {
+      "title": "L'esprit du soir",
+      "description1": "Le soir transforme notre espace en un refuge intime où les saveurs se complexifient et les conversations s'approfondissent. Notre menu du soir célèbre les techniques culinaires raffinées.",
+      "description2": "Accompagnés de notre sélection de vins naturels et de spiritueux artisanaux, nos plats du soir créent une expérience gastronomique mémorable dans l'atmosphère chaleureuse de notre adresse secrète.",
+      "atmosphere": "Atmosphère Intime",
+      "atmosphereDesc": "Éclairage tamisé et ambiance feutrée pour des soirées mémorables",
+      "pairings": "Accords Parfaits",
+      "pairingsDesc": "Vins et spiritueux choisis pour sublimer chaque plat",
+      "experience": "Expérience Raffinée",
+      "experienceDesc": "Service attentionné et présentation soignée"
+    },
+    "gallery": {
+      "title": "Nos soirées",
+      "subtitle": "L'art de la cuisine du soir et des accords parfaits",
+      "follow": "Suivre nos histoires du soir"
+    },
+    "footerText": "Explorez notre sélection complète dans nos menus PDF ci-dessus"
+  },
   "about": {
     "hero": {
       "title": "Notre Histoire",
@@ -102,10 +198,10 @@
       "description2": "Cette compréhension profonde de la qualité et l'attention aux détails a naturellement évolué vers notre café, où nous appliquons les mêmes principes à chaque tasse de café, chaque plat, et chaque moment que nos clients passent avec nous.",
       "description3": "Situé au cœur de la Place du Grand Sablon, notre café rend hommage à cette place historique tout en apportant une énergie fraîche à l'un des quartiers les plus aimés de Bruxelles."
     },
-    "terrace": {
-      "title": "Notre Terrasse Secrète",
-      "subtitle": "Nichée au cœur du Sablon, notre terrasse offre une évasion intemporelle de la ville animée",
-      "description": "Matériaux naturels, éclairage chaleureux et détails antiques subtils créent une atmosphère qui se sent à la fois contemporaine et intemporelle. Chaque élément a été choisi pour refléter l'appréciation de notre famille pour la beauté durable et l'artisanat authentique."
+    "space": {
+      "title": "Notre Espace Secret",
+      "subtitle": "Au cœur du Sablon, découvrez notre intérieur chaleureux et notre cour cachée, une évasion intemporelle de la ville animée",
+      "description": "Matériaux naturels, éclairage chaleureux et détails antiques subtils créent une atmosphère qui se sent à la fois contemporaine et intemporelle. Notre intérieur cosy et notre cour secrète offrent chacun une expérience unique, reflétant l'appréciation de notre famille pour la beauté durable et l'artisanat authentique."
     },
     "philosophy": {
       "title": "Notre Philosophie Culinaire",
@@ -120,18 +216,18 @@
       "heritage": "Héritage",
       "heritageDesc": "Nous honorons notre héritage familial tout en embrassant l'innovation moderne du café",
       "community": "Communauté",
-      "communityDesc": "Créer des connexions grâce à des expériences exceptionnelles dans notre jardin secret"
+      "communityDesc": "Créer des connexions grâce à des expériences exceptionnelles dans notre espace chaleureux"
     },
     "cta": {
       "title": "Découvrir Notre Histoire",
-      "subtitle": "Visitez notre terrasse secrète et devenez partie de l'histoire continue de Café Costermans",
-      "viewMenu": "Voir Notre Menu",
+      "subtitle": "Visitez notre adresse secrète et devenez partie de l'histoire continue de Café Costermans",
+      "viewArtGallery": "Accéder à la galerie d'Art",
       "visitUs": "Nous Rendre Visite"
     }
   },
   "footer": {
     "brand": {
-      "description": "Une terrasse intemporelle et légèrement secrète au cœur du Sablon, où l'héritage rencontre la culture moderne du café.",
+      "description": "Une adresse intemporelle et secrète au cœur du Sablon, avec un intérieur cosy et une cour cachée, où l'héritage rencontre la culture moderne du café.",
       "heritage": "Connecté aux Antiquaires Costermans - une tradition familiale d'artisanat et d'authenticité."
     },
     "contact": {
@@ -159,7 +255,7 @@
   "contact": {
     "hero": {
       "title": "Contactez-nous",
-      "subtitle": "Nous serions ravis de vous accueillir sur notre terrasse secrète"
+      "subtitle": "Nous serions ravis de vous accueillir dans notre adresse secrète"
     },
     "info": {
       "title": "Informations de Contact",
@@ -233,7 +329,7 @@
   },
   "instagram": {
     "title": "Suivez notre histoire",
-    "subtitle": "Découvrez la vie quotidienne de notre terrasse secrète à travers notre Instagram",
+    "subtitle": "Découvrez la vie quotidienne de notre adresse secrète à travers notre Instagram",
     "follow": "@cafecostermans"
   },
   "common": {

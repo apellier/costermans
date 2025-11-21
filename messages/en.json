@@ -1,23 +1,24 @@
 {
   "navigation": {
     "home": "Home",
-    "menu": "Menu",
+    "day": "Day",
+    "night": "Night",
     "about": "About",
     "contact": "Contact"
   },
   "home": {
     "hero": {
       "title": "Café Costermans",
-      "subtitle": "A secret terrace in the heart of Sablon",
+      "subtitle": "A secret address in the heart of Sablon",
       "cta": "Discover Our Menu"
     },
     "experience": {
       "title": "The Experience",
-      "subtitle": "Step into our world where heritage meets modern café culture",
+      "subtitle": "Discover our cozy interior and secret courtyard where heritage meets modern café culture",
       "heritage": "Heritage",
       "heritageDesc": "Connected to Costermans Antiquaire",
       "atmosphere": "Atmosphere",
-      "atmosphereDesc": "Secret terrace in Sablon",
+      "atmosphereDesc": "Cozy interior and secret courtyard in Sablon",
       "quality": "Quality",
       "qualityDesc": "Artisan coffee & fresh cuisine"
     },
@@ -91,6 +92,101 @@
     },
     "footerText": "View complete selection in our detailed menu PDFs above"
   },
+  "day": {
+    "hero": {
+      "title": "Day",
+      "subtitle": "Artisan brunch and lunch in our secret address",
+      "foodMenu": "Food Menu (PDF)",
+      "drinksMenu": "Drinks Menu (PDF)",
+      "scrollText": "Discover our daytime creations"
+    },
+    "sections": {
+      "morningBrunch": {
+        "title": "Morning Brunch",
+        "description": "Start your day with our signature morning creations",
+        "items": {
+          "superBun": "Costermans Super Bun - €12",
+          "ndujaEggs": "N'Duja Eggs - €10",
+          "toastedBrioche": "Toasted Brioche - €6"
+        }
+      },
+      "lunchBrunch": {
+        "title": "Midi Lunch/Brunch",
+        "description": "Perfect midday combinations of fresh flavors and comfort",
+        "items": {
+          "bunLegumes": "Vegetable Bun - €14",
+          "croqueJambonneau": "Croque Jambonneau - €14",
+          "tunaMelt": "Crispy Tuna Melt - €14"
+        }
+      }
+    },
+    "philosophy": {
+      "title": "Our daytime approach",
+      "description1": "Daytime with us celebrates fresh ingredients and simple preparations that reveal their natural flavors. Every brunch and lunch reflects our commitment to artisan quality.",
+      "description2": "From our signature coffee blends to our midday creations, we prioritize freshness and authenticity to accompany you throughout the day.",
+      "dietary": "Dietary Options",
+      "dietaryDesc": "Vegetarian, vegan, and gluten-free adaptations available",
+      "sourcing": "Local Ingredients",
+      "sourcingDesc": "Partnerships with trusted Belgian producers",
+      "fresh": "Daily Freshness",
+      "freshDesc": "Morning preparations and freshly roasted coffee"
+    },
+    "gallery": {
+      "title": "Our daytime creations",
+      "subtitle": "The art of artisan brunch and lunch",
+      "follow": "Follow our daytime stories"
+    },
+    "footerText": "Discover the complete selection in our PDF menus above"
+  },
+  "night": {
+    "hero": {
+      "title": "Night",
+      "subtitle": "Refined dining and wine selection in an intimate atmosphere",
+      "foodMenu": "Food Menu (PDF)",
+      "drinksMenu": "Drinks Menu (PDF)",
+      "scrollText": "Discover our evening delights"
+    },
+    "sections": {
+      "dinner": {
+        "title": "Dinner",
+        "description": "Evening delights featuring refined flavors and artisan techniques",
+        "items": {
+          "ravioles": "Ravioles (poultry, n'duja, candied lemon and Thai basil) - €12",
+          "pommesDauphines": "Pommes Dauphines (sage butter, black garlic and mushrooms) - €12",
+          "maquereau": "Flamed Mackerel (purple fig and shiso) - €12"
+        }
+      }
+    },
+    "wine": {
+      "title": "Wines & Spirits",
+      "subtitle": "A curated selection of natural wines and artisan spirits to accompany your evenings",
+      "features": {
+        "natural": "Natural Wines",
+        "naturalDesc": "Selection from independent and biodynamic vignerons",
+        "curated": "Expert Selection",
+        "curatedDesc": "Each bottle chosen for its unique personality",
+        "craft": "Artisan Spirits",
+        "craftDesc": "Gin, whisky and liqueurs from passionate producers"
+      }
+    },
+    "philosophy": {
+      "title": "The evening spirit",
+      "description1": "Evening transforms our space into an intimate refuge where flavors become complex and conversations deepen. Our evening menu celebrates refined culinary techniques.",
+      "description2": "Accompanied by our selection of natural wines and artisan spirits, our evening dishes create a memorable gastronomic experience in the warm atmosphere of our secret address.",
+      "atmosphere": "Intimate Atmosphere",
+      "atmosphereDesc": "Soft lighting and cozy ambiance for memorable evenings",
+      "pairings": "Perfect Pairings",
+      "pairingsDesc": "Wines and spirits chosen to enhance each dish",
+      "experience": "Refined Experience",
+      "experienceDesc": "Attentive service and careful presentation"
+    },
+    "gallery": {
+      "title": "Our evenings",
+      "subtitle": "The art of evening cuisine and perfect pairings",
+      "follow": "Follow our evening stories"
+    },
+    "footerText": "Explore our complete selection in our PDF menus above"
+  },
   "about": {
     "hero": {
       "title": "Our Story",
@@ -124,14 +220,14 @@
     },
     "cta": {
       "title": "Experience Our Story",
-      "subtitle": "Visit our secret terrace and become part of the continuing story of Café Costermans",
-      "viewMenu": "View Our Menu",
+      "subtitle": "Visit our secret address and become part of the continuing story of Café Costermans",
+      "viewArtGallery": "Access the Art Gallery",
       "visitUs": "Visit Us"
     }
   },
   "footer": {
     "brand": {
-      "description": "A timeless, slightly secret terrace in the heart of Sablon, where heritage meets modern café culture.",
+      "description": "A timeless secret address in the heart of Sablon, with a cozy interior and hidden courtyard, where heritage meets modern café culture.",
       "heritage": "Connected to Costermans Antiquaire - a family tradition of craftsmanship and authenticity."
     },
     "contact": {
@@ -159,7 +255,7 @@
   "contact": {
     "hero": {
       "title": "Contact Us",
-      "subtitle": "We would love to welcome you to our secret terrace"
+      "subtitle": "We would love to welcome you to our secret address"
     },
     "info": {
       "title": "Contact Information",
@@ -233,7 +329,7 @@
   },
   "instagram": {
     "title": "Follow Our Story",
-    "subtitle": "Experience the daily life of our secret terrace through our Instagram",
+    "subtitle": "Experience the daily life of our secret address through our Instagram",
     "follow": "@cafecostermans"
   },
   "common": {

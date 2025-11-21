@@ -1,23 +1,24 @@
 {
   "navigation": {
     "home": "Home",
-    "menu": "Menu",
+    "day": "De Dag",
+    "night": "De Avond",
     "about": "Over Ons",
     "contact": "Contact"
   },
   "home": {
     "hero": {
       "title": "Café Costermans",
-      "subtitle": "Een geheim terras in het hart van de Zavel",
+      "subtitle": "Een geheim adres in het hart van de Zavel",
       "cta": "Ontdek ons menu"
     },
     "experience": {
       "title": "De Ervaring",
-      "subtitle": "Stap binnen in onze wereld waar erfgoed moderne café cultuur ontmoet",
+      "subtitle": "Ontdek ons gezellige interieur en geheime binnenplaats waar erfgoed moderne café cultuur ontmoet",
       "heritage": "Erfgoed",
       "heritageDesc": "Verbonden met Costermans Antiquairs",
       "atmosphere": "Sfeer",
-      "atmosphereDesc": "Geheim terras op de Zavel",
+      "atmosphereDesc": "Gezellig interieur en geheime binnenplaats op de Zavel",
       "quality": "Kwaliteit",
       "qualityDesc": "Ambachtelijke koffie & verse keuken"
     },
@@ -91,6 +92,101 @@
     },
     "footerText": "Bekijk volledige selectie in onze gedetailleerde menu PDF's hierboven"
   },
+  "day": {
+    "hero": {
+      "title": "De Dag",
+      "subtitle": "Ambachtelijke brunch en lunch in ons geheime adres",
+      "foodMenu": "Voedsel Menu (PDF)",
+      "drinksMenu": "Dranken Menu (PDF)",
+      "scrollText": "Ontdek onze dagcreaties"
+    },
+    "sections": {
+      "morningBrunch": {
+        "title": "Ochtend Brunch",
+        "description": "Begin je dag met onze signature ochtend creaties",
+        "items": {
+          "superBun": "Costermans Super Bun - €12",
+          "ndujaEggs": "N'Duja Eieren - €10",
+          "toastedBrioche": "Geroosterde Brioche - €6"
+        }
+      },
+      "lunchBrunch": {
+        "title": "Middag Lunch/Brunch",
+        "description": "Perfecte middagcombinaties van verse smaken en comfort",
+        "items": {
+          "bunLegumes": "Groenten Bun - €14",
+          "croqueJambonneau": "Croque Jambonneau - €14",
+          "tunaMelt": "Crispy Tuna Melt - €14"
+        }
+      }
+    },
+    "philosophy": {
+      "title": "Onze dagbenadering",
+      "description1": "De dag bij ons viert verse ingrediënten en eenvoudige bereidingen die hun natuurlijke smaken onthullen. Elke brunch en lunch weerspiegelt onze toewijding aan ambachtelijke kwaliteit.",
+      "description2": "Van onze signature koffie blends tot onze middagcreaties, we geven prioriteit aan versheid en authenticiteit om je door de dag heen te begeleiden.",
+      "dietary": "Dieet Opties",
+      "dietaryDesc": "Vegetarische, veganistische en glutenvrije aanpassingen beschikbaar",
+      "sourcing": "Lokale Ingrediënten",
+      "sourcingDesc": "Partnerships met vertrouwde Belgische producenten",
+      "fresh": "Dagelijkse Versheid",
+      "freshDesc": "Ochtendbereidingen en vers gebrande koffie"
+    },
+    "gallery": {
+      "title": "Onze dagcreaties",
+      "subtitle": "De kunst van ambachtelijke brunch en lunch",
+      "follow": "Volg onze dagverhalen"
+    },
+    "footerText": "Ontdek de volledige selectie in onze PDF-menu's hierboven"
+  },
+  "night": {
+    "hero": {
+      "title": "De Avond",
+      "subtitle": "Verfijnd dineren en wijnselectie in een intieme sfeer",
+      "foodMenu": "Voedsel Menu (PDF)",
+      "drinksMenu": "Dranken Menu (PDF)",
+      "scrollText": "Ontdek onze avondverrukkingen"
+    },
+    "sections": {
+      "dinner": {
+        "title": "Diner",
+        "description": "Avondverrukkingen met verfijnde smaken en ambachtelijke technieken",
+        "items": {
+          "ravioles": "Ravioles (gevogelte, n'duja, geconfijte citroen en Thaise basilicum) - €12",
+          "pommesDauphines": "Pommes Dauphines (salieboter, zwarte knoflook en champignons) - €12",
+          "maquereau": "Makreel op Vuur (paarse vijg en shiso) - €12"
+        }
+      }
+    },
+    "wine": {
+      "title": "Wijnen & Spirituosen",
+      "subtitle": "Een selectie van natuurwijnen en ambachtelijke spirituosen om je avonden te begeleiden",
+      "features": {
+        "natural": "Natuurwijnen",
+        "naturalDesc": "Selectie van onafhankelijke en biodynamische wijnmakers",
+        "curated": "Expert Selectie",
+        "curatedDesc": "Elke fles gekozen voor zijn unieke persoonlijkheid",
+        "craft": "Ambachtelijke Spirituosen",
+        "craftDesc": "Gin, whisky en likeuren van gepassioneerde producenten"
+      }
+    },
+    "philosophy": {
+      "title": "De avondgeest",
+      "description1": "De avond transformeert onze ruimte in een intiem toevluchtsoord waar smaken complex worden en gesprekken diepgang krijgen. Ons avondmenu viert verfijnde culinaire technieken.",
+      "description2": "Begeleid door onze selectie natuurwijnen en ambachtelijke spirituosen, creëren onze avondgerechten een memorabele gastronomische ervaring in de warme sfeer van ons geheime adres.",
+      "atmosphere": "Intieme Sfeer",
+      "atmosphereDesc": "Zacht licht en gezellige ambiance voor memorabele avonden",
+      "pairings": "Perfecte Combinaties",
+      "pairingsDesc": "Wijnen en spirituosen gekozen om elk gerecht te verbeteren",
+      "experience": "Verfijnde Ervaring",
+      "experienceDesc": "Attente service en zorgvuldige presentatie"
+    },
+    "gallery": {
+      "title": "Onze avonden",
+      "subtitle": "De kunst van avondkeuken en perfecte combinaties",
+      "follow": "Volg onze avondverhalen"
+    },
+    "footerText": "Verken onze volledige selectie in onze PDF-menu's hierboven"
+  },
   "about": {
     "hero": {
       "title": "Ons Verhaal",
@@ -124,14 +220,14 @@
     },
     "cta": {
       "title": "Ervaar Ons Verhaal",
-      "subtitle": "Bezoek ons geheime terras en word onderdeel van het voortdurende verhaal van Café Costermans",
-      "viewMenu": "Bekijk Ons Menu",
+      "subtitle": "Bezoek ons geheime adres en word onderdeel van het voortdurende verhaal van Café Costermans",
+      "viewArtGallery": "Toegang tot de Kunstgalerij",
       "visitUs": "Bezoek Ons"
     }
   },
   "footer": {
     "brand": {
-      "description": "Een tijdloos, lichtelijk geheim terras in het hart van de Zavel, waar erfgoed moderne café cultuur ontmoet.",
+      "description": "Een tijdloos geheim adres in het hart van de Zavel, met een gezellig interieur en verborgen binnenplaats, waar erfgoed moderne café cultuur ontmoet.",
       "heritage": "Verbonden met Costermans Antiquairs - een familietraditie van vakmanschap en authenticiteit."
     },
     "contact": {
@@ -159,7 +255,7 @@
   "contact": {
     "hero": {
       "title": "Contacteer Ons",
-      "subtitle": "We zouden u graag verwelkomen op ons geheime terras"
+      "subtitle": "We zouden u graag verwelkomen op ons geheime adres"
     },
     "info": {
       "title": "Contactinformatie",
@@ -233,7 +329,7 @@
   },
   "instagram": {
     "title": "Volg Ons Verhaal",
-    "subtitle": "Ervaar het dagelijkse leven van ons geheime terras via onze Instagram",
+    "subtitle": "Ervaar het dagelijkse leven van ons geheime adres via onze Instagram",
     "follow": "@cafecostermans"
   },
   "common": {

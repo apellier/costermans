@@ -1,49 +1,22 @@
 'use client';
 
-import { useState } from 'react';
+import { useActionState } from 'react';
 import { useTranslations } from 'next-intl';
+import { sendContactEmail, type ContactFormState } from '@/actions/send-email';
+
+const initialState: ContactFormState = {
+  success: undefined,
+  errors: {},
+  message: '',
+};
 
 export default function ContactForm() {
   const t = useTranslations('contact.form');
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    try {
-      // Simulate form submission - replace with actual API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // For now, just show success message
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  const [state, formAction, isPending] = useActionState(sendContactEmail, initialState);
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form action={formAction} className="space-y-6">
         {/* Name */}
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-forest mb-2">
@@ -53,12 +26,15 @@ export default function ContactForm() {
             type="text"
             id="name"
             name="name"
-            value={formData.name}
-            onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-forest/20 rounded-lg focus:ring-2 focus:ring-forest focus:border-forest transition-colors"
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-forest focus:border-forest transition-colors ${
+              state?.errors?.name ? 'border-red-500' : 'border-forest/20'
+            }`}
             placeholder={t('fields.name.placeholder')}
           />
+          {state?.errors?.name && (
+            <p className="mt-1 text-sm text-red-600">{state.errors.name[0]}</p>
+          )}
         </div>
 
         {/* Email */}
@@ -70,12 +46,15 @@ export default function ContactForm() {
             type="email"
             id="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-forest/20 rounded-lg focus:ring-2 focus:ring-forest focus:border-forest transition-colors"
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-forest focus:border-forest transition-colors ${
+              state?.errors?.email ? 'border-red-500' : 'border-forest/20'
+            }`}
             placeholder={t('fields.email.placeholder')}
           />
+          {state?.errors?.email && (
+            <p className="mt-1 text-sm text-red-600">{state.errors.email[0]}</p>
+          )}
         </div>
 
         {/* Subject */}
@@ -86,10 +65,10 @@ export default function ContactForm() {
           <select
             id="subject"
             name="subject"
-            value={formData.subject}
-            onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-forest/20 rounded-lg focus:ring-2 focus:ring-forest focus:border-forest transition-colors"
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-forest focus:border-forest transition-colors ${
+              state?.errors?.subject ? 'border-red-500' : 'border-forest/20'
+            }`}
           >
             <option value="">{t('fields.subject.placeholder')}</option>
             <option value="reservation">{t('fields.subject.options.reservation')}</option>
@@ -97,6 +76,9 @@ export default function ContactForm() {
             <option value="general">{t('fields.subject.options.general')}</option>
             <option value="feedback">{t('fields.subject.options.feedback')}</option>
           </select>
+          {state?.errors?.subject && (
+            <p className="mt-1 text-sm text-red-600">{state.errors.subject[0]}</p>
+          )}
         </div>
 
         {/* Message */}
@@ -107,22 +89,25 @@ export default function ContactForm() {
           <textarea
             id="message"
             name="message"
-            value={formData.message}
-            onChange={handleChange}
             required
             rows={6}
-            className="w-full px-4 py-3 border border-forest/20 rounded-lg focus:ring-2 focus:ring-forest focus:border-forest transition-colors resize-vertical"
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-forest focus:border-forest transition-colors resize-vertical ${
+              state?.errors?.message ? 'border-red-500' : 'border-forest/20'
+            }`}
             placeholder={t('fields.message.placeholder')}
           />
+          {state?.errors?.message && (
+            <p className="mt-1 text-sm text-red-600">{state.errors.message[0]}</p>
+          )}
         </div>
 
         {/* Submit Button */}
         <button
           type="submit"
-          disabled={isSubmitting}
+          disabled={isPending}
           className="w-full bg-forest text-white px-8 py-4 rounded-full font-bold hover:bg-forest-light transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
-          {isSubmitting ? (
+          {isPending ? (
             <>
               <svg className="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -137,24 +122,24 @@ export default function ContactForm() {
       </form>
 
       {/* Status Messages */}
-      {submitStatus === 'success' && (
+      {state?.success === true && (
         <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
           <div className="flex items-center">
             <svg className="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
-            <p className="text-green-800 font-medium">{t('messages.success')}</p>
+            <p className="text-green-800 font-medium">{state.message || t('messages.success')}</p>
           </div>
         </div>
       )}
 
-      {submitStatus === 'error' && (
+      {state?.success === false && (
         <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg">
           <div className="flex items-center">
             <svg className="w-5 h-5 text-red-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
-            <p className="text-red-800 font-medium">{t('messages.error')}</p>
+            <p className="text-red-800 font-medium">{state.message || t('messages.error')}</p>
           </div>
         </div>
       )}

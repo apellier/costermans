@@ -75,6 +75,12 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 <h3 className="text-xl font-bold text-forest mb-4">{t('info.contact.title')}</h3>
                 <div className="space-y-3">
                   <div>
+                    <p className="font-medium text-forest">Téléphone</p>
+                    <a href="tel:+3225140587" className="text-forest hover:text-grasse transition-colors">
+                      +32 2 514 05 87
+                    </a>
+                  </div>
+                  <div>
                     <p className="font-medium text-forest">{t('info.contact.email')}</p>
                     <a href="mailto:cafecostermans@gmail.com" className="text-forest hover:text-grasse transition-colors">
                       cafecostermans@gmail.com
@@ -117,18 +123,18 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             </p>
           </div>
           
-          {/* Placeholder for map - can be replaced with actual map integration */}
-          <div className="aspect-[16/9] bg-white rounded-lg shadow-lg flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-forest/40 mb-4">
-                <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <p className="text-forest/60 font-medium">{t('map.placeholder')}</p>
-              <p className="text-body/60 text-sm mt-2">5 place du grand sablon, 1000 Bruxelles</p>
-            </div>
+          {/* Google Maps Integration */}
+          <div className="aspect-[16/9] bg-white rounded-lg shadow-lg overflow-hidden border-4 border-warm-beige">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.6382037936994!2d4.355472776989676!3d50.840111971394384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c47f1c8a91a5%3A0x8f67b15e6c6b4f4a!2sPlace%20du%20Grand%20Sablon%205%2C%201000%20Bruxelles!5e0!3m2!1sfr!2sbe!4v1700000000000!5m2!1sfr!2sbe"
+              width="100%"
+              height="100%"
+              style={{ border: 0, filter: 'sepia(10%) saturate(90%) hue-rotate(15deg)' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Café Costermans - 5 place du grand sablon, 1000 Bruxelles"
+            ></iframe>
           </div>
         </div>
       </section>

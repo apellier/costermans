@@ -236,9 +236,9 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             {t('cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center">
-            <Link href="menu" className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300">
-              {t('cta.viewMenu')}
-            </Link>
+            <a href="https://www.costermans-antiques.com/" target="_blank" rel="noopener noreferrer" className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300">
+              {t('cta.viewArtGallery')}
+            </a>
             <Link href="contact" className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300">
               {t('cta.visitUs')}
             </Link>

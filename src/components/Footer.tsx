@@ -62,8 +62,11 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-forest mt-8 pt-8 text-center text-white/60">
+        <div className="border-t border-forest mt-8 pt-8 text-center text-white/60 space-y-2">
           <p>&copy; {new Date().getFullYear()} Maison Costermans SRL. {t('copyright')}</p>
+          <p className="text-sm">
+            Photographies par <a href="https://tribeagency.be/" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors underline">Tribe Agency</a>
+          </p>
         </div>
       </div>
     </footer>

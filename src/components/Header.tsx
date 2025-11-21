@@ -13,7 +13,8 @@ export default function Header() {
 
   const navigation = [
     { name: t('home'), href: `/${locale}` },
-    { name: t('menu'), href: `/${locale}/menu` },
+    { name: t('day'), href: `/${locale}/day` },
+    { name: t('night'), href: `/${locale}/night` },
     { name: t('about'), href: `/${locale}/about` },
     { name: t('contact'), href: `/${locale}/contact` },
   ];
