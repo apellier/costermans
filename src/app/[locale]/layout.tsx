@@ -109,11 +109,8 @@ export default async function LocaleLayout({
       </head>
       <body className="antialiased min-h-screen flex flex-col">
         <NextIntlClientProvider messages={messages}>
-          <a href="#main-content" className="skip-link">
-            Skip to main content
-          </a>
           <Header />
-          <main id="main-content" className="flex-grow">
+          <main className="flex-grow">
             {children}
           </main>
           <Footer />

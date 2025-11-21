@@ -193,22 +193,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Skip to main content link */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: var(--forest);
-  color: var(--white);
-  padding: 8px;
-  text-decoration: none;
-  z-index: 100;
-  border-radius: 4px;
-}
-
-.skip-link:focus {
-  top: 6px;
-}
 
 /* Screen reader only content */
 .sr-only {
