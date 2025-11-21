@@ -1,10 +1,28 @@
 import Image from "next/image";
+import Link from "next/link";
+import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { IMAGES, IMAGE_SIZES } from "@/constants/images";
+import { generatePageMetadata, getKeywordsForPage } from '@/lib/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations('seo');
+  
+  return generatePageMetadata({
+    title: t('pages.day.title'),
+    description: t('pages.day.description'),
+    path: '/day',
+    locale,
+    keywords: getKeywordsForPage(locale, 'day'),
+    image: '/images/day/hero.jpg'
+  });
+}
 
 export default async function DayPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations('day');
+  const tSeo = await getTranslations('seo');
   
   const dayHighlights = [
     {
@@ -213,6 +231,7 @@ export default async function DayPage({ params }: { params: Promise<{ locale: st
               href="https://www.instagram.com/cafecostermans"
               target="_blank"
               rel="noopener noreferrer"
+              title={tSeo('links.instagram')}
               className="btn-primary"
             >
               {t('gallery.follow')}

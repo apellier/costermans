@@ -1,11 +1,28 @@
 import Image from "next/image";
+import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import ContactForm from '@/components/ContactForm';
 import { IMAGES, IMAGE_SIZES } from "@/constants/images";
+import { generatePageMetadata, getKeywordsForPage } from '@/lib/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations('seo');
+  
+  return generatePageMetadata({
+    title: t('pages.contact.title'),
+    description: t('pages.contact.description'),
+    path: '/contact',
+    locale,
+    keywords: getKeywordsForPage(locale, 'contact'),
+    image: '/images/contact/hero.jpg'
+  });
+}
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations('contact');
+  const tSeo = await getTranslations('seo');
 
   return (
     <div className="min-h-screen bg-white">
@@ -78,19 +95,33 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 <div className="space-y-3">
                   <div>
                     <p className="font-medium text-forest">Téléphone</p>
-                    <a href="tel:+3225140587" className="text-forest hover:text-grasse transition-colors">
+                    <a 
+                      href="tel:+3225140587" 
+                      title={tSeo('links.phone')}
+                      className="text-forest hover:text-grasse transition-colors"
+                    >
                       +32 2 514 05 87
                     </a>
                   </div>
                   <div>
                     <p className="font-medium text-forest">{t('info.contact.email')}</p>
-                    <a href="mailto:cafecostermans@gmail.com" className="text-forest hover:text-grasse transition-colors">
+                    <a 
+                      href="mailto:cafecostermans@gmail.com" 
+                      title={tSeo('links.email')}
+                      className="text-forest hover:text-grasse transition-colors"
+                    >
                       cafecostermans@gmail.com
                     </a>
                   </div>
                   <div>
                     <p className="font-medium text-forest">{t('info.contact.social')}</p>
-                    <a href="https://www.instagram.com/cafecostermans" target="_blank" rel="noopener noreferrer" className="text-forest hover:text-grasse transition-colors">
+                    <a 
+                      href="https://www.instagram.com/cafecostermans" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      title={tSeo('links.instagram')}
+                      className="text-forest hover:text-grasse transition-colors"
+                    >
                       @cafecostermans
                     </a>
                   </div>

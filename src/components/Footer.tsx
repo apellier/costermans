@@ -7,6 +7,7 @@ type FooterProps = {
 
 export default async function Footer({ locale }: FooterProps) {
   const t = await getTranslations('footer');
+  const tSeo = await getTranslations('seo');
   return (
     <footer className="bg-deep text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -50,16 +51,32 @@ export default async function Footer({ locale }: FooterProps) {
             </div>
             
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-              <Link href={`/${locale}/day`} className="text-white hover:text-grasse transition-colors font-space-grotesk">
+              <Link 
+                href={`/${locale}/day`} 
+                title={tSeo('navigation.day')}
+                className="text-white hover:text-grasse transition-colors font-space-grotesk"
+              >
                 {t('links.menu')}
               </Link>
-              <Link href={`/${locale}/about`} className="text-white hover:text-grasse transition-colors font-space-grotesk">
+              <Link 
+                href={`/${locale}/about`} 
+                title={tSeo('navigation.about')}
+                className="text-white hover:text-grasse transition-colors font-space-grotesk"
+              >
                 {t('links.about')}
               </Link>
-              <Link href={`/${locale}/contact`} className="text-white hover:text-grasse transition-colors font-space-grotesk">
+              <Link 
+                href={`/${locale}/contact`} 
+                title={tSeo('navigation.contact')}
+                className="text-white hover:text-grasse transition-colors font-space-grotesk"
+              >
                 {t('links.contact')}
               </Link>
-              <Link href={`/${locale}/legal`} className="text-white hover:text-grasse transition-colors font-space-grotesk">
+              <Link 
+                href={`/${locale}/legal`} 
+                title={tSeo('pages.legal.title')}
+                className="text-white hover:text-grasse transition-colors font-space-grotesk"
+              >
                 {t('links.legal')}
               </Link>
             </div>

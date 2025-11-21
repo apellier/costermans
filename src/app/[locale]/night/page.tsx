@@ -1,6 +1,22 @@
 import Image from "next/image";
+import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { IMAGES, IMAGE_SIZES } from "@/constants/images";
+import { generatePageMetadata, getKeywordsForPage } from '@/lib/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations('seo');
+  
+  return generatePageMetadata({
+    title: t('pages.night.title'),
+    description: t('pages.night.description'),
+    path: '/night',
+    locale,
+    keywords: getKeywordsForPage(locale, 'night'),
+    image: '/images/night/hero.jpg'
+  });
+}
 
 export default async function NightPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

@@ -374,5 +374,49 @@
       "content1": "Conformément au Règlement général sur la protection des données (RGPD), nous nous engageons à protéger vos données personnelles. Les informations que vous nous fournissez via notre formulaire de contact ne sont utilisées que pour répondre à vos demandes.",
       "content2": "Vos données ne sont pas transmises à des tiers et sont conservées uniquement le temps nécessaire au traitement de votre demande. Vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles."
     }
+  },
+  "seo": {
+    "pages": {
+      "home": {
+        "title": "Café Costermans",
+        "description": "Découvrez notre intérieur chaleureux et notre cour secrète au cœur du Sablon. Une adresse secrète où l'héritage rencontre la culture moderne du café."
+      },
+      "day": {
+        "title": "Menu Jour - Brunch et Déjeuner",
+        "description": "Découvrez notre menu du jour avec des brunchs matinaux et déjeuners frais. Ingrédients artisanaux et recettes intemporelles au Café Costermans."
+      },
+      "night": {
+        "title": "Menu Soir - Dîner et Vins",
+        "description": "Découvrez notre menu du soir avec des dîners raffinés et une sélection de vins naturels. Atmosphère intimiste pour vos soirées au Café Costermans."
+      },
+      "about": {
+        "title": "À Propos - Histoire et Héritage",
+        "description": "Découvrez l'histoire du Café Costermans, connecté aux Antiquaires Costermans. Une tradition familiale d'artisanat et d'authenticité au cœur du Sablon."
+      },
+      "contact": {
+        "title": "Contact - Nous Joindre",
+        "description": "Contactez le Café Costermans au 5 place du grand sablon, 1000 Bruxelles. Heures d'ouverture, réservations et informations pratiques."
+      },
+      "legal": {
+        "title": "Mentions Légales",
+        "description": "Mentions légales du Café Costermans - Maison Costermans SRL. Informations légales, politique de confidentialité et conditions d'utilisation."
+      }
+    },
+    "navigation": {
+      "home": "Accueil - Découvrez le Café Costermans",
+      "day": "Menu Jour - Brunch et déjeuner",
+      "night": "Menu Soir - Dîner et vins",
+      "about": "À propos - Notre histoire et héritage",
+      "contact": "Contact - Nous joindre et réserver"
+    },
+    "links": {
+      "dayMenu": "Découvrez notre menu jour - Brunch et déjeuner",
+      "nightMenu": "Découvrez notre menu soir - Dîner et vins",
+      "instagram": "Suivez-nous sur Instagram",
+      "antiques": "Découvrez la galerie d'art et les antiquités Costermans",
+      "visitUs": "Contactez-nous pour une visite ou réservation",
+      "phone": "Appelez le Café Costermans",
+      "email": "Envoyez-nous un email"
+    }
   }
 }

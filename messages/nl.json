@@ -374,5 +374,49 @@
       "content1": "In overeenstemming met de Algemene Verordening Gegevensbescherming (AVG) zijn we toegewijd aan het beschermen van uw persoonlijke gegevens. Informatie die u ons verstrekt via ons contactformulier wordt alleen gebruikt om te reageren op uw verzoeken.",
       "content2": "Uw gegevens worden niet gedeeld met derden en worden alleen bewaard zolang nodig is om uw verzoek te verwerken. U heeft het recht om uw persoonlijke gegevens in te zien, te corrigeren en te verwijderen."
     }
+  },
+  "seo": {
+    "pages": {
+      "home": {
+        "title": "Café Costermans",
+        "description": "Ontdek ons gezellige interieur en geheime binnenplaats in het hart van de Zavel. Een geheim adres waar erfgoed moderne café cultuur ontmoet."
+      },
+      "day": {
+        "title": "Dagmenu - Brunch & Lunch",
+        "description": "Ontdek ons dagmenu met verse ochtendbrunch en lunch aanbiedingen. Ambachtelijke ingrediënten en tijdloze recepten bij Café Costermans."
+      },
+      "night": {
+        "title": "Avondmenu - Diner & Wijn",
+        "description": "Ontdek ons avondmenu met verfijnde diners en natuurlijke wijnselectie. Intieme sfeer voor uw avonden bij Café Costermans."
+      },
+      "about": {
+        "title": "Over Ons - Geschiedenis & Erfgoed",
+        "description": "Ontdek het verhaal van Café Costermans, verbonden met Costermans Antiquairs. Een familietraditie van vakmanschap en authenticiteit in het hart van de Zavel."
+      },
+      "contact": {
+        "title": "Contact - Neem Contact Op",
+        "description": "Neem contact op met Café Costermans op 5 place du grand sablon, 1000 Brussel. Openingstijden, reserveringen en praktische informatie."
+      },
+      "legal": {
+        "title": "Juridische Informatie",
+        "description": "Juridische informatie voor Café Costermans - Maison Costermans SRL. Juridische informatie, privacybeleid en gebruiksvoorwaarden."
+      }
+    },
+    "navigation": {
+      "home": "Home - Ontdek Café Costermans",
+      "day": "Dagmenu - Brunch en lunch",
+      "night": "Avondmenu - Diner en wijn",
+      "about": "Over ons - Ons verhaal en erfgoed",
+      "contact": "Contact - Neem contact op en reserveer"
+    },
+    "links": {
+      "dayMenu": "Ontdek ons dagmenu - Brunch en lunch",
+      "nightMenu": "Ontdek ons avondmenu - Diner en wijn",
+      "instagram": "Volg ons op Instagram",
+      "antiques": "Ontdek de kunstgalerie en Costermans antiek",
+      "visitUs": "Neem contact op voor een bezoek of reservering",
+      "phone": "Bel Café Costermans",
+      "email": "Stuur ons een e-mail"
+    }
   }
 }

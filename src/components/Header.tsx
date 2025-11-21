@@ -10,14 +10,15 @@ import { IMAGES, IMAGE_SIZES } from "@/constants/images";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = useTranslations('navigation');
+  const tSeo = useTranslations('seo');
   const locale = useLocale();
 
   const navigation = [
-    { name: t('home'), href: `/${locale}` },
-    { name: t('day'), href: `/${locale}/day` },
-    { name: t('night'), href: `/${locale}/night` },
-    { name: t('about'), href: `/${locale}/about` },
-    { name: t('contact'), href: `/${locale}/contact` },
+    { name: t('home'), href: `/${locale}`, title: tSeo('navigation.home') },
+    { name: t('day'), href: `/${locale}/day`, title: tSeo('navigation.day') },
+    { name: t('night'), href: `/${locale}/night`, title: tSeo('navigation.night') },
+    { name: t('about'), href: `/${locale}/about`, title: tSeo('navigation.about') },
+    { name: t('contact'), href: `/${locale}/contact`, title: tSeo('navigation.contact') },
   ];
 
   return (
@@ -47,6 +48,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
+                  title={item.title}
                   className="text-black hover:text-forest transition-colors duration-300 font-space-grotesk font-bold px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2"
                 >
                   {item.name}
@@ -85,6 +87,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
+                  title={item.title}
                   className="text-black hover:text-forest transition-colors duration-300 font-space-grotesk font-bold px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2"
                   onClick={() => setIsMenuOpen(false)}
                 >

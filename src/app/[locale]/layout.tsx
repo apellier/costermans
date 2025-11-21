@@ -4,48 +4,19 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n/request';
 import { spaceGrotesk } from '@/lib/fonts';
+import { generatePageMetadata, defaultKeywords } from '@/lib/seo';
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-export const metadata: Metadata = {
-  title: {
-    template: '%s | Café Costermans',
-    default: 'Café Costermans - Secret Terrace in Brussels Sablon'
-  },
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Café Costermans',
   description: 'Experience refined café culture at our secret terrace in Brussels\' historic Sablon district. Heritage meets modern hospitality at Café Costermans.',
-  keywords: ['café Brussels', 'Sablon restaurant', 'terrace dining Brussels', 'brunch Brussels', 'antique district café', 'heritage restaurant Brussels', 'Place du Grand Sablon'],
-  authors: [{ name: 'Café Costermans' }],
-  creator: 'Café Costermans',
-  publisher: 'Café Costermans',
-  alternates: {
-    canonical: 'https://costermans.be',
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://costermans.be',
-    title: 'Café Costermans - Secret Terrace in Brussels Sablon',
-    description: 'Experience refined café culture at our secret terrace in Brussels\' historic Sablon district. Heritage meets modern hospitality.',
-    siteName: 'Café Costermans',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Café Costermans - Secret Terrace in Brussels Sablon',
-    description: 'Experience refined café culture at our secret terrace in Brussels\' historic Sablon district.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+  path: '',
+  locale: 'fr', // Default locale
+  keywords: defaultKeywords,
+  image: '/images/home/hero.jpg'
+});
 
 type Props = {
   children: React.ReactNode;

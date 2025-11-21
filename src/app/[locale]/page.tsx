@@ -1,12 +1,29 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import InstagramEmbed from "@/components/InstagramEmbed";
 import { IMAGES, IMAGE_SIZES } from "@/constants/images";
+import { generatePageMetadata, getKeywordsForPage } from '@/lib/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations('seo');
+  
+  return generatePageMetadata({
+    title: t('pages.home.title'),
+    description: t('pages.home.description'),
+    path: '',
+    locale,
+    keywords: getKeywordsForPage(locale, 'home'),
+    image: '/images/home/hero.jpg'
+  });
+}
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations('home');
+  const tSeo = await getTranslations('seo');
   return (
     <>
       {/* Hero Section - Mobile First Design with Vertical Images */}
@@ -37,10 +54,18 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             
             {/* Day and Night Menu Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href={`/${locale}/day`} className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300">
+              <Link 
+                href={`/${locale}/day`} 
+                title={tSeo('links.dayMenu')}
+                className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300"
+              >
                 {t('hero.dayMenu')}
               </Link>
-              <Link href={`/${locale}/night`} className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300">
+              <Link 
+                href={`/${locale}/night`} 
+                title={tSeo('links.nightMenu')}
+                className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300"
+              >
                 {t('hero.nightMenu')}
               </Link>
             </div>

@@ -374,5 +374,49 @@
       "content1": "In accordance with the General Data Protection Regulation (GDPR), we are committed to protecting your personal data. Information you provide to us through our contact form is used only to respond to your requests.",
       "content2": "Your data is not shared with third parties and is kept only as long as necessary to process your request. You have the right to access, correct and delete your personal data."
     }
+  },
+  "seo": {
+    "pages": {
+      "home": {
+        "title": "Café Costermans",
+        "description": "Discover our cozy interior and secret courtyard in the heart of Sablon. A secret address where heritage meets modern café culture."
+      },
+      "day": {
+        "title": "Day Menu - Brunch & Lunch",
+        "description": "Discover our day menu with fresh morning brunch and lunch offerings. Artisan ingredients and timeless recipes at Café Costermans."
+      },
+      "night": {
+        "title": "Night Menu - Dinner & Wine",
+        "description": "Discover our evening menu with refined dinners and natural wine selection. Intimate atmosphere for your evenings at Café Costermans."
+      },
+      "about": {
+        "title": "About - History & Heritage",
+        "description": "Discover the story of Café Costermans, connected to Costermans Antique dealers. A family tradition of craftsmanship and authenticity in the heart of Sablon."
+      },
+      "contact": {
+        "title": "Contact - Get In Touch",
+        "description": "Contact Café Costermans at 5 place du grand sablon, 1000 Brussels. Opening hours, reservations and practical information."
+      },
+      "legal": {
+        "title": "Legal Notice",
+        "description": "Legal notice for Café Costermans - Maison Costermans SRL. Legal information, privacy policy and terms of use."
+      }
+    },
+    "navigation": {
+      "home": "Home - Discover Café Costermans",
+      "day": "Day Menu - Brunch and lunch",
+      "night": "Night Menu - Dinner and wine",
+      "about": "About - Our story and heritage",
+      "contact": "Contact - Get in touch and reserve"
+    },
+    "links": {
+      "dayMenu": "Discover our day menu - Brunch and lunch",
+      "nightMenu": "Discover our night menu - Dinner and wine",
+      "instagram": "Follow us on Instagram",
+      "antiques": "Discover the art gallery and Costermans antiques",
+      "visitUs": "Contact us for a visit or reservation",
+      "phone": "Call Café Costermans",
+      "email": "Send us an email"
+    }
   }
 }

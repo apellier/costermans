@@ -1,11 +1,28 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { IMAGES, IMAGE_SIZES } from "@/constants/images";
+import { generatePageMetadata, getKeywordsForPage } from '@/lib/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations('seo');
+  
+  return generatePageMetadata({
+    title: t('pages.about.title'),
+    description: t('pages.about.description'),
+    path: '/about',
+    locale,
+    keywords: getKeywordsForPage(locale, 'about'),
+    image: '/images/about/hero.jpg'
+  });
+}
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations('about');
+  const tSeo = await getTranslations('seo');
   return (
     <div className="min-h-screen bg-white">
       {/* About Header - Mobile First Hero with Ambiance Photo */}
@@ -246,10 +263,20 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             {t('cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center">
-            <a href="https://www.costermans-antiques.com/" target="_blank" rel="noopener noreferrer" className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300">
+            <a 
+              href="https://www.costermans-antiques.com/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              title={tSeo('links.antiques')}
+              className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300"
+            >
               {t('cta.viewArtGallery')}
             </a>
-            <Link href="contact" className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300">
+            <Link 
+              href="contact" 
+              title={tSeo('links.visitUs')}
+              className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300"
+            >
               {t('cta.visitUs')}
             </Link>
           </div>

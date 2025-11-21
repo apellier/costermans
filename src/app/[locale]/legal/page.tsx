@@ -1,4 +1,20 @@
+import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { generatePageMetadata, getKeywordsForPage } from '@/lib/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations('seo');
+  
+  return generatePageMetadata({
+    title: t('pages.legal.title'),
+    description: t('pages.legal.description'),
+    path: '/legal',
+    locale,
+    keywords: getKeywordsForPage(locale, 'legal'),
+    image: '/images/home/hero.jpg'
+  });
+}
 
 export default async function LegalPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
