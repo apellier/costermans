@@ -66,7 +66,7 @@ export const IMAGES = {
 
   // Common/shared images across pages
   common: {
-    logo: "/logo-costermans.png", // Logo stays in root
+    logo: "/images/common/logo.png",
   },
 } as const;
 
