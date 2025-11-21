@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getTranslations } from 'next-intl/server';
+import { IMAGES, IMAGE_SIZES } from "@/constants/images";
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -12,10 +13,11 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         {/* Hero Image - Interior/Ambiance Photo */}
         <div className="relative flex-1 min-h-[60vh] lg:min-h-screen overflow-hidden">
           <Image
-            src="/images/ambiance/DSC02865-2.jpg"
+            src={IMAGES.about.hero}
             alt="Café Costermans - Interior heritage atmosphere"
             fill
             className="object-cover"
+            sizes={IMAGE_SIZES.hero}
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-forest/20 via-forest/10 to-forest/30"></div>
@@ -61,11 +63,12 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             <div className="order-first lg:order-last">
               <div className="aspect-[4/5] bg-warm-beige rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
                 <Image
-                  src="/images/ambiance/DSC02741-2.jpg"
+                  src={IMAGES.about.heritage}
                   alt="Heritage atmosphere at Café Costermans"
                   width={500}
                   height={625}
                   className="w-full h-full object-cover"
+                  sizes={IMAGE_SIZES.card}
                 />
               </div>
             </div>
@@ -89,29 +92,32 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mb-12 lg:mb-16">
             <div className="aspect-[4/3] bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
               <Image
-                src="/images/ambiance/terrace.jpg"
+                src={IMAGES.about.terrace.main}
                 alt="Secret terrace seating area"
                 width={400}
                 height={300}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                sizes={IMAGE_SIZES.galleryLarge}
               />
             </div>
             <div className="aspect-[4/3] bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
               <Image
-                src="/images/ambiance/terrace-statue.jpg"
+                src={IMAGES.about.terrace.heritage}
                 alt="Heritage terrace with vintage details"
                 width={400}
                 height={300}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                sizes={IMAGE_SIZES.galleryLarge}
               />
             </div>
             <div className="aspect-[4/3] bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer sm:col-span-2 lg:col-span-1">
               <Image
-                src="/images/ambiance/DSC02753-2.jpg"
+                src={IMAGES.about.terrace.intimate}
                 alt="Intimate terrace atmosphere"
                 width={400}
                 height={300}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                sizes={IMAGE_SIZES.galleryLarge}
               />
             </div>
           </div>
@@ -135,11 +141,12 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             <div>
               <div className="aspect-[4/5] bg-warm-beige rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
                 <Image
-                  src="/images/brunch/DSC02824-2.jpg"
+                  src={IMAGES.about.philosophy}
                   alt="Artisan food preparation at Café Costermans"
                   width={500}
                   height={625}
                   className="w-full h-full object-cover"
+                  sizes={IMAGE_SIZES.card}
                 />
               </div>
             </div>
@@ -178,11 +185,12 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             <div className="text-center">
               <div className="aspect-[3/4] bg-white rounded-lg overflow-hidden mb-6 mx-auto max-w-48 hover:shadow-lg transition-shadow">
                 <Image
-                  src="/images/drinks/DSC02794.jpg"
+                  src={IMAGES.about.values.quality}
                   alt="Quality coffee craftsmanship"
                   width={300}
                   height={400}
                   className="w-full h-full object-cover"
+                  sizes={IMAGE_SIZES.small}
                 />
               </div>
               <h3 className="text-xl lg:text-2xl text-forest mb-4">{t('values.quality')}</h3>
@@ -194,11 +202,12 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             <div className="text-center">
               <div className="aspect-[3/4] bg-white rounded-lg overflow-hidden mb-6 mx-auto max-w-48 hover:shadow-lg transition-shadow">
                 <Image
-                  src="/images/ambiance/IMG_6551.jpg"
+                  src={IMAGES.about.values.heritage}
                   alt="Heritage atmosphere and craftsmanship"
                   width={300}
                   height={400}
                   className="w-full h-full object-cover"
+                  sizes={IMAGE_SIZES.small}
                 />
               </div>
               <h3 className="text-xl lg:text-2xl text-forest mb-4">{t('values.heritage')}</h3>
@@ -210,11 +219,12 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             <div className="text-center">
               <div className="aspect-[3/4] bg-white rounded-lg overflow-hidden mb-6 mx-auto max-w-48 hover:shadow-lg transition-shadow">
                 <Image
-                  src="/images/brunch/IMG_6514.jpg"
+                  src={IMAGES.about.values.community}
                   alt="Community gathering over great food"
                   width={300}
                   height={400}
                   className="w-full h-full object-cover"
+                  sizes={IMAGE_SIZES.small}
                 />
               </div>
               <h3 className="text-xl lg:text-2xl text-forest mb-4">{t('values.community')}</h3>

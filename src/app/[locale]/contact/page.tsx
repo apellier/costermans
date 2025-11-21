@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getTranslations } from 'next-intl/server';
 import ContactForm from '@/components/ContactForm';
+import { IMAGES, IMAGE_SIZES } from "@/constants/images";
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -13,10 +14,11 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         {/* Hero Image - Terrace Photo */}
         <div className="relative flex-1 min-h-[60vh] lg:min-h-screen overflow-hidden">
           <Image
-            src="/images/ambiance/terrace.jpg"
-            alt="Café Costermans - Contact us about our secret terrace"
+            src={IMAGES.contact.hero}
+            alt="Café Costermans - Contact us about our secret address"
             fill
             className="object-cover"
+            sizes={IMAGE_SIZES.hero}
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-forest/20 via-forest/10 to-forest/30"></div>

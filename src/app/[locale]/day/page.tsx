@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from 'next-intl/server';
+import { IMAGES, IMAGE_SIZES } from "@/constants/images";
 
 export default async function DayPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -35,10 +36,11 @@ export default async function DayPage({ params }: { params: Promise<{ locale: st
         {/* Hero Image - Bright/Daytime Photo */}
         <div className="relative flex-1 min-h-[50vh] lg:min-h-screen overflow-hidden">
           <Image
-            src="/images/brunch/DSC02698-2.jpg"
+            src={IMAGES.day.hero}
             alt="Café Costermans - Day menu with fresh brunch and lunch offerings"
             fill
             className="object-cover"
+            sizes={IMAGE_SIZES.hero}
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-forest/20 via-forest/10 to-forest/30"></div>
@@ -97,11 +99,12 @@ export default async function DayPage({ params }: { params: Promise<{ locale: st
               <div className="w-full lg:w-1/3">
                 <div className="aspect-[3/4] bg-warm-beige rounded-lg overflow-hidden mx-auto max-w-sm lg:max-w-none hover:shadow-lg transition-shadow">
                   <Image
-                    src={sectionIndex === 0 ? "/images/brunch/DSC02686-2.jpg" : "/images/brunch/DSC02828-2.jpg"}
+                    src={sectionIndex === 0 ? IMAGES.day.morningBrunch : IMAGES.day.lunch}
                     alt={`${section.title} at Café Costermans`}
                     width={400}
                     height={533}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    sizes={IMAGE_SIZES.card}
                   />
                 </div>
               </div>
@@ -182,12 +185,12 @@ export default async function DayPage({ params }: { params: Promise<{ locale: st
           {/* Day Food Photo Grid - Brunch & Lunch focused */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mb-12">
             {[
-              { src: "/images/brunch/DSC02693-2.jpg", alt: "Morning brunch at Café Costermans" },
-              { src: "/images/drinks/DSC02818-2.jpg", alt: "Coffee and daytime beverages" },
-              { src: "/images/brunch/DSC02705-2.jpg", alt: "Fresh lunch offerings" },
-              { src: "/images/drinks/drinks-2.jpg", alt: "Daytime specialty drinks" },
-              { src: "/images/brunch/DSC02783-2.jpg", alt: "Artisan lunch selection" },
-              { src: "/images/drinks/DSC02900-2.jpg", alt: "Morning coffee ritual" }
+              { src: IMAGES.day.gallery.brunchPlate, alt: "Morning brunch at Café Costermans" },
+              { src: IMAGES.day.gallery.coffeeDrinks, alt: "Coffee and daytime beverages" },
+              { src: IMAGES.day.gallery.freshLunch, alt: "Fresh lunch offerings" },
+              { src: IMAGES.day.gallery.specialtyDrinks, alt: "Daytime specialty drinks" },
+              { src: IMAGES.day.gallery.artisanLunch, alt: "Artisan lunch selection" },
+              { src: IMAGES.day.gallery.morningCoffee, alt: "Morning coffee ritual" }
             ].map((photo, index) => (
               <div
                 key={index}
@@ -199,6 +202,7 @@ export default async function DayPage({ params }: { params: Promise<{ locale: st
                   width={300}
                   height={400}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes={IMAGE_SIZES.gallery}
                 />
               </div>
             ))}

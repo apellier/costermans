@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
+import { IMAGES, IMAGE_SIZES } from "@/constants/images";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,11 +31,12 @@ export default function Header() {
             aria-label="Café Costermans - Return to homepage"
           >
             <Image 
-              src="/logo-costermans.png" 
+              src={IMAGES.common.logo} 
               alt="Café Costermans" 
               width={120}
               height={40}
               className="h-10 w-auto"
+              sizes={IMAGE_SIZES.small}
             />
           </Link>
 

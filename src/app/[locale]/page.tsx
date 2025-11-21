@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getTranslations } from 'next-intl/server';
 import InstagramEmbed from "@/components/InstagramEmbed";
+import { IMAGES, IMAGE_SIZES } from "@/constants/images";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -13,10 +14,11 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         {/* Hero Background - Landing Image */}
         <div className="relative flex-1 min-h-[60vh] lg:min-h-screen overflow-hidden">
           <Image
-            src="/images/landing/landing_picture.jpg"
-            alt="Café Costermans - Secret terrace in Brussels"
+            src={IMAGES.home.hero}
+            alt="Café Costermans - Secret address in Brussels"
             fill
             className="object-cover"
+            sizes={IMAGE_SIZES.heroFull}
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-forest/20 via-forest/10 to-forest/30"></div>
@@ -61,66 +63,72 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             {/* Ambiance photos */}
             <div className="aspect-[3/4] bg-warm-beige rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
               <Image
-                src="/images/ambiance/terrace-2.jpg"
+                src={IMAGES.home.ambianceTerrace}
                 alt="Café Costermans terrace ambiance"
                 width={300}
                 height={400}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                sizes={IMAGE_SIZES.gallery}
               />
             </div>
             
             {/* Brunch photo */}
             <div className="aspect-[3/4] bg-warm-beige rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
               <Image
-                src="/images/brunch/DSC02677-2.jpg"
+                src={IMAGES.home.brunchSample}
                 alt="Delicious brunch at Café Costermans"
                 width={300}
                 height={400}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                sizes={IMAGE_SIZES.gallery}
               />
             </div>
             
             {/* Drinks photo */}
             <div className="aspect-[3/4] bg-warm-beige rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
               <Image
-                src="/images/drinks/DSC02790-2.jpg"
+                src={IMAGES.home.coffeeDrinks}
                 alt="Artisan coffee and drinks"
                 width={300}
                 height={400}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                sizes={IMAGE_SIZES.gallery}
               />
             </div>
             
             {/* Another ambiance photo */}
             <div className="aspect-[3/4] bg-warm-beige rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
               <Image
-                src="/images/ambiance/DSC02858-2.jpg"
+                src={IMAGES.home.interior}
                 alt="Interior atmosphere of Café Costermans"
                 width={300}
                 height={400}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                sizes={IMAGE_SIZES.gallery}
               />
             </div>
             
             {/* Food photo */}
             <div className="aspect-[3/4] bg-warm-beige rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
               <Image
-                src="/images/brunch/DSC02710-2.jpg"
+                src={IMAGES.home.freshFood}
                 alt="Fresh cuisine at Café Costermans"
                 width={300}
                 height={400}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                sizes={IMAGE_SIZES.gallery}
               />
             </div>
             
             {/* Terrace with statue */}
             <div className="aspect-[3/4] bg-warm-beige rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
               <Image
-                src="/images/ambiance/terrace-statue-2.jpg"
+                src={IMAGES.home.heritageTerrace}
                 alt="Secret terrace with heritage atmosphere"
                 width={300}
                 height={400}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                sizes={IMAGE_SIZES.gallery}
               />
             </div>
           </div>

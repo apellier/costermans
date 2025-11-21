@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from 'next-intl/server';
+import { IMAGES, IMAGE_SIZES } from "@/constants/images";
 
 export default async function NightPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -25,10 +26,11 @@ export default async function NightPage({ params }: { params: Promise<{ locale: 
         {/* Hero Image - Dark/Evening Photo */}
         <div className="relative flex-1 min-h-[50vh] lg:min-h-screen overflow-hidden">
           <Image
-            src="/images/dinner/dinner-2.jpg"
+            src={IMAGES.night.hero}
             alt="Café Costermans - Night menu with refined dinner offerings"
             fill
             className="object-cover"
+            sizes={IMAGE_SIZES.hero}
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-forest/30 via-forest/20 to-forest/40"></div>
@@ -87,11 +89,12 @@ export default async function NightPage({ params }: { params: Promise<{ locale: 
               <div className="w-full lg:w-1/3">
                 <div className="aspect-[3/4] bg-warm-beige rounded-lg overflow-hidden mx-auto max-w-sm lg:max-w-none hover:shadow-lg transition-shadow">
                   <Image
-                    src="/images/dinner/dinner.jpg"
+                    src={IMAGES.night.dinnerSection}
                     alt={`${section.title} at Café Costermans`}
                     width={400}
                     height={533}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    sizes={IMAGE_SIZES.card}
                   />
                 </div>
               </div>
@@ -216,12 +219,12 @@ export default async function NightPage({ params }: { params: Promise<{ locale: 
           {/* Evening Food & Drinks Photo Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mb-12">
             {[
-              { src: "/images/dinner/dinner-2.jpg", alt: "Evening dinner presentation" },
-              { src: "/images/drinks/drinks-2.jpg", alt: "Wine and evening cocktails" },
-              { src: "/images/dinner/dinner.jpg", alt: "Artisan dinner dishes" },
-              { src: "/images/drinks/DSC02818-2.jpg", alt: "Evening beverage service" },
-              { src: "/images/dinner/dinner-2.jpg", alt: "Refined dinner plates" },
-              { src: "/images/drinks/DSC02900-2.jpg", alt: "Wine and craft cocktails" }
+              { src: IMAGES.night.gallery.dinnerPresentation, alt: "Evening dinner presentation" },
+              { src: IMAGES.night.gallery.wineAndCocktails, alt: "Wine and evening cocktails" },
+              { src: IMAGES.night.gallery.artisanDishes, alt: "Artisan dinner dishes" },
+              { src: IMAGES.night.gallery.beverageService, alt: "Evening beverage service" },
+              { src: IMAGES.night.gallery.refinedPlates, alt: "Refined dinner plates" },
+              { src: IMAGES.night.gallery.craftCocktails, alt: "Wine and craft cocktails" }
             ].map((photo, index) => (
               <div
                 key={index}
@@ -233,6 +236,7 @@ export default async function NightPage({ params }: { params: Promise<{ locale: 
                   width={300}
                   height={400}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes={IMAGE_SIZES.gallery}
                 />
               </div>
             ))}
