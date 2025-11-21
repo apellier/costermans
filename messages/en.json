@@ -249,7 +249,8 @@
     "links": {
       "menu": "Menu",
       "about": "About",
-      "contact": "Contact"
+      "contact": "Contact",
+      "legal": "Legal Notice"
     },
     "copyright": "All rights reserved."
   },
@@ -342,6 +343,36 @@
       "terrace": "Secret terrace with heritage atmosphere",
       "heritage": "Heritage atmosphere and craftsmanship",
       "community": "Community gathering over great food"
+    }
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "company": {
+      "title": "Company Information",
+      "name": "Company Name",
+      "address": "Address",
+      "contact": "Contact",
+      "email": "Email",
+      "phone": "Phone",
+      "registration": "Company Number",
+      "vat": "VAT Number"
+    },
+    "website": {
+      "title": "Website Information",
+      "host": "Website Host",
+      "responsible": "Editorial Responsibility",
+      "design": "Design and Photography"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "content1": "The information contained on this website is for general information purposes only. While we strive to keep the information up to date and accurate, we make no warranties or representations of any kind, express or implied, about the completeness, accuracy, reliability, or availability of the website or the information contained therein.",
+      "content2": "Under no circumstances shall Maison Costermans SRL be liable for any loss or damage, including without limitation, indirect or consequential damage, arising from the use of this website.",
+      "content3": "This website may contain links to external websites. We have no control over the content and nature of these sites and cannot be held responsible for their content."
+    },
+    "privacy": {
+      "title": "Personal Data Protection",
+      "content1": "In accordance with the General Data Protection Regulation (GDPR), we are committed to protecting your personal data. Information you provide to us through our contact form is used only to respond to your requests.",
+      "content2": "Your data is not shared with third parties and is kept only as long as necessary to process your request. You have the right to access, correct and delete your personal data."
     }
   }
 }

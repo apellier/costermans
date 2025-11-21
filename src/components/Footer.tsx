@@ -48,8 +48,8 @@ export default function Footer() {
               <p className="text-sm italic">{t('hours.days.monday')}</p>
             </div>
             
-            <div className="flex space-x-4">
-              <Link href={`/${locale}/menu`} className="text-white hover:text-grasse transition-colors font-space-grotesk">
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+              <Link href={`/${locale}/day`} className="text-white hover:text-grasse transition-colors font-space-grotesk">
                 {t('links.menu')}
               </Link>
               <Link href={`/${locale}/about`} className="text-white hover:text-grasse transition-colors font-space-grotesk">
@@ -57,6 +57,9 @@ export default function Footer() {
               </Link>
               <Link href={`/${locale}/contact`} className="text-white hover:text-grasse transition-colors font-space-grotesk">
                 {t('links.contact')}
+              </Link>
+              <Link href={`/${locale}/legal`} className="text-white hover:text-grasse transition-colors font-space-grotesk">
+                {t('links.legal')}
               </Link>
             </div>
           </div>

@@ -249,7 +249,8 @@
     "links": {
       "menu": "Menu",
       "about": "À propos",
-      "contact": "Contact"
+      "contact": "Contact",
+      "legal": "Mentions légales"
     },
     "copyright": "Tous droits réservés."
   },
@@ -342,6 +343,36 @@
       "terrace": "Terrasse secrète avec atmosphère patrimoniale",
       "heritage": "Atmosphère patrimoniale et artisanat",
       "community": "Rassemblement communautaire autour de la bonne nourriture"
+    }
+  },
+  "legal": {
+    "title": "Mentions Légales",
+    "company": {
+      "title": "Informations sur l'entreprise",
+      "name": "Dénomination sociale",
+      "address": "Adresse",
+      "contact": "Contact",
+      "email": "Email",
+      "phone": "Téléphone",
+      "registration": "Numéro d'entreprise",
+      "vat": "Numéro de TVA"
+    },
+    "website": {
+      "title": "Informations sur le site web",
+      "host": "Hébergeur du site",
+      "responsible": "Responsable éditorial",
+      "design": "Conception et photographies"
+    },
+    "disclaimer": {
+      "title": "Clause de non-responsabilité",
+      "content1": "Les informations contenues dans ce site web sont fournies à des fins d'information générale uniquement. Bien que nous nous efforcions de maintenir les informations à jour et exactes, nous ne donnons aucune garantie ou assurance, expresse ou implicite, concernant l'exhaustivité, l'exactitude, la fiabilité ou la disponibilité du site web ou des informations qu'il contient.",
+      "content2": "En aucun cas, Maison Costermans SRL ne sera tenue responsable de toute perte ou dommage, y compris, mais sans s'y limiter, les dommages indirects ou consécutifs, résultant de l'utilisation de ce site web.",
+      "content3": "Ce site web peut contenir des liens vers des sites web externes. Nous n'avons aucun contrôle sur le contenu et la nature de ces sites et ne pouvons être tenus responsables de leur contenu."
+    },
+    "privacy": {
+      "title": "Protection des données personnelles",
+      "content1": "Conformément au Règlement général sur la protection des données (RGPD), nous nous engageons à protéger vos données personnelles. Les informations que vous nous fournissez via notre formulaire de contact ne sont utilisées que pour répondre à vos demandes.",
+      "content2": "Vos données ne sont pas transmises à des tiers et sont conservées uniquement le temps nécessaire au traitement de votre demande. Vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles."
     }
   }
 }

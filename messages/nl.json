@@ -249,7 +249,8 @@
     "links": {
       "menu": "Menu",
       "about": "Over Ons",
-      "contact": "Contact"
+      "contact": "Contact",
+      "legal": "Juridische Informatie"
     },
     "copyright": "Alle rechten voorbehouden."
   },
@@ -342,6 +343,36 @@
       "terrace": "Geheim terras met erfgoed sfeer",
       "heritage": "Erfgoed sfeer en vakmanschap",
       "community": "Gemeenschap bijeenkomst over lekker eten"
+    }
+  },
+  "legal": {
+    "title": "Juridische Informatie",
+    "company": {
+      "title": "Bedrijfsinformatie",
+      "name": "Bedrijfsnaam",
+      "address": "Adres",
+      "contact": "Contact",
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "registration": "Ondernemingsnummer",
+      "vat": "BTW-nummer"
+    },
+    "website": {
+      "title": "Website Informatie",
+      "host": "Website Host",
+      "responsible": "Redactionele Verantwoordelijkheid",
+      "design": "Ontwerp en Fotografie"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "content1": "De informatie op deze website is alleen bedoeld voor algemene informatiedoeleinden. Hoewel we streven naar actuele en juiste informatie, geven we geen garanties of verklaringen van welke aard dan ook, expliciet of impliciet, over de volledigheid, nauwkeurigheid, betrouwbaarheid of beschikbaarheid van de website of de informatie die erop staat.",
+      "content2": "In geen geval is Maison Costermans SRL aansprakelijk voor verlies of schade, inclusief maar niet beperkt tot indirecte of gevolgschade, voortvloeiend uit het gebruik van deze website.",
+      "content3": "Deze website kan links bevatten naar externe websites. We hebben geen controle over de inhoud en aard van deze sites en kunnen niet verantwoordelijk worden gehouden voor hun inhoud."
+    },
+    "privacy": {
+      "title": "Bescherming van Persoonlijke Gegevens",
+      "content1": "In overeenstemming met de Algemene Verordening Gegevensbescherming (AVG) zijn we toegewijd aan het beschermen van uw persoonlijke gegevens. Informatie die u ons verstrekt via ons contactformulier wordt alleen gebruikt om te reageren op uw verzoeken.",
+      "content2": "Uw gegevens worden niet gedeeld met derden en worden alleen bewaard zolang nodig is om uw verzoek te verwerken. U heeft het recht om uw persoonlijke gegevens in te zien, te corrigeren en te verwijderen."
     }
   }
 }
