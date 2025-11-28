@@ -107,7 +107,7 @@ export async function sendContactEmail(
     }
 
     const { error } = await resend.emails.send({
-      from: 'Contact Café Costermans <contact@costermans.be>',
+      from: 'Contact Café Costermans <contact@mail.costermans.be>',
       to: [contactEmail],
       replyTo: email,
       subject: emailSubject,
