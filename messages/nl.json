@@ -36,6 +36,11 @@
         "sunday": "Zondag",
         "monday": "Gesloten op maandag"
       }
+    },
+    "instagram": {
+      "title": "Volg Ons Verhaal",
+      "subtitle": "Ervaar het dagelijkse leven van ons geheime adres via onze Instagram",
+      "followButton": "Volg ons op Instagram"
     }
   },
   "menu": {
@@ -328,11 +333,6 @@
       "subtitle": "Gelegen in het hart van de Grote Zavel, omringd door antiquairs en chocolatiers",
       "placeholder": "Interactieve Kaart"
     }
-  },
-  "instagram": {
-    "title": "Volg Ons Verhaal",
-    "subtitle": "Ervaar het dagelijkse leven van ons geheime adres via onze Instagram",
-    "follow": "@cafecostermans"
   },
   "common": {
     "alt": {

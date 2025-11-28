@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import InstagramEmbed from "@/components/InstagramEmbed";
 import { IMAGES, IMAGE_SIZES } from "@/constants/images";
 import { generatePageMetadata, getKeywordsForPage } from '@/lib/seo';
 
@@ -184,7 +183,23 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* Instagram Section */}
-      <InstagramEmbed />
+      <section className="py-20 bg-warm-beige">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl mb-6 title-accent">{t('instagram.title')}</h2>
+          <p className="text-lg text-body mb-8 max-w-2xl mx-auto">
+            {t('instagram.subtitle')}
+          </p>
+          <a 
+            href="https://www.instagram.com/cafecostermans/?hl=fr" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            title={tSeo('links.instagram')}
+            className="inline-flex items-center gap-2 bg-forest text-white px-8 py-4 rounded-full font-bold hover:bg-deep transition-colors duration-300 text-lg"
+          >
+            {t('instagram.followButton')}
+          </a>
+        </div>
+      </section>
       
       {/* Visit Us Section - Simplified */}
       <section className="py-20 bg-light">

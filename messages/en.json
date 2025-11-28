@@ -36,6 +36,11 @@
         "sunday": "Sunday",
         "monday": "Closed on Monday"
       }
+    },
+    "instagram": {
+      "title": "Follow Our Story",
+      "subtitle": "Experience the daily life of our secret address through our Instagram",
+      "followButton": "Follow us on Instagram"
     }
   },
   "menu": {
@@ -328,11 +333,6 @@
       "subtitle": "Located in the heart of Place du Grand Sablon, surrounded by antique dealers and chocolatiers",
       "placeholder": "Interactive Map"
     }
-  },
-  "instagram": {
-    "title": "Follow Our Story",
-    "subtitle": "Experience the daily life of our secret address through our Instagram",
-    "follow": "@cafecostermans"
   },
   "common": {
     "alt": {
