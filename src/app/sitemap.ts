@@ -1,12 +1,12 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.cafecostermans.be' // Replace with actual domain
+  const baseUrl = 'https://www.maisoncostermans.be' // Replace with actual domain
   const locales = ['fr', 'en', 'nl']
   const pages = [
     '', // home
     '/day',
-    '/night', 
+    '/night',
     '/about',
     '/contact',
     '/legal'
@@ -17,10 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Add pages for each locale
   locales.forEach(locale => {
     pages.forEach(page => {
-      const url = locale === 'fr' 
+      const url = locale === 'fr'
         ? `${baseUrl}${page}` // Default locale (French) without prefix
         : `${baseUrl}/${locale}${page}`
-      
+
       sitemap.push({
         url,
         lastModified: new Date(),
