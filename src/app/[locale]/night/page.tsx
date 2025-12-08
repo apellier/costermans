@@ -7,7 +7,7 @@ import { generatePageMetadata, getKeywordsForPage } from '@/lib/seo';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations('seo');
-  
+
   return generatePageMetadata({
     title: t('pages.night.title'),
     description: t('pages.night.description'),
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function NightPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations('night');
-  
+
   const nightHighlights = [
     {
       title: t('sections.dinner.title'),
@@ -51,7 +51,7 @@ export default async function NightPage({ params }: { params: Promise<{ locale: 
           />
           <div className="absolute inset-0 bg-gradient-to-b from-forest/30 via-forest/20 to-forest/40"></div>
         </div>
-        
+
         {/* Night Menu Content & PDF Access */}
         <div className="relative flex-1 flex items-center justify-center bg-gradient-to-br from-deep to-forest">
           <div className="text-center text-white px-4 py-8 lg:py-16">
@@ -61,12 +61,12 @@ export default async function NightPage({ params }: { params: Promise<{ locale: 
             <p className="text-lg lg:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-light">
               {t('hero.subtitle')}
             </p>
-            
+
             {/* PDF Download Options */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a 
-                href="/Carte food.pdf" 
-                target="_blank" 
+              <a
+                href="/night-menu.pdf"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2"
               >
@@ -75,9 +75,9 @@ export default async function NightPage({ params }: { params: Promise<{ locale: 
                 </svg>
                 {t('hero.foodMenu')}
               </a>
-              <a 
-                href="/Carte boissons.pdf" 
-                target="_blank" 
+              <a
+                href="/drinks-menu.pdf"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2"
               >
@@ -87,7 +87,7 @@ export default async function NightPage({ params }: { params: Promise<{ locale: 
                 {t('hero.drinksMenu')}
               </a>
             </div>
-            
+
             <p className="text-sm text-white/70">
               {t('hero.scrollText')}
             </p>
@@ -99,7 +99,7 @@ export default async function NightPage({ params }: { params: Promise<{ locale: 
       {nightHighlights.map((section, sectionIndex) => (
         <section key={sectionIndex} className="py-12 lg:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
+
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
               {/* Vertical Image */}
               <div className="w-full lg:w-1/3">
@@ -114,7 +114,7 @@ export default async function NightPage({ params }: { params: Promise<{ locale: 
                   />
                 </div>
               </div>
-              
+
               {/* Content */}
               <div className="flex-1 text-center lg:text-left">
                 <h2 className="text-3xl lg:text-4xl text-forest mb-4">
@@ -123,7 +123,7 @@ export default async function NightPage({ params }: { params: Promise<{ locale: 
                 <p className="text-lg text-body mb-6">
                   {section.description}
                 </p>
-                
+
                 {/* Highlight Items */}
                 <div className="space-y-3 mb-8">
                   {section.highlights.map((highlight, index) => (
@@ -132,7 +132,7 @@ export default async function NightPage({ params }: { params: Promise<{ locale: 
                     </div>
                   ))}
                 </div>
-                
+
                 <p className="text-sm text-body italic">
                   {t('footerText')}
                 </p>
@@ -203,7 +203,7 @@ export default async function NightPage({ params }: { params: Promise<{ locale: 
                 </p>
               </div>
             </div>
-            
+
             <div className="space-y-6 w-full lg:w-auto">
               <div className="bg-white/10 rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-3 !text-white">{t('philosophy.atmosphere')}</h3>
@@ -231,7 +231,7 @@ export default async function NightPage({ params }: { params: Promise<{ locale: 
               {t('gallery.subtitle')}
             </p>
           </div>
-          
+
           {/* Evening Food & Drinks Photo Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mb-12">
             {[
@@ -257,7 +257,7 @@ export default async function NightPage({ params }: { params: Promise<{ locale: 
               </div>
             ))}
           </div>
-          
+
           <div className="text-center">
             <a
               href="https://www.instagram.com/cafecostermans"
