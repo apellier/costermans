@@ -289,7 +289,7 @@
       },
       "reservations": {
         "title": "Reservations",
-        "description": "We don't accept reservations, but feel free to contact us for special events or groups."
+        "description": "We don't accept reservations for day time, but feel free to contact us for special events or groups. To reserve a table at night, please call us or send an email."
       }
     },
     "form": {
@@ -326,7 +326,7 @@
         "success": "Thank you! Your message has been sent successfully. We'll get back to you soon.",
         "error": "Sorry, there was a problem sending your message. Please try again."
       },
-      "note": "We typically respond within 24 hours during our opening hours."
+      "note": "We typically respond within 48 hours during our opening hours."
     },
     "map": {
       "title": "Find Us",

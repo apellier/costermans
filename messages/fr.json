@@ -289,7 +289,7 @@
       },
       "reservations": {
         "title": "Réservations",
-        "description": "Nous n'acceptons pas les réservations, mais n'hésitez pas à nous contacter pour des événements spéciaux ou des groupes."
+        "description": "Nous n'acceptons pas les réservations en journée, mais n'hésitez pas à nous contacter pour des événements spéciaux ou des groupes. Pour réserver une table le soir, veuillez nous appeler ou nous envoyer un email."
       }
     },
     "form": {
@@ -326,7 +326,7 @@
         "success": "Merci ! Votre message a été envoyé avec succès. Nous vous répondrons bientôt.",
         "error": "Désolé, il y a eu un problème lors de l'envoi de votre message. Veuillez réessayer."
       },
-      "note": "Nous répondons généralement dans les 24 heures pendant nos heures d'ouverture."
+      "note": "Nous répondons généralement dans les 48 heures pendant nos heures d'ouverture."
     },
     "map": {
       "title": "Nous Trouver",

@@ -4,11 +4,12 @@ import { getTranslations } from 'next-intl/server';
 import ContactForm from '@/components/ContactForm';
 import { IMAGES, IMAGE_SIZES } from "@/constants/images";
 import { generatePageMetadata, getKeywordsForPage } from '@/lib/seo';
+import { ADDRESS, ADDRESS_CITY, ADDRESS_STREET, PHONE_NUMBER, EMAIL, OPENING_HOURS } from '@/constants/info';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations('seo');
-  
+
   return generatePageMetadata({
     title: t('pages.contact.title'),
     description: t('pages.contact.description'),
@@ -40,7 +41,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           />
           <div className="absolute inset-0 bg-gradient-to-b from-forest/20 via-forest/10 to-forest/30"></div>
         </div>
-        
+
         {/* Hero Content */}
         <div className="relative flex-1 flex items-center justify-center bg-gradient-to-br from-forest to-deep">
           <div className="text-center text-white px-4 py-8 lg:py-16">
@@ -58,19 +59,18 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       <section className="py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-            
+
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl lg:text-4xl text-forest mb-8">
                 {t('info.title')}
               </h2>
-              
+
               {/* Location */}
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-forest mb-4">{t('info.location.title')}</h3>
                 <div className="space-y-2 text-lg text-body">
-                  <p>5 place du grand sablon</p>
-                  <p>1000 Bruxelles</p>
+                  <p className="whitespace-pre-line">{ADDRESS[locale as keyof typeof ADDRESS]}</p>
                   <p className="text-sm text-body/70">{t('info.location.description')}</p>
                 </div>
               </div>
@@ -79,12 +79,12 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-forest mb-4">{t('info.hours.title')}</h3>
                 <div className="space-y-1 text-body">
-                  <p><strong>{t('info.hours.days.tuesday')}:</strong> 09h-18h</p>
-                  <p><strong>{t('info.hours.days.wednesday')}:</strong> 09h-23h</p>
-                  <p><strong>{t('info.hours.days.thursday')}:</strong> 09h-23h</p>
-                  <p><strong>{t('info.hours.days.friday')}:</strong> 09h-23h</p>
-                  <p><strong>{t('info.hours.days.saturday')}:</strong> 09h-18h</p>
-                  <p><strong>{t('info.hours.days.sunday')}:</strong> 09h-18h</p>
+                  <p><strong>{t('info.hours.days.tuesday')}:</strong> {OPENING_HOURS.tuesday}</p>
+                  <p><strong>{t('info.hours.days.wednesday')}:</strong> {OPENING_HOURS.wednesday}</p>
+                  <p><strong>{t('info.hours.days.thursday')}:</strong> {OPENING_HOURS.thursday}</p>
+                  <p><strong>{t('info.hours.days.friday')}:</strong> {OPENING_HOURS.friday}</p>
+                  <p><strong>{t('info.hours.days.saturday')}:</strong> {OPENING_HOURS.saturday}</p>
+                  <p><strong>{t('info.hours.days.sunday')}:</strong> {OPENING_HOURS.sunday}</p>
                   <p className="text-sm italic text-body/70">{t('info.hours.days.monday')}</p>
                 </div>
               </div>
@@ -95,30 +95,30 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 <div className="space-y-3">
                   <div>
                     <p className="font-medium text-forest">Téléphone</p>
-                    <a 
-                      href="tel:+3225140587" 
+                    <a
+                      href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`}
                       title={tSeo('links.phone')}
                       className="text-forest hover:text-grasse transition-colors"
                     >
-                      +32 2 514 05 87
+                      {PHONE_NUMBER}
                     </a>
                   </div>
                   <div>
                     <p className="font-medium text-forest">{t('info.contact.email')}</p>
-                    <a 
-                      href="mailto:cafecostermans@gmail.com" 
+                    <a
+                      href={`mailto:${EMAIL}`}
                       title={tSeo('links.email')}
                       className="text-forest hover:text-grasse transition-colors"
                     >
-                      cafecostermans@gmail.com
+                      {EMAIL}
                     </a>
                   </div>
                   <div>
                     <p className="font-medium text-forest">{t('info.contact.social')}</p>
-                    <a 
-                      href="https://www.instagram.com/cafecostermans" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <a
+                      href="https://www.instagram.com/cafecostermans"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       title={tSeo('links.instagram')}
                       className="text-forest hover:text-grasse transition-colors"
                     >
@@ -155,7 +155,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               {t('map.subtitle')}
             </p>
           </div>
-          
+
           {/* Google Maps Integration */}
           <div className="aspect-[16/9] bg-white rounded-lg shadow-lg overflow-hidden border-4 border-warm-beige">
             <iframe

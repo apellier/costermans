@@ -1,5 +1,6 @@
-import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
+import { ADDRESS, EMAIL, OPENING_HOURS, PHONE_NUMBER } from '@/constants/info';
 
 type FooterProps = {
   locale: string;
@@ -25,13 +26,17 @@ export default async function Footer({ locale }: FooterProps) {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-space-grotesk font-bold text-white mb-4" style={{color: 'white'}}>{t('contact.title')}</h4>
+            <h4 className="text-lg font-space-grotesk font-bold text-white mb-4" style={{ color: 'white' }}>{t('contact.title')}</h4>
             <address className="text-white not-italic font-space-grotesk">
-              <p className="mb-2">5 place du grand sablon</p>
-              <p className="mb-2">1000 Bruxelles</p>
+              <p className="mb-2 whitespace-pre-line">{ADDRESS[locale as keyof typeof ADDRESS]}</p>
               <p>
-                <a href="mailto:cafecostermans@gmail.com" className="text-white hover:text-grasse transition-colors">
-                  cafecostermans@gmail.com
+                <a href={`mailto:${EMAIL}`} className="text-white hover:text-grasse transition-colors">
+                  {EMAIL}
+                </a>
+              </p>
+              <p className="mt-2">
+                <a href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`} className="text-white hover:text-grasse transition-colors">
+                  {PHONE_NUMBER}
                 </a>
               </p>
             </address>
@@ -39,41 +44,41 @@ export default async function Footer({ locale }: FooterProps) {
 
           {/* Hours & Links */}
           <div>
-            <h4 className="text-lg font-space-grotesk font-bold text-white mb-4" style={{color: 'white'}}>{t('hours.title')}</h4>
+            <h4 className="text-lg font-space-grotesk font-bold text-white mb-4" style={{ color: 'white' }}>{t('hours.title')}</h4>
             <div className="text-white space-y-1 mb-6 font-space-grotesk">
-              <p><strong>{t('hours.days.tuesday')}:</strong> 09h-18h</p>
-              <p><strong>{t('hours.days.wednesday')}:</strong> 09h-23h</p>
-              <p><strong>{t('hours.days.thursday')}:</strong> 09h-23h</p>
-              <p><strong>{t('hours.days.friday')}:</strong> 09h-23h</p>
-              <p><strong>{t('hours.days.saturday')}:</strong> 09h-18h</p>
-              <p><strong>{t('hours.days.sunday')}:</strong> 09h-18h</p>
+              <p><strong>{t('hours.days.tuesday')}:</strong> {OPENING_HOURS.tuesday}</p>
+              <p><strong>{t('hours.days.wednesday')}:</strong> {OPENING_HOURS.wednesday}</p>
+              <p><strong>{t('hours.days.thursday')}:</strong> {OPENING_HOURS.thursday}</p>
+              <p><strong>{t('hours.days.friday')}:</strong> {OPENING_HOURS.friday}</p>
+              <p><strong>{t('hours.days.saturday')}:</strong> {OPENING_HOURS.saturday}</p>
+              <p><strong>{t('hours.days.sunday')}:</strong> {OPENING_HOURS.sunday}</p>
               <p className="text-sm italic">{t('hours.days.monday')}</p>
             </div>
-            
+
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-              <Link 
-                href={`/${locale}/day`} 
+              <Link
+                href={`/${locale}/day`}
                 title={tSeo('navigation.day')}
                 className="text-white hover:text-grasse transition-colors font-space-grotesk"
               >
                 {t('links.menu')}
               </Link>
-              <Link 
-                href={`/${locale}/about`} 
+              <Link
+                href={`/${locale}/about`}
                 title={tSeo('navigation.about')}
                 className="text-white hover:text-grasse transition-colors font-space-grotesk"
               >
                 {t('links.about')}
               </Link>
-              <Link 
-                href={`/${locale}/contact`} 
+              <Link
+                href={`/${locale}/contact`}
                 title={tSeo('navigation.contact')}
                 className="text-white hover:text-grasse transition-colors font-space-grotesk"
               >
                 {t('links.contact')}
               </Link>
-              <Link 
-                href={`/${locale}/legal`} 
+              <Link
+                href={`/${locale}/legal`}
                 title={tSeo('pages.legal.title')}
                 className="text-white hover:text-grasse transition-colors font-space-grotesk"
               >
@@ -82,7 +87,7 @@ export default async function Footer({ locale }: FooterProps) {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-forest mt-8 pt-8 text-center text-white/60 space-y-2">
           <p>&copy; {new Date().getFullYear()} Maison Costermans SRL. {t('copyright')}</p>
           <p className="text-sm">

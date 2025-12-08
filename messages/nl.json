@@ -289,7 +289,7 @@
       },
       "reservations": {
         "title": "Reserveringen",
-        "description": "We accepteren geen reserveringen, maar neem gerust contact op voor speciale evenementen of groepen."
+        "description": "We accepteren overdag geen reserveringen, maar neem gerust contact op voor speciale evenementen of groepen. Om 's avonds een tafel te reserveren, kunt u ons bellen of een e-mail sturen."
       }
     },
     "form": {
@@ -326,7 +326,7 @@
         "success": "Bedankt! Uw bericht is succesvol verzonden. We nemen binnenkort contact met u op.",
         "error": "Sorry, er is een probleem opgetreden bij het verzenden van uw bericht. Probeer het opnieuw."
       },
-      "note": "We reageren meestal binnen 24 uur tijdens onze openingsuren."
+      "note": "We reageren meestal binnen 48 uur tijdens onze openingsuren."
     },
     "map": {
       "title": "Vind Ons",

@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { generatePageMetadata, getKeywordsForPage } from '@/lib/seo';
+import { ADDRESS_CITY, ADDRESS_STREET, PHONE_NUMBER, EMAIL, ENTERPRISE_NUMBER, VAT_NUMBER } from '@/constants/info';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations('seo');
-  
+
   return generatePageMetadata({
     title: t('pages.legal.title'),
     description: t('pages.legal.description'),
@@ -26,32 +27,32 @@ export default async function LegalPage({ params }: { params: Promise<{ locale: 
         <h1 className="text-4xl lg:text-5xl text-forest mb-12 text-center font-bold">
           {t('title')}
         </h1>
-        
+
         <div className="prose prose-lg max-w-none">
           <section className="mb-8">
             <h2 className="text-2xl text-forest mb-4 font-bold">{t('company.title')}</h2>
             <div className="bg-warm-beige rounded-lg p-6">
               <p className="mb-2"><strong>{t('company.name')}:</strong> Maison Costermans SRL</p>
               <p className="mb-2"><strong>{t('company.address')}:</strong></p>
-              <p className="ml-4 mb-2">5 place du grand sablon</p>
-              <p className="ml-4 mb-4">1000 Bruxelles, Belgique</p>
-              
+              <p className="ml-4 mb-2">{ADDRESS_STREET[locale as keyof typeof ADDRESS_STREET]}</p>
+              <p className="ml-4 mb-4">{ADDRESS_CITY[locale as keyof typeof ADDRESS_CITY]}, Belgique</p>
+
               <p className="mb-2"><strong>{t('company.contact')}:</strong></p>
               <p className="ml-4 mb-2">
                 <strong>{t('company.email')}:</strong>{' '}
-                <a href="mailto:cafecostermans@gmail.com" className="text-forest hover:text-grasse transition-colors">
-                  cafecostermans@gmail.com
+                <a href={`mailto:${EMAIL}`} className="text-forest hover:text-grasse transition-colors">
+                  {EMAIL}
                 </a>
               </p>
               <p className="ml-4 mb-4">
                 <strong>{t('company.phone')}:</strong>{' '}
-                <a href="tel:+3225140587" className="text-forest hover:text-grasse transition-colors">
-                  +32 2 514 05 87
+                <a href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`} className="text-forest hover:text-grasse transition-colors">
+                  {PHONE_NUMBER}
                 </a>
               </p>
-              
-              <p className="mb-2"><strong>{t('company.registration')}:</strong> BE 0XXX.XXX.XXX</p>
-              <p className="mb-2"><strong>{t('company.vat')}:</strong> BE 0XXX.XXX.XXX</p>
+
+              <p className="mb-2"><strong>{t('company.registration')}:</strong> {ENTERPRISE_NUMBER}</p>
+              <p className="mb-2"><strong>{t('company.vat')}:</strong> {VAT_NUMBER}</p>
             </div>
           </section>
 
