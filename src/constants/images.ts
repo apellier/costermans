@@ -5,12 +5,14 @@ export const IMAGES = {
   // Home page images
   home: {
     hero: "/images/home/hero.jpg",
-    ambianceTerrace: "/images/home/ambiance-terrace.jpg",
-    brunchSample: "/images/home/brunch-sample.jpg",
-    coffeeDrinks: "/images/home/coffee-drinks.jpg",
-    interior: "/images/home/interior.jpg",
-    freshFood: "/images/home/fresh-food.jpg",
-    heritageTerrace: "/images/home/heritage-terrace.jpg",
+    gallery: {
+      gallery1: "/images/home/gallery-1.jpg", // was ambianceTerrace
+      gallery2: "/images/home/gallery-2.jpg", // was brunchSample
+      gallery3: "/images/home/gallery-3.jpg", // was coffeeDrinks
+      gallery4: "/images/home/gallery-4.jpg", // was interior
+      gallery5: "/images/home/gallery-5.jpg", // was freshFood
+      gallery6: "/images/home/gallery-6.jpg", // was heritageTerrace
+    }
   },
 
   // Day page images (brunch & lunch)

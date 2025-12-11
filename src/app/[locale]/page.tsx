@@ -95,7 +95,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             {/* Ambiance photos */}
             <div className="aspect-[3/4] bg-warm-beige rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
               <Image
-                src={IMAGES.home.ambianceTerrace}
+                src={IMAGES.home.gallery.gallery1}
                 alt="Café Costermans terrace ambiance"
                 width={300}
                 height={400}
@@ -107,7 +107,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             {/* Brunch photo */}
             <div className="aspect-[3/4] bg-warm-beige rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
               <Image
-                src={IMAGES.home.brunchSample}
+                src={IMAGES.home.gallery.gallery2}
                 alt="Delicious brunch at Café Costermans"
                 width={300}
                 height={400}
@@ -119,7 +119,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             {/* Drinks photo */}
             <div className="aspect-[3/4] bg-warm-beige rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
               <Image
-                src={IMAGES.home.coffeeDrinks}
+                src={IMAGES.home.gallery.gallery3}
                 alt="Artisan coffee and drinks"
                 width={300}
                 height={400}
@@ -131,7 +131,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             {/* Another ambiance photo */}
             <div className="aspect-[3/4] bg-warm-beige rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
               <Image
-                src={IMAGES.home.interior}
+                src={IMAGES.home.gallery.gallery4}
                 alt="Interior atmosphere of Café Costermans"
                 width={300}
                 height={400}
@@ -143,7 +143,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             {/* Food photo */}
             <div className="aspect-[3/4] bg-warm-beige rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
               <Image
-                src={IMAGES.home.freshFood}
+                src={IMAGES.home.gallery.gallery5}
                 alt="Fresh cuisine at Café Costermans"
                 width={300}
                 height={400}
@@ -155,7 +155,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             {/* Terrace with statue */}
             <div className="aspect-[3/4] bg-warm-beige rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
               <Image
-                src={IMAGES.home.heritageTerrace}
+                src={IMAGES.home.gallery.gallery6}
                 alt="Secret terrace with heritage atmosphere"
                 width={300}
                 height={400}
