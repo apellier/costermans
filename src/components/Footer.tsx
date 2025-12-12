@@ -91,7 +91,7 @@ export default async function Footer({ locale }: FooterProps) {
         <div className="border-t border-forest mt-8 pt-8 text-center text-white/60 space-y-2">
           <p>&copy; {new Date().getFullYear()} Maison Costermans SRL. {t('copyright')}</p>
           <p className="text-sm">
-            Photographies par <a href="https://tribeagency.be/" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors underline">Tribe Agency</a>
+            Photographies par <a href="https://tribeagency.be/" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors underline">Tribe Agency</a> et <a href="https://www.camilleriche-photographie.com/" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors underline">Camille Riche</a>
           </p>
         </div>
       </div>

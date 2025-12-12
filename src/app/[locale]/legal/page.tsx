@@ -61,7 +61,7 @@ export default async function LegalPage({ params }: { params: Promise<{ locale: 
             <div className="bg-warm-beige rounded-lg p-6">
               <p className="mb-2"><strong>{t('website.host')}:</strong> Café Costermans</p>
               <p className="mb-2"><strong>{t('website.responsible')}:</strong> Maison Costermans SRL</p>
-              <p className="mb-2"><strong>{t('website.design')}:</strong> Tribe Agency</p>
+              <p className="mb-2"><strong>{t('website.design')}:</strong> Tribe Agency; Camille Riche</p>
             </div>
           </section>
 
