@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -81,6 +83,8 @@ export default async function LocaleLayout({
           <Header />
           <main className="flex-grow">
             {children}
+            <Analytics />
+            <SpeedInsights />
           </main>
           <Footer locale={locale} />
         </NextIntlClientProvider>
