@@ -8,7 +8,7 @@ import { generatePageMetadata, getKeywordsForPage } from '@/lib/seo';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations('seo');
-  
+
   return generatePageMetadata({
     title: t('pages.about.title'),
     description: t('pages.about.description'),
@@ -39,7 +39,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           />
           <div className="absolute inset-0 bg-gradient-to-b from-forest/20 via-forest/10 to-forest/30"></div>
         </div>
-        
+
         {/* Hero Content */}
         <div className="relative flex-1 flex items-center justify-center bg-gradient-to-br from-forest to-deep">
           <div className="text-center text-white px-4 py-8 lg:py-16">
@@ -57,7 +57,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <section className="py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            
+
             {/* Story Content */}
             <div>
               <h2 className="text-3xl lg:text-4xl text-forest mb-6">
@@ -75,7 +75,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                 </p>
               </div>
             </div>
-            
+
             {/* Heritage Photo */}
             <div className="order-first lg:order-last">
               <div className="aspect-[4/5] bg-warm-beige rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
@@ -93,62 +93,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
 
-      {/* The Secret Terrace */}
-      <section className="py-16 lg:py-20 bg-warm-beige">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl lg:text-4xl text-forest mb-6">
-              {t('terrace.title')}
-            </h2>
-            <p className="text-lg lg:text-xl text-body max-w-3xl mx-auto">
-              {t('terrace.subtitle')}
-            </p>
-          </div>
-          
-          {/* Photo Grid showcasing the terrace - Mobile First */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mb-12 lg:mb-16">
-            <div className="aspect-[4/3] bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
-              <Image
-                src={IMAGES.about.terrace.main}
-                alt="Secret terrace seating area"
-                width={400}
-                height={300}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                sizes={IMAGE_SIZES.galleryLarge}
-              />
-            </div>
-            <div className="aspect-[4/3] bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
-              <Image
-                src={IMAGES.about.terrace.heritage}
-                alt="Heritage terrace with vintage details"
-                width={400}
-                height={300}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                sizes={IMAGE_SIZES.galleryLarge}
-              />
-            </div>
-            <div className="aspect-[4/3] bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer sm:col-span-2 lg:col-span-1">
-              <Image
-                src={IMAGES.about.terrace.intimate}
-                alt="Intimate terrace atmosphere"
-                width={400}
-                height={300}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                sizes={IMAGE_SIZES.galleryLarge}
-              />
-            </div>
-          </div>
-          
-          {/* Atmosphere description */}
-          <div className="text-center">
-            <div className="max-w-3xl mx-auto">
-              <p className="text-lg text-body leading-relaxed">
-                {t('terrace.description')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Our Approach - with Food Photos */}
       <section className="py-16 lg:py-20">
@@ -167,7 +112,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                 />
               </div>
             </div>
-            
+
             {/* Approach Content */}
             <div>
               <h2 className="text-3xl lg:text-4xl text-forest mb-6">
@@ -197,7 +142,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
               {t('values.title')}
             </h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             <div className="text-center">
               <div className="aspect-[3/4] bg-white rounded-lg overflow-hidden mb-6 mx-auto max-w-48 hover:shadow-lg transition-shadow">
@@ -215,7 +160,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                 {t('values.qualityDesc')}
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="aspect-[3/4] bg-white rounded-lg overflow-hidden mb-6 mx-auto max-w-48 hover:shadow-lg transition-shadow">
                 <Image
@@ -232,7 +177,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                 {t('values.heritageDesc')}
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="aspect-[3/4] bg-white rounded-lg overflow-hidden mb-6 mx-auto max-w-48 hover:shadow-lg transition-shadow">
                 <Image
@@ -263,17 +208,17 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             {t('cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center">
-            <a 
-              href="https://www.costermans-antiques.com/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://www.costermans-antiques.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               title={tSeo('links.antiques')}
               className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300"
             >
               {t('cta.viewArtGallery')}
             </a>
-            <Link 
-              href="contact" 
+            <Link
+              href="contact"
               title={tSeo('links.visitUs')}
               className="bg-white text-deep border-2 border-white hover:bg-forest hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300"
             >

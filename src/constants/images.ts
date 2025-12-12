@@ -55,9 +55,9 @@ export const IMAGES = {
       intimate: "/images/about/terrace-3.jpg",
     },
     values: {
-      quality: "/images/about/quality.jpg",
-      heritage: "/images/about/heritage-value.jpg",
-      community: "/images/about/community.jpg",
+      quality: "https://placehold.co/600x800", // Placeholder
+      heritage: "https://placehold.co/600x800", // Placeholder
+      community: "https://placehold.co/600x800", // Placeholder
     },
   },
 

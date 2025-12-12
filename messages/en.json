@@ -157,33 +157,33 @@
         "title": "Dinner",
         "description": "Evening delights featuring refined flavors and artisan techniques",
         "items": {
-          "ravioles": "Ravioles (poultry, n'duja, candied lemon and Thai basil) - €12",
-          "pommesDauphines": "Pommes Dauphines (sage butter, black garlic and mushrooms) - €12",
-          "maquereau": "Flamed Mackerel (purple fig and shiso) - €12"
+          "poissonDuJour": "Torch-seared Catch of the Day (Persimmons, lime leaf and herb salad) - €15",
+          "crudoStJacques": "Scallop Crudo (Miso, chilies and burnt orange) - €18",
+          "ravioles": "Ravioli (Poultry, candied lemon and Thai basil, n'duja sauce) - €12"
         }
       }
     },
     "wine": {
-      "title": "Wines & Spirits",
-      "subtitle": "A curated selection of natural wines and artisan spirits to accompany your evenings",
+      "title": "Food Philosophy",
+      "subtitle": "We place great importance on our products: we prioritize organic and sustainable ingredients, local and seasonal whenever possible",
       "features": {
-        "natural": "Natural Wines",
-        "naturalDesc": "Selection from independent and biodynamic vignerons",
-        "curated": "Expert Selection",
-        "curatedDesc": "Each bottle chosen for its unique personality",
-        "craft": "Artisan Spirits",
-        "craftDesc": "Gin, whisky and liqueurs from passionate producers"
+        "organic": "Sustainable Farming",
+        "organicDesc": "Prioritizing organic and sustainable ingredients",
+        "local": "Local Producers",
+        "localDesc": "Supporting craftsmanship and Belgian producers",
+        "seasonal": "Seasonal",
+        "seasonalDesc": "Fresh products following the rhythm of seasons"
       }
     },
     "philosophy": {
       "title": "The evening spirit",
       "description1": "Evening transforms our space into an intimate refuge where flavors become complex and conversations deepen. Our evening menu celebrates refined culinary techniques.",
-      "description2": "Accompanied by our selection of natural wines and artisan spirits, our evening dishes create a memorable gastronomic experience in the warm atmosphere of our secret address.",
-      "atmosphere": "Intimate Atmosphere",
+      "description2": "Accompanied by our selection of wines, our evening dishes create a memorable experience in the warm atmosphere of our secret address.",
+      "atmosphere": "Intimate atmosphere",
       "atmosphereDesc": "Soft lighting and cozy ambiance for memorable evenings",
-      "pairings": "Perfect Pairings",
-      "pairingsDesc": "Wines and spirits chosen to enhance each dish",
-      "experience": "Refined Experience",
+      "pairings": "Perfect pairings",
+      "pairingsDesc": "Wines chosen to enhance each dish",
+      "experience": "Refined experience",
       "experienceDesc": "Attentive service and careful presentation"
     },
     "gallery": {
@@ -204,11 +204,6 @@
       "description2": "This deep understanding of quality and attention to detail naturally evolved into our café, where we apply the same principles to every cup of coffee, every dish, and every moment our guests spend with us.",
       "description3": "Located in the heart of Place du Grand Sablon, our café pays homage to this historic square while bringing fresh energy to one of Brussels' most beloved neighborhoods."
     },
-    "terrace": {
-      "title": "Our Secret Terrace",
-      "subtitle": "Tucked away in the heart of Sablon, our terrace offers a timeless escape from the bustling city",
-      "description": "Natural materials, warm lighting, and subtle antique details create an atmosphere that feels both contemporary and timeless. Every element has been chosen to reflect our family's appreciation for enduring beauty and authentic craftsmanship."
-    },
     "philosophy": {
       "title": "Our Culinary Philosophy",
       "description1": "Every dish tells a story of careful sourcing and artisan preparation. We work closely with local Belgian producers who share our commitment to quality and sustainability.",
@@ -225,7 +220,7 @@
       "communityDesc": "Creating connections over exceptional experiences in our secret garden"
     },
     "cta": {
-      "title": "Experience Our Story",
+      "title": "Discover our story",
       "subtitle": "Visit our secret address and become part of the continuing story of Café Costermans",
       "viewArtGallery": "Access the Art Gallery",
       "visitUs": "Visit Us"

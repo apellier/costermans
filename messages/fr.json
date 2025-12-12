@@ -157,33 +157,33 @@
         "title": "Dîner",
         "description": "Délices du soir avec des saveurs raffinées et des techniques artisanales",
         "items": {
-          "ravioles": "Ravioles (volaille, n'duja, citron confit et basilic thaï) - €12",
-          "pommesDauphines": "Pommes dauphines (beurre de sauge, ail noir et champignons) - €12",
-          "maquereau": "Maquereau à la flamme (figue violette et shiso) - €12"
+          "poissonDuJour": "Poisson du jour au chalumeau (Kakis, feuille de citronnier et salade d’herbes) - €15",
+          "crudoStJacques": "Crudo de St-Jacques (Miso, piments et orange brûlée) - €18",
+          "ravioles": "Ravioles (Volaille, citron confit et basilic thaï, sauce n’duja) - €12"
         }
       }
     },
     "wine": {
-      "title": "Vins & Spiritueux",
-      "subtitle": "Une sélection curatée de vins naturels et de spiritueux artisanaux pour accompagner vos soirées",
+      "title": "Philosophie Alimentaire",
+      "subtitle": "Nous accordons une grande importance aux produits : nous privilégions autant que possible les ingrédients biologiques et d’agriculture raisonnée, locaux et de saison",
       "features": {
-        "natural": "Vins Naturels",
-        "naturalDesc": "Sélection de vignerons indépendants et biodynamiques",
-        "curated": "Sélection Experte",
-        "curatedDesc": "Chaque bouteille choisie pour sa personnalité unique",
-        "craft": "Spiritueux Artisanaux",
-        "craftDesc": "Gin, whisky et liqueurs de producteurs passionnés"
+        "organic": "Agriculture Raisonnée",
+        "organicDesc": "Privilégier les ingrédients biologiques et durables",
+        "local": "Producteurs Locaux",
+        "localDesc": "Soutenir l'artisanat et les producteurs belges",
+        "seasonal": "De Saison",
+        "seasonalDesc": "Des produits frais au rythme des saisons"
       }
     },
     "philosophy": {
       "title": "L'esprit du soir",
       "description1": "Le soir transforme notre espace en un refuge intime où les saveurs se complexifient et les conversations s'approfondissent. Notre menu du soir célèbre les techniques culinaires raffinées.",
-      "description2": "Accompagnés de notre sélection de vins naturels et de spiritueux artisanaux, nos plats du soir créent une expérience gastronomique mémorable dans l'atmosphère chaleureuse de notre adresse secrète.",
-      "atmosphere": "Atmosphère Intime",
+      "description2": "Accompagnés de notre sélection de vins, nos plats du soir créent une expérience mémorable dans l'atmosphère chaleureuse de notre adresse secrète.",
+      "atmosphere": "Atmosphère intime",
       "atmosphereDesc": "Éclairage tamisé et ambiance feutrée pour des soirées mémorables",
-      "pairings": "Accords Parfaits",
-      "pairingsDesc": "Vins et spiritueux choisis pour sublimer chaque plat",
-      "experience": "Expérience Raffinée",
+      "pairings": "Accords parfaits",
+      "pairingsDesc": "Vins choisis pour sublimer chaque plat",
+      "experience": "Expérience raffinée",
       "experienceDesc": "Service attentionné et présentation soignée"
     },
     "gallery": {
@@ -204,11 +204,6 @@
       "description2": "Cette compréhension profonde de la qualité et l'attention aux détails a naturellement évolué vers notre café, où nous appliquons les mêmes principes à chaque tasse de café, chaque plat, et chaque moment que nos clients passent avec nous.",
       "description3": "Situé au cœur de la Place du Grand Sablon, notre café rend hommage à cette place historique tout en apportant une énergie fraîche à l'un des quartiers les plus aimés de Bruxelles."
     },
-    "space": {
-      "title": "Notre Espace Secret",
-      "subtitle": "Au cœur du Sablon, découvrez notre intérieur chaleureux et notre cour cachée, une évasion intemporelle de la ville animée",
-      "description": "Matériaux naturels, éclairage chaleureux et détails antiques subtils créent une atmosphère qui se sent à la fois contemporaine et intemporelle. Notre intérieur cosy et notre cour secrète offrent chacun une expérience unique, reflétant l'appréciation de notre famille pour la beauté durable et l'artisanat authentique."
-    },
     "philosophy": {
       "title": "Notre Philosophie Culinaire",
       "description1": "Chaque plat raconte une histoire d'approvisionnement soigné et de préparation artisanale. Nous travaillons étroitement avec des producteurs belges locaux qui partagent notre engagement envers la qualité et la durabilité.",
@@ -225,7 +220,7 @@
       "communityDesc": "Créer des connexions grâce à des expériences exceptionnelles dans notre espace chaleureux"
     },
     "cta": {
-      "title": "Découvrir Notre Histoire",
+      "title": "Découvrir notre histoire",
       "subtitle": "Visitez notre adresse secrète et devenez partie de l'histoire continue de Café Costermans",
       "viewArtGallery": "Accéder à la galerie d'Art",
       "visitUs": "Nous Rendre Visite"

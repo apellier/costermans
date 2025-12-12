@@ -157,33 +157,33 @@
         "title": "Diner",
         "description": "Avondverrukkingen met verfijnde smaken en ambachtelijke technieken",
         "items": {
-          "ravioles": "Ravioles (gevogelte, n'duja, geconfijte citroen en Thaise basilicum) - €12",
-          "pommesDauphines": "Pommes Dauphines (salieboter, zwarte knoflook en champignons) - €12",
-          "maquereau": "Makreel op Vuur (paarse vijg en shiso) - €12"
+          "poissonDuJour": "Vis van de dag met de brander (Kakis, citroenblad en kruidensalade) - €15",
+          "crudoStJacques": "Coquille Crudo (Miso, pepers en gebrande sinaasappel) - €18",
+          "ravioles": "Ravioli (Gevogelte, gekonfijte citroen en Thaise basilicum, n'duja saus) - €12"
         }
       }
     },
     "wine": {
-      "title": "Wijnen & Spirituosen",
-      "subtitle": "Een selectie van natuurwijnen en ambachtelijke spirituosen om je avonden te begeleiden",
+      "title": "Voedingsfilosofie",
+      "subtitle": "Wij hechten veel belang aan onze producten: wij geven waar mogelijk de voorkeur aan biologische, duurzame, lokale en seizoensgebonden ingrediënten",
       "features": {
-        "natural": "Natuurwijnen",
-        "naturalDesc": "Selectie van onafhankelijke en biodynamische wijnmakers",
-        "curated": "Expert Selectie",
-        "curatedDesc": "Elke fles gekozen voor zijn unieke persoonlijkheid",
-        "craft": "Ambachtelijke Spirituosen",
-        "craftDesc": "Gin, whisky en likeuren van gepassioneerde producenten"
+        "organic": "Duurzame Landbouw",
+        "organicDesc": "Voorrang aan biologische en duurzame ingrediënten",
+        "local": "Lokale Producenten",
+        "localDesc": "Steun aan vakmanschap en Belgische producenten",
+        "seasonal": "Seizoensgebonden",
+        "seasonalDesc": "Verse producten op het ritme van de seizoenen"
       }
     },
     "philosophy": {
       "title": "De avondgeest",
       "description1": "De avond transformeert onze ruimte in een intiem toevluchtsoord waar smaken complex worden en gesprekken diepgang krijgen. Ons avondmenu viert verfijnde culinaire technieken.",
-      "description2": "Begeleid door onze selectie natuurwijnen en ambachtelijke spirituosen, creëren onze avondgerechten een memorabele gastronomische ervaring in de warme sfeer van ons geheime adres.",
-      "atmosphere": "Intieme Sfeer",
+      "description2": "Onder begeleiding van onze selectie wijnen creëren onze avondgerechten een onvergetelijke ervaring in de warme sfeer van ons geheime adres.",
+      "atmosphere": "Intieme sfeer",
       "atmosphereDesc": "Zacht licht en gezellige ambiance voor memorabele avonden",
-      "pairings": "Perfecte Combinaties",
-      "pairingsDesc": "Wijnen en spirituosen gekozen om elk gerecht te verbeteren",
-      "experience": "Verfijnde Ervaring",
+      "pairings": "Perfecte combinaties",
+      "pairingsDesc": "Wijnen gekozen om elk gerecht te verbeteren",
+      "experience": "Verfijnde ervaring",
       "experienceDesc": "Attente service en zorgvuldige presentatie"
     },
     "gallery": {
@@ -204,11 +204,6 @@
       "description2": "Dit diepe begrip van kwaliteit en aandacht voor detail evolueerde natuurlijk naar ons café, waar we dezelfde principes toepassen op elke kop koffie, elk gerecht, en elk moment dat onze gasten bij ons doorbrengen.",
       "description3": "Gelegen in het hart van de Grote Zavel, brengt ons café hulde aan dit historische plein terwijl het frisse energie brengt naar een van Brussel's meest geliefde buurten."
     },
-    "terrace": {
-      "title": "Ons Geheime Terras",
-      "subtitle": "Verstopt in het hart van de Zavel, biedt ons terras een tijdloze ontsnapping uit de bruisende stad",
-      "description": "Natuurlijke materialen, warme verlichting en subtiele antieke details creëren een sfeer die zowel eigentijds als tijdloos aanvoelt. Elk element is gekozen om onze familie's waardering voor blijvende schoonheid en authentiek vakmanschap te reflecteren."
-    },
     "philosophy": {
       "title": "Onze Culinaire Filosofie",
       "description1": "Elk gerecht vertelt een verhaal van zorgvuldige inkoop en ambachtelijke bereiding. We werken nauw samen met lokale Belgische producenten die onze toewijding aan kwaliteit en duurzaamheid delen.",
@@ -225,7 +220,7 @@
       "communityDesc": "Verbindingen creëren door uitzonderlijke ervaringen in onze geheime tuin"
     },
     "cta": {
-      "title": "Ervaar Ons Verhaal",
+      "title": "Ervaar ons verhaal",
       "subtitle": "Bezoek ons geheime adres en word onderdeel van het voortdurende verhaal van Café Costermans",
       "viewArtGallery": "Toegang tot de Kunstgalerij",
       "visitUs": "Bezoek Ons"
