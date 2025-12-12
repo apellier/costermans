@@ -5,7 +5,14 @@ import type { NextConfig } from 'next';
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
-  /* Vos autres options de config ici si nécessaire */
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+      }
+    ],
+  },
 };
 
 export default withNextIntl(nextConfig);
