@@ -17,6 +17,7 @@ export default function Header() {
     { name: t('home'), href: `/${locale}`, title: tSeo('navigation.home') },
     { name: t('day'), href: `/${locale}/day`, title: tSeo('navigation.day') },
     { name: t('night'), href: `/${locale}/night`, title: tSeo('navigation.night') },
+    { name: t('events'), href: `/${locale}/events`, title: tSeo('navigation.events') },
     { name: t('about'), href: `/${locale}/about`, title: tSeo('navigation.about') },
     { name: t('contact'), href: `/${locale}/contact`, title: tSeo('navigation.contact') },
   ];
@@ -26,14 +27,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
           {/* Logo */}
-          <Link 
-            href={`/${locale}`} 
+          <Link
+            href={`/${locale}`}
             className="flex items-center space-x-3"
             aria-label="Café Costermans - Return to homepage"
           >
-            <Image 
-              src={IMAGES.common.logo} 
-              alt="Café Costermans" 
+            <Image
+              src={IMAGES.common.logo}
+              alt="Café Costermans"
               width={120}
               height={40}
               className="h-10 w-auto"

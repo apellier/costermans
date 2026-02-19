@@ -128,6 +128,7 @@ export const keywordsByLanguage = {
       night: ['dîner Bruxelles', 'restaurant soir', 'sélection vins', 'cocktails artisanaux'],
       about: ['café patrimoine', 'histoire Costermans', 'tradition familiale', 'connexion antiquaires'],
       contact: ['contact café', 'réservation Bruxelles', 'localisation Sablon', 'heures ouverture'],
+      events: ['événements Bruxelles', 'concerts Sablon', 'quizz night Bruxelles', 'tournois échecs'],
       legal: ['mentions légales', 'politique confidentialité', 'café Costermans juridique']
     }
   },
@@ -152,6 +153,7 @@ export const keywordsByLanguage = {
       night: ['dinner Brussels', 'evening dining', 'wine selection', 'craft cocktails'],
       about: ['heritage café', 'Costermans history', 'family tradition', 'antique connection'],
       contact: ['contact café', 'Brussels reservation', 'Sablon location', 'opening hours'],
+      events: ['Brussels events', 'Sablon concerts', 'quiz night Brussels', 'chess tournaments'],
       legal: ['legal notice', 'privacy policy', 'café Costermans legal']
     }
   },
@@ -176,6 +178,7 @@ export const keywordsByLanguage = {
       night: ['diner Brussel', 'avondrestaurant', 'wijnselectie', 'ambachtelijke cocktails'],
       about: ['erfgoed café', 'Costermans geschiedenis', 'familietraditie', 'antiek connectie'],
       contact: ['contact café', 'Brussel reservering', 'Zavel locatie', 'openingstijden'],
+      events: ['evenementen Brussel', 'concerten Zavel', 'quiz night Brussel', 'schaaktoernooien'],
       legal: ['juridische informatie', 'privacybeleid', 'café Costermans juridisch']
     }
   }

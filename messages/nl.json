@@ -3,6 +3,7 @@
     "home": "Home",
     "day": "De Dag",
     "night": "De Avond",
+    "events": "Evenementen",
     "about": "Over Ons",
     "contact": "Contact"
   },
@@ -192,6 +193,33 @@
       "follow": "Volg onze avondverhalen"
     },
     "footerText": "Verken onze volledige selectie in onze PDF-menu's hierboven"
+  },
+  "events": {
+    "hero": {
+      "title": "Onze Evenementen",
+      "subtitle": "Momenten van delen en cultuur in het hart van de Zavel",
+      "downloadBrochure": "Download Programma (PDF)",
+      "instagram": "Bekijk op Instagram",
+      "scrollText": "Ontdek onze maandelijkse bijeenkomsten"
+    },
+    "sections": {
+      "quizz": {
+        "title": "Quiztermans",
+        "description": "Test uw kennis in een gezellige sfeer. Vorm uw team en maak kans op prijzen!",
+        "when": "Maandelijks"
+      },
+      "concerts": {
+        "title": "Live Concerten",
+        "description": "Muziekavonden met lokale artiesten. Feestelijke en ontspannen sfeer.",
+        "when": "Maandelijks"
+      },
+      "chess": {
+        "title": "Schaaktoernooien",
+        "description": "Strategie en concentratie bij een goede maaltijd. Sluit u aan bij onze gemeenschap van liefhebbers voor spannende toernooien.",
+        "when": "Maandelijks"
+      }
+    },
+    "footerText": "Volg ons op Instagram voor exacte data en inschrijvingen"
   },
   "about": {
     "hero": {
@@ -384,6 +412,10 @@
         "title": "Avondmenu - Diner & Wijn",
         "description": "Ontdek ons avondmenu met verfijnde diners en natuurlijke wijnselectie. Intieme sfeer voor uw avonden bij Café Costermans."
       },
+      "events": {
+        "title": "Evenementen - Quiz, Concerten & Schaken",
+        "description": "Neem deel aan onze maandelijkse evenementen bij Café Costermans. Quizavonden, live concerten en schaaktoernooien in het hart van de Zavel."
+      },
       "about": {
         "title": "Over Ons - Geschiedenis & Erfgoed",
         "description": "Ontdek het verhaal van Café Costermans, verbonden met Costermans Antiquairs. Een familietraditie van vakmanschap en authenticiteit in het hart van de Zavel."
@@ -401,6 +433,7 @@
       "home": "Home - Ontdek Café Costermans",
       "day": "Dagmenu - Brunch en lunch",
       "night": "Avondmenu - Diner en wijn",
+      "events": "Evenementen - Quiz, Concerten en Schaken",
       "about": "Over ons - Ons verhaal en erfgoed",
       "contact": "Contact - Neem contact op en reserveer"
     },

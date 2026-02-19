@@ -3,6 +3,7 @@
     "home": "Home",
     "day": "Day",
     "night": "Night",
+    "events": "Events",
     "about": "About",
     "contact": "Contact"
   },
@@ -192,6 +193,33 @@
       "follow": "Follow our evening stories"
     },
     "footerText": "Explore our complete selection in our PDF menus above"
+  },
+  "events": {
+    "hero": {
+      "title": "Our Events",
+      "subtitle": "Moments of sharing and culture in the heart of Sablon",
+      "downloadBrochure": "Download Program (PDF)",
+      "instagram": "View on Instagram",
+      "scrollText": "Discover our monthly gatherings"
+    },
+    "sections": {
+      "quizz": {
+        "title": "Quiztermans",
+        "description": "Test your knowledge in a friendly atmosphere. Form your team and try to win prizes!",
+        "when": "Monthly"
+      },
+      "concerts": {
+        "title": "Live Concerts",
+        "description": "Musical evenings featuring local artists. Festive and relaxed atmosphere.",
+        "when": "Monthly"
+      },
+      "chess": {
+        "title": "Chess Tournaments",
+        "description": "Strategy and concentration around a good meal. Join our community of enthusiasts for exciting tournaments.",
+        "when": "Monthly"
+      }
+    },
+    "footerText": "Follow us on Instagram for precise dates and registration"
   },
   "about": {
     "hero": {
@@ -384,6 +412,10 @@
         "title": "Night Menu - Dinner & Wine",
         "description": "Discover our evening menu with refined dinners and natural wine selection. Intimate atmosphere for your evenings at Café Costermans."
       },
+      "events": {
+        "title": "Events - Quiz, Concerts & Chess",
+        "description": "Participate in our monthly events at Café Costermans. Quiz Nights, Live Concerts and Chess Tournaments in the heart of Sablon."
+      },
       "about": {
         "title": "About - History & Heritage",
         "description": "Discover the story of Café Costermans, connected to Costermans Antique dealers. A family tradition of craftsmanship and authenticity in the heart of Sablon."
@@ -401,6 +433,7 @@
       "home": "Home - Discover Café Costermans",
       "day": "Day Menu - Brunch and lunch",
       "night": "Night Menu - Dinner and wine",
+      "events": "Events - Quiz, Concerts and Chess",
       "about": "About - Our story and heritage",
       "contact": "Contact - Get in touch and reserve"
     },

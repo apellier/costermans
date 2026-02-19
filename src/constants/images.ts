@@ -66,6 +66,14 @@ export const IMAGES = {
     hero: "/images/contact/hero.jpg",
   },
 
+  // Events page images
+  events: {
+    hero: "/images/events/hero.jpg",
+    quizz: "/images/events/quizz.jpg",
+    concert: "/images/events/concert.jpg",
+    chess: "/images/events/chess.jpg",
+  },
+
   // Common/shared images across pages
   common: {
     logo: "/images/common/logo.png",
