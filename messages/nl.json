@@ -7,6 +7,28 @@
     "about": "Over Ons",
     "contact": "Contact"
   },
+  "hub": {
+    "title": "Maison Costermans",
+    "subtitle": "Een uitzonderlijke plek in het hart van de Zavel",
+    "activities": {
+      "cafe": {
+        "title": "Le Café",
+        "description": "Een geheim adres voor uw brunches, lunches en verfijnde diners."
+      },
+      "antiquaire": {
+        "title": "L'Antiquaire",
+        "description": "Ontdek onze kunst- en antiekgalerij."
+      },
+      "events": {
+        "title": "Salons Privés",
+        "description": "Privatiseer onze uitzonderlijke salons voor uw evenementen."
+      },
+      "hotel": {
+        "title": "L'Hôtel",
+        "description": "Verblijf in de elegantie van Maison Costermans."
+      }
+    }
+  },
   "home": {
     "hero": {
       "title": "Café Costermans",

@@ -57,28 +57,28 @@ export default async function Footer({ locale }: FooterProps) {
 
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
               <Link
-                href={`/${locale}/day`}
+                href={`/${locale}/cafe/day`}
                 title={tSeo('navigation.day')}
                 className="text-white hover:text-grasse transition-colors font-space-grotesk"
               >
                 {t('links.menu')}
               </Link>
               <Link
-                href={`/${locale}/about`}
+                href={`/${locale}/cafe/about`}
                 title={tSeo('navigation.about')}
                 className="text-white hover:text-grasse transition-colors font-space-grotesk"
               >
                 {t('links.about')}
               </Link>
               <Link
-                href={`/${locale}/contact`}
+                href={`/${locale}/cafe/contact`}
                 title={tSeo('navigation.contact')}
                 className="text-white hover:text-grasse transition-colors font-space-grotesk"
               >
                 {t('links.contact')}
               </Link>
               <Link
-                href={`/${locale}/legal`}
+                href={`/${locale}/cafe/legal`}
                 title={tSeo('pages.legal.title')}
                 className="text-white hover:text-grasse transition-colors font-space-grotesk"
               >
