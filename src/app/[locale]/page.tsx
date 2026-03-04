@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import ScrollIndicator from '@/components/ScrollIndicator';
 import { IMAGES, IMAGE_SIZES } from "@/constants/images";
 import { generatePageMetadata } from '@/lib/seo';
 
@@ -53,14 +54,17 @@ export default async function Hub({ params }: { params: Promise<{ locale: string
             id: 'hotel',
             title: t('activities.hotel.title'),
             description: t('activities.hotel.description'),
-            href: 'https://www.booking.com/',
+            href: 'https://www.booking.com/Share-Y3Za23',
             image: IMAGES.hub.hotel,
             external: true
         }
     ];
 
     return (
-        <div className="min-h-screen bg-deep text-white selection:bg-forest selection:text-white">
+        <div className="relative min-h-screen bg-deep text-white selection:bg-forest selection:text-white">
+            {/* Dynamic Scroll Indicator */}
+            <ScrollIndicator />
+
             {/* Header / Logo section */}
             <header className="absolute top-0 left-0 right-0 z-20 py-8 px-4 flex items-center justify-between pointer-events-none">
                 {/* Empty div for flex balance */}
