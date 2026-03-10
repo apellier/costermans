@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://costermans.be' // Use official domain
+  const baseUrl = 'https://www.maisoncostermans.be' // Use official domain
   const locales = ['fr', 'en', 'nl']
   const pages = [
     '', // hub

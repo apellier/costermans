@@ -47,7 +47,7 @@ export default async function LocaleLayout({
       addressCountry: 'BE',
     },
     email: 'cafecostermans@gmail.com',
-    url: 'https://costermans.be',
+    url: 'https://www.maisoncostermans.be',
     priceRange: '€€',
     servesCuisine: ['European', 'Belgian', 'Brunch'],
     openingHours: [
