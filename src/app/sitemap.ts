@@ -1,15 +1,16 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.maisoncostermans.be' // Replace with actual domain
+  const baseUrl = 'https://costermans.be' // Use official domain
   const locales = ['fr', 'en', 'nl']
   const pages = [
-    '', // home
-    '/day',
-    '/night',
-    '/about',
-    '/contact',
-    '/legal'
+    '', // hub
+    '/cafe',
+    '/cafe/day',
+    '/cafe/night',
+    '/cafe/about',
+    '/cafe/contact',
+    '/cafe/legal'
   ]
 
   const sitemap: MetadataRoute.Sitemap = []
@@ -38,12 +39,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 function getPriority(page: string): number {
   switch (page) {
-    case '': return 1.0 // homepage
-    case '/day':
-    case '/night': return 0.9 // main menu pages
-    case '/about':
-    case '/contact': return 0.8 // important pages
-    case '/legal': return 0.3 // legal page
+    case '': return 1.0 // homepage (hub)
+    case '/cafe': return 0.9 // cafe home
+    case '/cafe/day':
+    case '/cafe/night': return 0.8 // main menu pages
+    case '/cafe/about':
+    case '/cafe/contact': return 0.7 // important pages
+    case '/cafe/legal': return 0.3 // legal page
     default: return 0.5
   }
 }
