@@ -7,6 +7,28 @@
     "about": "About",
     "contact": "Contact"
   },
+  "hub": {
+    "title": "Maison Costermans",
+    "subtitle": "An exceptional place in the heart of Sablon",
+    "activities": {
+      "cafe": {
+        "title": "Le Café",
+        "description": "A secret address for your brunches, lunches, and refined dinners."
+      },
+      "antiquaire": {
+        "title": "The Art Gallery",
+        "description": "Discover our art and antiques gallery."
+      },
+      "events": {
+        "title": "Salons Privés",
+        "description": "Privatize our exceptional salons for your events."
+      },
+      "hotel": {
+        "title": "L'Hôtel",
+        "description": "Stay in the elegance of Maison Costermans."
+      }
+    }
+  },
   "home": {
     "hero": {
       "title": "Café Costermans",

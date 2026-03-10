@@ -14,12 +14,12 @@ export default function Header() {
   const locale = useLocale();
 
   const navigation = [
-    { name: t('home'), href: `/${locale}`, title: tSeo('navigation.home') },
-    { name: t('day'), href: `/${locale}/day`, title: tSeo('navigation.day') },
-    { name: t('night'), href: `/${locale}/night`, title: tSeo('navigation.night') },
-    { name: t('events'), href: `/${locale}/events`, title: tSeo('navigation.events') },
-    { name: t('about'), href: `/${locale}/about`, title: tSeo('navigation.about') },
-    { name: t('contact'), href: `/${locale}/contact`, title: tSeo('navigation.contact') },
+    { name: t('home'), href: `/${locale}/cafe`, title: tSeo('navigation.home') },
+    { name: t('day'), href: `/${locale}/cafe/day`, title: tSeo('navigation.day') },
+    { name: t('night'), href: `/${locale}/cafe/night`, title: tSeo('navigation.night') },
+    { name: t('events'), href: `/${locale}/cafe/events`, title: tSeo('navigation.events') },
+    { name: t('about'), href: `/${locale}/cafe/about`, title: tSeo('navigation.about') },
+    { name: t('contact'), href: `/${locale}/cafe/contact`, title: tSeo('navigation.contact') },
   ];
 
   return (

@@ -8,12 +8,10 @@ import { locales } from '@/i18n/request';
 import { spaceGrotesk } from '@/lib/fonts';
 import { generatePageMetadata, getKeywordsForPage } from '@/lib/seo';
 import "../globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Café Costermans',
-  description: 'Experience refined café culture at our secret terrace in Brussels\' historic Sablon district. Heritage meets modern hospitality at Café Costermans.',
+  title: 'Maison Costermans',
+  description: 'Experience refined café culture, art, and heritage in Brussels\' historic Sablon district at Maison Costermans.',
   path: '',
   locale: 'fr', // Default locale
   keywords: getKeywordsForPage('fr', 'home'),
@@ -80,13 +78,11 @@ export default async function LocaleLayout({
       </head>
       <body className={`${spaceGrotesk.className} antialiased min-h-screen flex flex-col`}>
         <NextIntlClientProvider messages={messages}>
-          <Header />
           <main className="flex-grow">
             {children}
             <Analytics />
             <SpeedInsights />
           </main>
-          <Footer locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>

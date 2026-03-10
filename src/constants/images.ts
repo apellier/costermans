@@ -2,6 +2,14 @@
 // Organized by page/section for easy management and maintenance
 
 export const IMAGES = {
+  // Hub landing page
+  hub: {
+    cafe: "/images/landing/cafe.jpg",
+    antiquaire: "/images/landing/antiquaire.jpg",
+    events: "/images/landing/events.jpg",
+    hotel: "/images/landing/hotel.jpg",
+  },
+
   // Home page images
   home: {
     hero: "/images/home/hero.jpg",
