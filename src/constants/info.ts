@@ -25,10 +25,10 @@ export const VAT_NUMBER = "BE1016.165.466";
 
 export const OPENING_HOURS = {
     tuesday: "09h-19h",
-    wednesday: "09h-19h",
-    thursday: "09h-23h",
-    friday: "09h-23h",
-    saturday: "09h-23h",
+    wednesday: "09h-22h",
+    thursday: "09h-22h",
+    friday: "09h-22h",
+    saturday: "09h-22h",
     sunday: "09h-19h",
     monday: "Closed",
 };
